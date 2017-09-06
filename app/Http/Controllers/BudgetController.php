@@ -24,7 +24,7 @@ class BudgetController extends Controller
 
     }
 
-    public function plus($user)
+    public function plus()
     {
       
       $user = Auth::user();
@@ -35,7 +35,7 @@ class BudgetController extends Controller
 
     }
 
-    public function prime($user)
+    public function prime()
     {
       
       $user = Auth::user();

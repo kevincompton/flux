@@ -99,6 +99,7 @@
                 {{ csrf_field() }}
                 <button type="submit">Flux Prime</buttom> 
             </button>
+            
             <br>
             <p>If you are unsure which program is right for you, please
             read about the benefits of each. If you have any additional questions, please don't hesitate to <a href="#">contact us</a> 24/7 via Email/Chat/Phone.</p>
