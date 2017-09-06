@@ -1,0 +1,73 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Auth;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $user = Auth::user();
+        $budget = $user->budget()->get()->first();
+        $creditors = $user->creditors()->get();
+
+        if($budget) {
+            $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
+            $budget->afford = ($budget->income - $budget->expenses) * 0.6;
+
+            if($budget->afford < 250) {
+                $budget->afford = 250;
+            }
+        }
+
+        $data = [
+            "user" => $user,
+            "budget" => $budget,
+            "creditors" => $creditors
+        ];
+
+        return view('home')->with($data);
+    }
+
+    public function dashboard()
+    {
+        $user = Auth::user();
+        $budget = $user->budget()->get()->first();
+        $creditors = $user->creditors()->get();
+
+        if($budget) {
+            $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
+            $budget->afford = ($budget->income - $budget->expenses) * 0.6;
+
+            if($budget->afford < 250) {
+                $budget->afford = 250;
+            }
+        }
+
+        $data = [
+            "user" => $user,
+            "budget" => $budget,
+            "creditors" => $creditors
+        ];
+
+        return view('dashboard')->with($data);
+    }
+
+}
