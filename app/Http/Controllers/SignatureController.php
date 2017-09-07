@@ -38,6 +38,9 @@ class SignatureController extends Controller
       $response = $client->getEmbeddedSignUrl($signature_id);
       $sign_url = $response->getSignUrl();
 
+      $response = $this->client->getSignatureRequests();
+      print_r($response->getWarnings());
+
       return View::make('documents.poa')->with('sign_url', $sign_url);
     }
 

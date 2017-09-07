@@ -1,7 +1,7 @@
 @extends('layouts.client')
 
 @section('content')
-
+  <div id="hs-container"></div>
 @endsection
 
 @section('footer')
