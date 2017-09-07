@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <script src="https://use.fontawesome.com/c753f43933.js"></script>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -16,7 +17,6 @@
     </head>
     <body>
         <div class="wrapper">
-
             <header>
                 <nav class="main-nav">
                     <ul>
@@ -41,14 +41,13 @@
                         <a href="{{ route('login') }}">Already have an account?</a>
                         <a class="btn" href="{{ route('register') }}">Start Today</a>
                     @endif
-                </div>
-
-
-                <div class="content">
-                    @yield('content')
+                    <div class="concierge"><i class="fa fa-phone" aria-hidden="true"></i> 866.FLUX.218</div>
                 </div>
             </header>
+        </div>
 
+        <div class="content">
+            @yield('content')
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>

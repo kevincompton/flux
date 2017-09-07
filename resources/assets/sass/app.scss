@@ -5,8 +5,19 @@
 
 // Typography
 
+body {
+  color: white;
+}
+
 a {
   color: #00d2c1;
+  &:hover {
+    color: #333;
+  }
+}
+
+button:hover {
+  background-color: #333;
 }
 
 button {
@@ -18,28 +29,46 @@ a.btn {
   @extend button;
 }
 
+h1 {
+  font-size: 2.4rem;
+  color: #00d2c1;
+}
+
 h2.section-heading {
   clear: both;
   margin-top: 45px;
 }
 
+p {
+  font-weight: 100;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
 // Layout
+
+body {
+  margin: 0;
+  background: #101010;
+}
 
 div.wrapper {
   max-width: 1400px;
   margin: auto;
-  .content {
-    margin-top: 60px;
-    padding: 60px;
+  &.page_wrap {
+    margin-top: 120px;
   }
 }
 
 // Header
 
 header {
+  a:hover {
+    color: white;
+  }
   nav.main-nav {
     line-height: 40px;
-    margin-top: 25px;
+    margin-top: 17px;
     position: relative;
     z-index: 222;
     width: 40%;
@@ -50,7 +79,7 @@ header {
   div.top-right {
     float: right;
     text-align: right;
-    margin-top: -32px;
+    margin-top: -28px;
     position: relative;
     z-index: 222;
     a {
@@ -66,28 +95,42 @@ header {
     left: 0;
     right: 0;
     img {
-      width: 150px;
+      width: 200px;
     }
+  }
+  .concierge {
+    color: #00d2c1;
+    margin-right: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
   }
 }
 
 // Onboard Signup
 
 section.onboard_signup {
-
+  margin-top: 120px;
   text-align: center;
 
   span.or {
     display: block;
     font-size: 24px;
     text-align: center;
-    margin: 30px 0;
+    margin: 45px 0;
+    color: white;
+  }
+
+  button {
+    background-color: #4267b2;
   }
 
   p {
-    border-top: 1px solid rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(275,275,275,0.05);
     padding-top: 45px;
     margin-top: 60px;
+    font-size: 28px;
   }
 
 }
@@ -222,4 +265,16 @@ section.onboard_signup {
     font-size: 0.7em;
     font-weight: normal;
   }
+}
+
+// Home hero
+section.home_hero {
+  background: url(/images/bg.jpg);
+  background-size: cover;
+  padding-top: 220px;
+  margin-top: -60px;
+  padding-bottom: 120px;
+  color: white;
+  text-align: center;
+  border-top: 8px solid #00d2c1;
 }

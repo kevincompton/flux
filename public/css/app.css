@@ -337,8 +337,21 @@ picture {
   max-width: 100%;
 }
 
+body {
+  color: white;
+}
+
 a {
   color: #00d2c1;
+}
+
+a:hover {
+  color: #333;
+}
+
+button:hover,
+a.btn:hover {
+  background-color: #333;
 }
 
 button,
@@ -347,9 +360,25 @@ a.btn {
   color: white;
 }
 
+h1 {
+  font-size: 2.4rem;
+  color: #00d2c1;
+}
+
 h2.section-heading {
   clear: both;
   margin-top: 45px;
+}
+
+p {
+  font-weight: 100;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+body {
+  margin: 0;
+  background: #101010;
 }
 
 div.wrapper {
@@ -357,14 +386,17 @@ div.wrapper {
   margin: auto;
 }
 
-div.wrapper .content {
-  margin-top: 60px;
-  padding: 60px;
+div.wrapper.page_wrap {
+  margin-top: 120px;
+}
+
+header a:hover {
+  color: white;
 }
 
 header nav.main-nav {
   line-height: 40px;
-  margin-top: 25px;
+  margin-top: 17px;
   position: relative;
   z-index: 222;
   width: 40%;
@@ -377,7 +409,7 @@ header nav.main-nav a {
 header div.top-right {
   float: right;
   text-align: right;
-  margin-top: -32px;
+  margin-top: -28px;
   position: relative;
   z-index: 222;
 }
@@ -397,10 +429,20 @@ header span.logo {
 }
 
 header span.logo img {
-  width: 150px;
+  width: 200px;
+}
+
+header .concierge {
+  color: #00d2c1;
+  margin-right: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
 }
 
 section.onboard_signup {
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -408,13 +450,20 @@ section.onboard_signup span.or {
   display: block;
   font-size: 24px;
   text-align: center;
-  margin: 30px 0;
+  margin: 45px 0;
+  color: white;
+}
+
+section.onboard_signup button,
+section.onboard_signup a.btn {
+  background-color: #4267b2;
 }
 
 section.onboard_signup p {
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 45px;
   margin-top: 60px;
+  font-size: 28px;
 }
 
 .progress-bar {
@@ -496,5 +545,16 @@ section.onboard_signup p {
   display: block;
   font-size: 0.7em;
   font-weight: normal;
+}
+
+section.home_hero {
+  background: url(/images/bg.jpg);
+  background-size: cover;
+  padding-top: 220px;
+  margin-top: -60px;
+  padding-bottom: 120px;
+  color: white;
+  text-align: center;
+  border-top: 8px solid #00d2c1;
 }
 

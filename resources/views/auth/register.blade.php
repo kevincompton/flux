@@ -1,7 +1,7 @@
 @extends('layouts.client')
 
 @section('content')
-<div class="container">
+<div class="wrapper page_wrap">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
