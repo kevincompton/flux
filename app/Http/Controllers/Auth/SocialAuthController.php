@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 
+use Auth;
 use Socialite;
 use Illuminate\Http\Request;
 
@@ -21,16 +22,16 @@ class SocialAuthController extends Controller
 
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
-        return redirect($this->redirectTo);
+        return redirect('/home');
     }
 
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = \App\User::where('provider_id', $user->id)->first();
         if ($authUser) {
             return $authUser;
         }
-        return User::create([
+        return \App\User::create([
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
