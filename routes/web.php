@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/sign', function()
+Route::get('/sign', function()
 {
  return "Hello API Event Received";
 });
