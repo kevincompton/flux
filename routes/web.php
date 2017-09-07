@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('/sign', function()
+{
+ return "Hello API Event Received";
+});
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,7 +36,3 @@ Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
 
-Route::post('/sign', function()
-{
- return "Hello API Event Received";
-});
