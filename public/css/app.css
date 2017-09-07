@@ -346,12 +346,13 @@ a {
 }
 
 a:hover {
-  color: #333;
+  color: white;
 }
 
 button:hover,
 a.btn:hover {
-  background-color: #333;
+  background-color: white;
+  color: #00d2c1;
 }
 
 button,
@@ -459,6 +460,11 @@ section.onboard_signup a.btn {
   background-color: #4267b2;
 }
 
+section.onboard_signup button:hover,
+section.onboard_signup a.btn:hover {
+  color: white;
+}
+
 section.onboard_signup p {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 45px;
@@ -556,5 +562,57 @@ section.home_hero {
   color: white;
   text-align: center;
   border-top: 8px solid #00d2c1;
+}
+
+ul.features {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  float: left;
+  display: block;
+  margin-right: 2.35765202%;
+  width: 91.47019566%;
+  margin-left: 8.52980434%;
+}
+
+ul.features:last-child {
+  margin-right: 0;
+}
+
+ul.features li {
+  float: left;
+  display: block;
+  margin-right: 2.35765202%;
+  width: 23.23176098%;
+  margin-right: 0;
+  text-align: left;
+  position: relative;
+}
+
+ul.features li:last-child {
+  margin-right: 0;
+}
+
+ul.features i {
+  font-size: 28px;
+  color: #00d2c1;
+  position: absolute;
+  left: 20px;
+}
+
+ul.features h3 {
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+ul.features p,
+ul.features h3 {
+  padding-left: 55px;
+  padding-right: 40px;
+}
+
+ul.features p {
+  font-size: 13px;
+  line-height: 1.4;
 }
 

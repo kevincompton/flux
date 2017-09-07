@@ -12,12 +12,13 @@ body {
 a {
   color: #00d2c1;
   &:hover {
-    color: #333;
+    color: white;
   }
 }
 
 button:hover {
-  background-color: #333;
+  background-color: white;
+  color: #00d2c1;
 }
 
 button {
@@ -124,6 +125,9 @@ section.onboard_signup {
 
   button {
     background-color: #4267b2;
+    &:hover {
+      color:white;
+    }
   }
 
   p {
@@ -278,3 +282,38 @@ section.home_hero {
   text-align: center;
   border-top: 8px solid #00d2c1;
 }
+
+// Home features 
+
+ul.features {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  @include span-columns(11);
+  @include shift(1); 
+  li {
+    @include span-columns(3);
+    @include omega();
+    text-align: left;
+    position: relative;
+  }
+  i {
+    font-size: 28px;
+    color: #00d2c1;
+    position: absolute;
+    left: 20px;
+  }
+  h3 {
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  p, h3 {
+    padding-left: 55px;
+    padding-right: 40px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
