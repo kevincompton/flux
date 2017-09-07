@@ -31,3 +31,8 @@ Route::post('/budget/new', 'BudgetController@create');
 Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
+
+Route::post('/sign', function()
+{
+ return "Hello API Event Received";
+});

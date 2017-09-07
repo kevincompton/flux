@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1afaac97607efdbd8a79695da74cec86",
+    "content-hash": "32c9eea57332bdb45eccce2b2a733c7a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -845,6 +845,45 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "hellosign/hellosign-php-sdk",
+            "version": "v3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/HelloFax/hellosign-php-sdk.git",
+                "reference": "0c0d344b961be17b68a57e79a28fa25e481cc8a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/HelloFax/hellosign-php-sdk/zipball/0c0d344b961be17b68a57e79a28fa25e481cc8a4",
+                "reference": "0c0d344b961be17b68a57e79a28fa25e481cc8a4",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HelloSign\\": "library/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "HelloSign",
+                    "email": "apisupport@hellosign.com"
+                }
+            ],
+            "description": "This is the official PHP wrapper for HelloSign's API",
+            "time": "2017-09-06 20:32:41"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -4533,7 +4572,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "hellosign/hellosign-php-sdk": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
