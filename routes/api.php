@@ -1,6 +1,6 @@
 <?php
 
-use Input;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
 
 /*
