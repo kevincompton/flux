@@ -25,7 +25,7 @@ class SignatureController extends Controller
        $request->enableTestMode();
       }
 
-      $request->setSigner('Signer', $user->email, $user->name);
+      $request->setSigner('Signer', 'test@testers.com', 'Tess Testers');
 
       $embedded_request = new HelloSign\EmbeddedSignatureRequest($request, getenv('HELLOSIGN_CLIENT_KEY'));
       $response = $client->createEmbeddedSignatureRequest($embedded_request);
