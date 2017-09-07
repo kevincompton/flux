@@ -1,5 +1,6 @@
 <?php
 
+use Input;
 use Illuminate\Http\Request;
 
 /*
