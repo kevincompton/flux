@@ -46,6 +46,16 @@ class HomeController extends Controller
         return view('home')->with($data);
     }
 
+    public function poaPlaceholder()
+    {
+        return view('poa_placeholder');
+    }
+
+    public function payment()
+    {
+        return view('payment');
+    }
+
     public function dashboard()
     {
         $user = Auth::user();
