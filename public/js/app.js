@@ -789,6 +789,12 @@ module.exports = __webpack_require__(40);
 
 __webpack_require__(10);
 
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 //window.Vue = require('vue');
 
 /**
