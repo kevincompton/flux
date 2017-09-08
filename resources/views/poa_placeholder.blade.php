@@ -1,7 +1,9 @@
 @extends('layouts.client')
 
 @section('content')
-  <h1>POA Placeholder</h1>
+  <div class="wrapper page_wrap">
+    <h1>POA Placeholder</h1>
 
-  <a class="btn" href="/payment">Continue</a>
+    <a class="btn" href="/payment">Continue</a>
+  </div>
 @endsection

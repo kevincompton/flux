@@ -21,7 +21,7 @@
         <br>
         you mentioned earlier that you had approximately {{ $budget->debt }} in debt that needed resolution...</p>
 
-        creditor forms here, upload files, skip section link, submit<br>
+        creditor forms here<br>
 
         <ul>
             @foreach($creditors as $creditor)
@@ -39,12 +39,6 @@
 
             <button type="submit">Add Creditor</button>
         </form>
-
-        @if(!$user->creditor)
-            <a href="/dashboard">Skip this section</a>
-        @else
-            <a href="/dashboard" class="btn">Continue</a>
-        @endif
       </section>
     @endif
 
