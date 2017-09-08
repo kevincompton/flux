@@ -377,6 +377,10 @@ p {
   letter-spacing: 0.5px;
 }
 
+h3 {
+  clear: both;
+}
+
 body {
   margin: 0;
   background: #101010;
