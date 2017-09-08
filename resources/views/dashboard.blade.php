@@ -27,9 +27,20 @@
           <h3>Your Creditors</h3>
 
           <table>
+            <tbody>
+             <tr>
+               <th>Name</th>
+               <th>Phone</th>
+               <th>Account #</th>
+             </tr> 
               @foreach($creditors as $creditor)
-                  <tr><td>{{ $creditor->name }}</td></tr>
+                  <tr>
+                    <td>{{ $creditor->name }}</td>
+                    <td>{{ $creditor->phone }}</td>
+                    <td>{{ $creditor->account }}</td>
+                  </tr>
               @endforeach
+            </tbody>
           </table>
         @endif
 
