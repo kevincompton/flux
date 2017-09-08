@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/signup', 'OnboardController@onboard');
+Route::get('/poa-placeholder', 'HomeController@poaPlaceholder');
+Route::get('/payment-placeholder', 'HomeController@paymentPlaceholder');
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');

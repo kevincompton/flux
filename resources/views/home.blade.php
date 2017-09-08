@@ -123,39 +123,7 @@
 
             </section>
         @endif
-        @if($user->ssn)
-            <section class="form_creditors">
-                <h2>Creditor Information</h2>
-                <p>{{ $user->name }},<br> 
-                <br>
-                you mentioned earlier that you had approximately {{ $budget->debt }} in debt that needed resolution...</p>
 
-                creditor forms here, upload files, skip section link, submit<br>
-
-                <ul>
-                    @foreach($creditors as $creditor)
-                        <li>{{ $creditor->name }}</li>
-                    @endforeach
-                </ul>
-
-                <h3>Add A Creditor</h3>
-
-                <form role="form" method="POST" action="/creditor/new">
-                    {{ csrf_field() }}
-                    <input name="name" type="text" placeholder="Creditor Name">
-                    <input name="account" type="text" placeholder="Account #">
-                    <input name="phone" type="text" placeholder="Creditor Phone">
-
-                    <button type="submit">Add Creditor</button>
-                </form>
-
-                @if(!$user->creditor)
-                    <a href="/dashboard">Skip this section</a>
-                @else
-                    <a href="/dashboard" class="btn">Continue</a>
-                @endif
-            </section>
-        @endif
 
     </div>
 @endsection
