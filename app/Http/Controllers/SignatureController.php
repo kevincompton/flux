@@ -39,13 +39,13 @@ class SignatureController extends Controller
 
       $ch = curl_init('https://api.hellosign.com/v3/embedded/sign_url/' . $signature_id);
 
-      $response = $this->curlRequest($ch);
+      $response = $this->curlRequest($ch, null);
 
       return $response;
 
     }
 
-    private function curlRequest($ch)
+    private function curlRequest($ch, $data)
     {
       $apiKey = getenv('HELLOSIGN_API_KEY');
 
@@ -92,7 +92,7 @@ class SignatureController extends Controller
 
         $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
 
-        $response = $this->curlRequest($ch);
+        $response = $this->curlRequest($ch, $data);
 
         return $response;
     }
