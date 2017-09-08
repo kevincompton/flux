@@ -86,7 +86,7 @@ class SignatureController extends Controller
 
         curl_close($ch);
 
-        return $response;
+        return var_dump($response);
     }
 
 }
