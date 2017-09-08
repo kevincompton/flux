@@ -50,7 +50,7 @@ class SignatureController extends Controller
         $env = getenv('ENV');
 
         $data = [
-            'client_id' => ($env == 'prod') ? self::HELLOSIGN_CLIENT_KEY,
+            'client_id' => self::HELLOSIGN_CLIENT_KEY,
             'template_id' => self::HELLOSIGN_TEMPLATE_ID,
             'subject' => 'Subject',
             'message' => '',
@@ -74,7 +74,7 @@ class SignatureController extends Controller
 
         $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
 
-        $apiKey = ($env == 'prod') ? self::HELLOSIGN_API_KEY : self::HELLOSIGN_API_KEY;
+        $apiKey = self::HELLOSIGN_API_KEY;
 
         curl_setopt($ch, CURLOPT_USERNAME, $apiKey);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
