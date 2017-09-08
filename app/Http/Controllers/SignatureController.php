@@ -20,23 +20,53 @@ class SignatureController extends Controller
 
       $response = $this->getEmbeddedSignatureRequest();
 
+      $signature_request_id = $response["signature_request"]["signature_request_id"];
+      $signatures = $response["signature_request"]["signatures"];
+
+      $signature_id = $signatures[0]["signature_id"];
+
+      $response = $this->getEmbeddedSignUrl($signature_id);
+
       return var_dump($response);
 
-      $signature_request_id = $response["signature_request"]["signature_request_id"];
-
-      return $signature_request_id;
-
-      $signatures = $response->getSignatures();
-
-      $signature_id = $signatures[0]->getId();
-
-      $response = $client->getEmbeddedSignUrl($signature_id);
       $sign_url = $response->getSignUrl();
 
-      $response = $this->client->getSignatureRequests();
-      print_r($response->getWarnings());
-
       return View::make('documents.poa')->with('sign_url', $sign_url);
+    }
+
+    public static function getEmbeddedSignUrl($signature_id)
+    {
+
+      $ch = curl_init('https://api.hellosign.com/v3/embedded/sign_url/' . $signature_id);
+
+      $response = $this->curlRequest($ch);
+
+      return $response;
+
+    }
+
+    private static function curlRequest($ch)
+    {
+      $apiKey = getenv('HELLOSIGN_API_KEY');
+
+        curl_setopt($ch, CURLOPT_USERNAME, $apiKey);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+
+        if (curl_errno($ch)) {
+            throw new \Exception(curl_error($ch));
+        }
+
+        $response = json_decode(curl_exec($ch), true);
+
+        if (array_key_exists('error', $response)) {
+            throw new \Exception($response->error->error_msg);
+        }
+
+        curl_close($ch);
+
+        return $response;
     }
 
     public static function getEmbeddedSignatureRequest()
@@ -62,24 +92,7 @@ class SignatureController extends Controller
 
         $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
 
-        $apiKey = getenv('HELLOSIGN_API_KEY');
-
-        curl_setopt($ch, CURLOPT_USERNAME, $apiKey);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-
-        if (curl_errno($ch)) {
-            throw new \Exception(curl_error($ch));
-        }
-
-        $response = json_decode(curl_exec($ch), true);
-
-        if (array_key_exists('error', $response)) {
-            throw new \Exception($response->error->error_msg);
-        }
-
-        curl_close($ch);
+        $response = $this->curlRequest($ch);
 
         return $response;
     }
