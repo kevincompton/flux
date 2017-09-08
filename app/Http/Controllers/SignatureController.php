@@ -61,7 +61,7 @@ class SignatureController extends Controller
             ]
         ];
 
-        if ($env != 'prod') {
+        if (getenv('HELLOSIGN_TEST_MODE') == 1) {
             $data['test_mode'] = 1;
         }
 
