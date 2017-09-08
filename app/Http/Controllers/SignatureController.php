@@ -58,13 +58,7 @@ class SignatureController extends Controller
                     'email_address' => 'test@testers.com',
                     'name' => 'Tess Testers'
                 ]
-            ],
-            'custom_fields' => json_encode([
-                [
-                    'name' => 'field_label',
-                    'value' => $value
-                ],
-            ])
+            ]
         ];
 
         if ($env != 'prod') {
