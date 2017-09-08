@@ -47,17 +47,16 @@ class SignatureController extends Controller
     public static function getEmbeddedSignatureRequest()
     {
       $user = Auth::user();
-        $env = getenv('ENV');
 
         $data = [
-            'client_id' => self::HELLOSIGN_CLIENT_KEY,
-            'template_id' => self::HELLOSIGN_TEMPLATE_ID,
+            'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
+            'template_id' => getenv('HELLOSIGN_TEMPLATE_ID'),
             'subject' => 'Subject',
             'message' => '',
             'signers' => [
                 'Client' => [
-                    'email_address' => $user->email,
-                    'name' => $user->name
+                    'email_address' => 'test@testers.com',
+                    'name' => 'Tess Testers'
                 ]
             ],
             'custom_fields' => json_encode([
@@ -74,7 +73,7 @@ class SignatureController extends Controller
 
         $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
 
-        $apiKey = self::HELLOSIGN_API_KEY;
+        $apiKey = getenv('HELLOSIGN_API_KEY');
 
         curl_setopt($ch, CURLOPT_USERNAME, $apiKey);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
