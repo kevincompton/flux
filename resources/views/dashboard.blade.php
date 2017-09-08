@@ -21,8 +21,6 @@
         <br>
         you mentioned earlier that you had approximately {{ $budget->debt }} in debt that needed resolution...</p>
 
-        creditor forms here<br>
-
         @if(count($creditors) > 0)
           <h3>Your Creditors</h3>
 
