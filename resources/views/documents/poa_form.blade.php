@@ -5,14 +5,14 @@
 @endsection
 
 @section('footer')
- <script type="text/javascript" src="https://s3.amazonaws.com/cdn.hellofax.com/js/embedded.js"></script>
+ <script type="text/javascript" src="https://s3.amazonaws.com/cdn.hellosign.com/public/js/hellosign-embedded.LATEST.min.js"></script>
  <script type="text/javascript">
    HelloSign.init("{{ getenv('HELLOSIGN_CLIENT_KEY') }}");
    HelloSign.open({
      // Set the sign_url passed from the controller.
      url: "{{ $sign_url }}",
      allowCancel: false,
-     redirectUrl: '/api/hellosign-callback',
+     redirectUrl: '/',
      skipDomainVerification: false,
      height: 800,
      // Set the debug mode based on the test mode toggle.
