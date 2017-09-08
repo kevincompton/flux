@@ -447,6 +447,10 @@ header .concierge {
   letter-spacing: 0.5px;
 }
 
+.dash_wrap h3 {
+  margin-top: 45px;
+}
+
 section.onboard_signup {
   margin-top: 120px;
   text-align: center;
