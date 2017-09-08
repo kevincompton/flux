@@ -447,7 +447,8 @@ header .concierge {
   letter-spacing: 0.5px;
 }
 
-.dash_wrap h3 {
+.dash_wrap h3,
+.dash_wrap h2 {
   margin-top: 45px;
 }
 
