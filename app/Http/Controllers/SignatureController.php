@@ -34,7 +34,7 @@ class SignatureController extends Controller
       return View::make('documents.poa')->with('sign_url', $sign_url);
     }
 
-    public static function getEmbeddedSignUrl($signature_id)
+    private function getEmbeddedSignUrl($signature_id)
     {
 
       $ch = curl_init('https://api.hellosign.com/v3/embedded/sign_url/' . $signature_id);
@@ -45,7 +45,7 @@ class SignatureController extends Controller
 
     }
 
-    private static function curlRequest($ch)
+    private function curlRequest($ch)
     {
       $apiKey = getenv('HELLOSIGN_API_KEY');
 
@@ -69,7 +69,7 @@ class SignatureController extends Controller
         return $response;
     }
 
-    public static function getEmbeddedSignatureRequest()
+    private function getEmbeddedSignatureRequest()
     {
       $user = Auth::user();
 
