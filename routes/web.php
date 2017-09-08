@@ -12,7 +12,7 @@
 */
 
 
-Route::get('/poa', 'SignatureController@getEmbeddedSignatureRequest');
+Route::get('/poa', 'SignatureController@sign');
 
 Route::get('/', function () {
     return view('welcome');
