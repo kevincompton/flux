@@ -23,22 +23,29 @@
 
         creditor forms here<br>
 
-        <ul>
-            @foreach($creditors as $creditor)
-                <li>{{ $creditor->name }}</li>
-            @endforeach
-        </ul>
+        @if(count($creditors) > 0)
+          <h3>Your Creditors</h3>
 
-        <h3>Add A Creditor</h3>
+          <table>
+              @foreach($creditors as $creditor)
+                  <tr><td>{{ $creditor->name }}</td></tr>
+              @endforeach
+          </table>
+        @endif
 
-        <form role="form" method="POST" action="/creditor/new">
-            {{ csrf_field() }}
-            <input name="name" type="text" placeholder="Creditor Name">
-            <input name="account" type="text" placeholder="Account #">
-            <input name="phone" type="text" placeholder="Creditor Phone">
+        <fieldset>
+          <h3>Add A Creditor</h3>
 
-            <button type="submit">Add Creditor</button>
-        </form>
+          <form role="form" method="POST" action="/creditor/new">
+              {{ csrf_field() }}
+              <input name="name" type="text" placeholder="Creditor Name">
+              <input name="account" type="text" placeholder="Account #">
+              <input name="phone" type="text" placeholder="Creditor Phone">
+
+              <button type="submit">Add Creditor</button>
+          </form>
+        </fieldset>
+
       </section>
     @endif
 
