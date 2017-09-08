@@ -52,7 +52,9 @@ class SignatureController extends Controller
         curl_setopt($ch, CURLOPT_USERNAME, $apiKey);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        if($data != null) {
+          curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        }
 
         if (curl_errno($ch)) {
             throw new \Exception(curl_error($ch));
