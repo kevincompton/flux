@@ -60,6 +60,31 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Phone</label>
+                            <input name="phone" type="text" placeholder="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Address</label>
+                            <input name="address" type="text" placeholder="address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">City</label>
+                            <input name="city" type="text" placeholder="city">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">State</label>
+                            <input name="state" type="text" placeholder="state">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm" class="col-md-4 control-label">Zip</label>
+                            <input name="zip" type="text" placeholder="zip">
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register

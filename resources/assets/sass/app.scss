@@ -125,12 +125,13 @@ section.onboard_signup {
 
   button {
     background-color: #4267b2;
+    margin-top: 60px;
     &:hover {
       color:white;
     }
   }
 
-  p {
+  p.cta {
     border-top: 1px solid rgba(275,275,275,0.05);
     padding-top: 45px;
     margin-top: 60px;

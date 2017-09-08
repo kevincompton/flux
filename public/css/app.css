@@ -458,6 +458,7 @@ section.onboard_signup span.or {
 section.onboard_signup button,
 section.onboard_signup a.btn {
   background-color: #4267b2;
+  margin-top: 60px;
 }
 
 section.onboard_signup button:hover,
@@ -465,7 +466,7 @@ section.onboard_signup a.btn:hover {
   color: white;
 }
 
-section.onboard_signup p {
+section.onboard_signup p.cta {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 45px;
   margin-top: 60px;
