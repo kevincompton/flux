@@ -12,7 +12,7 @@
      // Set the sign_url passed from the controller.
      url: "{{ $sign_url }}",
      allowCancel: false,
-     redirectUrl: '{{ route('sign-agreement') }}',
+     redirectUrl: '/api/hellosign-callback',
      skipDomainVerification: false,
      height: 800,
      // Set the debug mode based on the test mode toggle.
