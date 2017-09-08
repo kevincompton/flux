@@ -29,7 +29,7 @@ class SignatureController extends Controller
 
       $sign_url = $response["embedded"]["sign_url"];
 
-      return View::make('documents.poa_form')->with('sign_url', $sign_url);
+      return view('documents.poa_form')->with('sign_url', $sign_url);
     }
 
     private function getEmbeddedSignUrl($signature_id)
