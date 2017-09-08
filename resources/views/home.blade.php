@@ -92,12 +92,12 @@
 
                 <form role="form" method="POST" action="/plan/plus">
                     {{ csrf_field() }}
-                    <button type="submit">Flux Plus</buttom> 
+                    <button type="submit">Flux Plus</button> 
                 </form>
 
                 <form role="form" method="POST" action="/plan/prime">
                     {{ csrf_field() }}
-                    <button type="submit">Flux Prime</buttom> 
+                    <button type="submit">Flux Prime</button> 
                 </form>
                 
                 <br>
