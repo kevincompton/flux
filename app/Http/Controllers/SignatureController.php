@@ -71,7 +71,7 @@ class SignatureController extends Controller
             throw new \Exception(curl_error($ch));
         }
 
-        $response = json_decode(curl_exec($ch));
+        $response = json_decode(curl_exec($ch), true);
 
         if (array_key_exists('error', $response)) {
             throw new \Exception($response->error->error_msg);
