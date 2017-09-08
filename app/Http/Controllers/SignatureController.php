@@ -20,7 +20,7 @@ class SignatureController extends Controller
 
       $response = $this->getEmbeddedSignatureRequest();
 
-      //return var_dump($response);
+      return var_dump($response);
 
       $signature_request_id = $response["signature_request"]["signature_request_id"];
 
