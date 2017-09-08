@@ -41,7 +41,7 @@
                         </form>
                     @else
                         <a href="{{ route('login') }}">Already have an account?</a>
-                        <a class="btn" href="{{ route('register') }}">Start Today</a>
+                        <a class="btn" href="/signup">Start Today</a>
                     @endif
                     <div class="concierge"><i class="fa fa-phone" aria-hidden="true"></i> 866.FLUX.218</div>
                 </div>
@@ -55,6 +55,6 @@
         <script src="{{ asset('js/app.js') }}"></script>
 
         @yield('footer')
-        
+
     </body>
 </html>
