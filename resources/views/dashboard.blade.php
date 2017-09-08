@@ -1,7 +1,7 @@
 @extends('layouts.client')
 
 @section('content')
-
+  <div class="wrapper page_wrap">
     <h1>Welcome, {{ $user->name }}!</h1>
 
     @if($budget->income)
@@ -42,6 +42,5 @@
       </section>
     @endif
 
-
-
+  </div>
 @endsection
