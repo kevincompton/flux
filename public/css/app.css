@@ -630,6 +630,11 @@ ul.features p {
   line-height: 1.4;
 }
 
+#hs-container {
+  width: 900px;
+  margin: 60px auto;
+}
+
 .min {
   padding-top: 5px;
   padding-left: 10px;
