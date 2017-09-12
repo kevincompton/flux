@@ -28,6 +28,10 @@ class HomeController extends Controller
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
 
+        if($user->dob) {
+            return redirect('/dashboard');
+        }
+
         if($budget) {
             $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
             $budget->afford = ($budget->income - $budget->expenses) * 0.6;

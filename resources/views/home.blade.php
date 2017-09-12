@@ -48,8 +48,16 @@
             deductions (Your Net Income). This information will remain confidential and only used internally to help customize
             the best solution for you.</p>
 
-                    scrollbar graphic here
-                    <input type="number" name="income">
+                <div id="income_range">
+                    <input name="income" id="income" type="range" value="2500" step="25" min="100" max="126000">
+
+                    <div class="range income">
+                      <small class="min pull-left">Min</small>
+                      <small class="max pull-right">Max</small>
+                    </div>
+
+                    <p id="helper" class="slideRight text-center income"><small>Slide to get started &#x2192</small></p>
+                </div>
 
                     <h2>Expenses</h2>
 
@@ -59,8 +67,16 @@
         determine what your approximate total balance due is. Please only include those accounts that are closed or you intend
         to close. Due not include the balances due on your current vehicles or rent/mortgage.</p>
 
-                    scrollbar graphic here
-                    <input type="number" name="debt">
+                <div id="debt_range">
+                    <input name="debt" id="debt" type="range" value="2500" step="25" min="1000" max="126000">
+
+                    <div class="range debt">
+                      <small class="min pull-left">Min</small>
+                      <small class="max pull-right">Max</small>
+                    </div>
+
+                    <p id="helper" class="slideRight text-center debt"><small>Slide to get started &#x2192</small></p>
+                </div>
 
                     <h3>Fixed Monthly Expenses</h3>
                     <p>Please complete the section below to estimate what your fixed monthly expenses are. You should not include any payment
