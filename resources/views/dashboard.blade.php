@@ -4,7 +4,7 @@
   <div class="wrapper page_wrap dash_wrap">
     <h1>Welcome, {{ $user->name }}!</h1>
 
-    @if($budget->income)
+    @if(isset($budget->income))
       <div class="stats">
         <ul>
           <li>${{ $budget->income }}<span>Income</span></li>
