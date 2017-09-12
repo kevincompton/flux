@@ -14,7 +14,7 @@
       </div>
     @endif
 
-    @if($budget->debt)
+    @if(isset($budget->debt))
       <section class="form_creditors">
         <h2>Creditor Information</h2>
         <p>{{ $user->name }},<br> 
