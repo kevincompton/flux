@@ -6,9 +6,9 @@
     <div class="wrapper">
       <h1>#1 Bankruptcy Alternative in America</h1>
 
-      <h3>Eliminate Debts & Perfect Your Credit</h3>
+      <h3 class="heading">Eliminate Debts & Perfect Your Credit</h3>
 
-      <p>Our team formed FLUX to leverage decades of finance, business & technology experience to help our clients keep over $50 Million in their pockets.</p>
+      <p class="tagline">Our team formed FLUX to leverage decades of finance, business & technology experience to help our clients keep over $50 Million in their pockets.</p>
 
       <ul class="features">
         <li>

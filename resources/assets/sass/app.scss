@@ -11,19 +11,67 @@ body {
 
 a {
   color: #00d2c1;
+  transition: all 0.4s ease 0s;
   &:hover {
     color: white;
   }
 }
 
-button:hover {
-  background-color: white;
-  color: #00d2c1;
+button {
+  background: rgba(0, 210, 193, .8);
+  color: white;
+  padding-left: 45px;
+  padding-right: 45px;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+  line-height: 30px;
+  &:hover {
+    background: rgba(0, 210, 193, 1);
+  }
 }
 
-button {
-  background: #00d2c1;
-  color: white;
+input[type="text"], input[type="email"], input[type="password"] {
+  line-height: 30px;
+  border-radius: 5px;
+}
+
+form {
+  @include span-columns(11);
+  @include shift(1);
+  &.small {
+    @include span-columns(8);
+    @include shift(2);
+    .actions {
+      @include span-columns(12);
+    }
+  }
+}
+
+form .actions {
+  @include span-columns(10);
+  text-align: right;
+  button {
+    margin-left: 25px;
+  }
+}
+
+label {
+  font-weight: 100;
+  letter-spacing: 1.5px;
+}
+
+.form-group {
+  @include span-columns(5);
+  margin-bottom: 12px;
+  &.small {
+    @include span-columns(2);
+  }
+}
+
+.help-block {
+  display: block;
+  color: red;
+  margin-bottom: 15px;
 }
 
 a.btn {
@@ -35,6 +83,10 @@ h1 {
   color: #00d2c1;
 }
 
+h2 {
+  font-size: 1.8rem;
+}
+
 h2.section-heading {
   clear: both;
   margin-top: 45px;
@@ -43,7 +95,7 @@ h2.section-heading {
 p {
   font-weight: 100;
   line-height: 1.8;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 h2, h3 {
@@ -68,17 +120,30 @@ div.wrapper {
 // Header
 
 header {
+  @include clearfix();
   a:hover {
     color: white;
   }
   nav.main-nav {
     line-height: 40px;
-    margin-top: 17px;
     position: relative;
     z-index: 222;
     width: 40%;
+    li {
+      display: inline-block;
+      
+    }
     a {
-      font-weight: bold;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      padding: 0 15px;
+      border-top: 3px solid transparent;
+      line-height: 67px;
+      display: block;
+      transition: all 0.4s ease 0s;
+      &:hover {
+        border-top: 3px solid white;
+      }
     }
   }
   div.top-right {
@@ -91,6 +156,9 @@ header {
       font-size: 12px;
       display: inline-block;
       margin-right: 15px;
+      padding-left: 25px;
+      padding-right: 25px;
+      line-height: 20px;
     }
   }
   span.logo {
@@ -100,7 +168,7 @@ header {
     left: 0;
     right: 0;
     img {
-      width: 200px;
+      width: 250px;
     }
   }
   .concierge {
@@ -291,11 +359,22 @@ section.home_hero {
   background: url(/images/bg.jpg);
   background-size: cover;
   padding-top: 220px;
-  margin-top: -60px;
+  margin-top: -111px;
   padding-bottom: 120px;
   color: white;
   text-align: center;
-  border-top: 8px solid #00d2c1;
+  border-top: 3px solid #00d2c1;
+  h3.heading {
+    font-size: 24px;
+    margin-top: 25px;
+    color: #00d2c1;
+  }
+  p.tagline {
+    font-size: 18px;
+    width: 55%;
+    margin: auto;
+    margin-top: 30px;
+  }
 }
 
 // Home features 
@@ -332,6 +411,26 @@ ul.features {
   }
 }
 
+// Plan selection
+.form_plan {
+  @include span-columns(8);
+  @include shift(2);
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 45px;
+  }
+  .section-actions {
+    @include clearfix();
+    form {
+      @include span-columns(2);
+      @include shift(2);
+      padding: 45px 0;
+    }
+  }
+}
+
 // Document signing
 
 #hs-container {
@@ -339,8 +438,132 @@ ul.features {
   margin: 60px auto;
 }
 
+// Footer
+footer.main-footer {
+  clear:both;
+  padding-top: 80px;
+  .site-info {
+      margin-top: 30px;
+  }
+  .disclaimer p {
+      @include span-columns(8);
+      @include shift(2);
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: 200;
+      color: rgba(275,275,275,0.5);
+      margin-top: 2em;
+      line-height: 1.5;
+      text-align: center;
+  }
+  .copyright {
+      @include span-columns(12);
+      font-size: 11px;
+      text-decoration: none;
+      padding: 45px 0;
+      color: rgba(275,275,275,0.5);
+  }
+  a.copyright:hover {
+      text-decoration: none;
+  }
+  .sep {
+      margin-left: 5px;
+      padding-left: 5px;
+      text-decoration: none;
+  }
+  span.sep:hover {
+      text-decoration: none;
+      color: rgba(0, 210, 193, 1);
+  }
+  .social {
+      margin-bottom: 45px;
+      color: rgba(0, 210, 193, 1);
+  }
+  .social a {
+    margin: 0 12px;
+      color: rgba(275,275,275,0.5);
+      transition: all 0.4s ease 0s;
+  }
+  .social a:hover {
+      color: rgba(0, 210, 193, 1);
+  }
+  .ssl p {
+      margin-bottom: 0;
+  }
+  .ssl img {}
+
+      padding: 2em 1em;
+      text-align: center;
+      color: #fff;
+
+   h5 {
+      color: #fff;
+      font-size: 1.6em;
+  }
+   img {
+      max-width: 200px;
+      margin-top: -20px;
+      float: none;
+  }
+  .footer-nav p {
+      margin-bottom: 0;
+      font-size: 1.2em;
+      font-weight: 100;
+      letter-spacing: 0.5px;
+      font-style: italic;
+  }
+  .nav-col {
+      display: inline-block;
+  }
+  .footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+  @media screen and (min-width:992px) {
+      .footer-nav ul {
+          margin: 55px 0 0 0;
+      }
+  }
+  .footer-nav ul li {
+      text-align: center;
+  }
+  @media screen and (min-width:992px) {
+      .footer-nav ul li {
+          text-align: left;
+      }
+  }
+  .footer-nav ul li a {
+      font-size: 1.4em;
+      transition: all 0.4s ease 0s;
+      font-weight: 100;
+  }
+  @media screen and (min-width:992px) {
+      .footer-nav ul li a {
+          font-size: .9em;
+      }
+  }
+  @media screen and (min-width:1100px) {
+      .footer-nav ul li a {
+          font-size: 1.1em;
+      }
+  }
+  .footer-nav ul li a:hover {
+      text-decoration: none;
+  }
+  .footer-branding a {
+      margin: 10px 0;
+      font-size: 1.2em;
+  }
+}
 
 // Range Slider
+#income_range, #debt_range {
+  @include span-columns(8);
+  @include shift(2);
+  padding: 60px 0;
+}
+
 $lighter-blue: #abe0ed;
 $light-blue: #46b7d5;
 $blue: #0085b2;
@@ -348,12 +571,12 @@ $orange: #FD8521;
 $lightgray: #cccccc;
 
 .min {
-  padding-top: 5px;
+  padding-top: 12px;
   padding-left: 10px;
   color: $lightgray;
 }
 .max {
-  padding-top: 5px;
+  padding-top: 8px;
   padding-right: 10px;
   color: $lightgray;
 }
