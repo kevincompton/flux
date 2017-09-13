@@ -73,6 +73,14 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
 
+      // name b9478a_9
+      // ssn b9478a_10
+      // dob b9478a_11
+      // address b9478a_12
+      // city b9478a_13
+      // state b9478a_14
+      // zip b9478a_15
+
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
             'template_id' => getenv('HELLOSIGN_TEMPLATE_ID'),
@@ -83,7 +91,40 @@ class SignatureController extends Controller
                     'email_address' => $user->email,
                     'name' => $user->name
                 ]
-            ]
+            ],
+            'custom_fields' => json_encode([
+              [
+                  [
+                    'name' => 'customer',
+                    'value' => $user->name
+                  ],
+                  [
+                    'name' => 'ssn',
+                    'value' => $user->ssn
+                  ],
+                  [
+                    'name' => 'dob',
+                    'value' => $user->dob
+                  ],
+                  [
+                    'name' => 'address',
+                    'value' => $user->address
+                  ],
+                  [
+                    'name' => 'city',
+                    'value' => $user->city
+                  ],
+                  [
+                    'name' => 'state',
+                    'value' => $user->state
+                  ],
+                  [
+                    'name' => 'zip',
+                    'value' => $user->zip
+                  ]
+
+              ],
+            ])
         ];
 
         if (getenv('HELLOSIGN_TEST_MODE') == 1) {
