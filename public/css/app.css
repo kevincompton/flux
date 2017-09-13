@@ -593,7 +593,7 @@ header .concierge {
 }
 
 .body__onboard {
-  background: url(/images/bg.jpg);
+  background: #101010 url(/images/bg.jpg);
   background-size: cover;
 }
 
