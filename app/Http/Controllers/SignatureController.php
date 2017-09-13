@@ -96,36 +96,33 @@ class SignatureController extends Controller
             ],
             'custom_fields' => json_encode([
               [
-                  [
-                    'name' => 'customer',
-                    'value' => $user->name
-                  ],
-                  [
-                    'name' => 'ssn',
-                    'value' => $user->ssn
-                  ],
-                  [
-                    'name' => 'dob',
-                    'value' => $user->dob
-                  ],
-                  [
-                    'name' => 'address',
-                    'value' => $user->address
-                  ],
-                  [
-                    'name' => 'city',
-                    'value' => $user->city
-                  ],
-                  [
-                    'name' => 'state',
-                    'value' => $user->state
-                  ],
-                  [
-                    'name' => 'zip',
-                    'value' => $user->zip
-                  ]
-
+                'name' => 'customer',
+                'value' => $user->name
               ],
+              [
+                'name' => 'ssn',
+                'value' => $user->ssn
+              ],
+              [
+                'name' => 'dob',
+                'value' => $user->dob
+              ],
+              [
+                'name' => 'address',
+                'value' => $user->address
+              ],
+              [
+                'name' => 'city',
+                'value' => $user->city
+              ],
+              [
+                'name' => 'state',
+                'value' => $user->state
+              ],
+              [
+                'name' => 'zip',
+                'value' => $user->zip
+              ]
             ])
         ];
 
