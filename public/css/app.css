@@ -574,12 +574,22 @@ header .concierge {
   letter-spacing: 0.5px;
 }
 
-.dash_wrap h3 {
-  margin-top: 45px;
+.dash_wrap section {
+  float: left;
+  display: block;
+  margin-right: 2.35765202%;
+  width: 40.29136965%;
+  padding: 30px;
+  background: white;
+  color: black;
 }
 
-.dash_wrap h2 {
-  margin-top: 65px;
+.dash_wrap section:last-child {
+  margin-right: 0;
+}
+
+.dash_wrap section form {
+  margin-left: 0;
 }
 
 section.onboard_signup {

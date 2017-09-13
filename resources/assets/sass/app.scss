@@ -183,11 +183,14 @@ header {
 
 // Dashboard
 .dash_wrap {
-  h3 {
-    margin-top: 45px;
-  }
-  h2 {
-    margin-top: 65px;
+  section {
+    @include span-columns(5);
+    padding: 30px;
+    background: white;
+    color: black;
+    form {
+      margin-left: 0;
+    }
   }
 }
 

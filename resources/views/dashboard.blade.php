@@ -2,21 +2,22 @@
 
 @section('content')
   <div class="wrapper page_wrap dash_wrap">
-    <h1>Welcome, {{ $user->name }}!</h1>
+    <h2>Welcome, {{ $user->name }}!</h2>
 
     @if(isset($budget->income))
-      <div class="stats">
+      <section class="stats">
+        <h3>Your Budget</h3>
         <ul>
           <li>${{ $budget->income }}<span>Income</span></li>
           <li>${{ $budget->debt }}<span>Debt</span></li>
           <li>${{ $budget->afford }}<span>Payment</span></li>
         </ul>
-      </div>
+      </section>
     @endif
 
     @if(isset($budget->debt))
       <section class="form_creditors">
-        <h2>Creditor Information</h2>
+        <h3>Creditor Information</h3>
         <p>{{ $user->name }},<br> 
         <br>
         you mentioned earlier that you had approximately {{ $budget->debt }} in debt that needed resolution...</p>
