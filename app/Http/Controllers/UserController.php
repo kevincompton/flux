@@ -31,7 +31,7 @@ class UserController extends Controller
       $user->dob = $request->dob;
       $user->save();
 
-      return redirect('poa-placeholder');
+      return redirect('/poa');
 
     }
 
