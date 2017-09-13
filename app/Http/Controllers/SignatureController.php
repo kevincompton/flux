@@ -18,6 +18,8 @@ class SignatureController extends Controller
     {
       $response = $this->getEmbeddedSignatureRequest();
 
+      return var_dump($response);
+
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
 
@@ -70,14 +72,6 @@ class SignatureController extends Controller
     private function getEmbeddedSignatureRequest()
     {
       $user = Auth::user();
-
-      // name b9478a_9
-      // ssn b9478a_10
-      // dob b9478a_11
-      // address b9478a_12
-      // city b9478a_13
-      // state b9478a_14
-      // zip b9478a_15
 
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
