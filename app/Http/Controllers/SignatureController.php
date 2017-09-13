@@ -96,7 +96,7 @@ class SignatureController extends Controller
             ],
             'custom_fields' => json_encode([
               [
-                'name' => 'customer',
+                'name' => 'customer_name',
                 'value' => $user->name
               ],
               [
