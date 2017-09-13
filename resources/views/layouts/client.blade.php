@@ -17,7 +17,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body>
+    <body class="@yield('body_class')">
         <div class="wrapper">
             <header>
                 <nav class="main-nav">

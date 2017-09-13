@@ -1,3 +1,5 @@
+@section('body_class', 'body__onboard')
+
 @extends('layouts.client')
 
 @section('content')
