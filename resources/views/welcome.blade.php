@@ -37,7 +37,7 @@
         <li>
       </ul>
 
-      <a class="btn" href="/signup">Start Today</a>
+      <a class="btn" href="/register">Start Today</a>
     </div>
   </section>
 
