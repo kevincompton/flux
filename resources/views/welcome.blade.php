@@ -17,24 +17,20 @@
           <p>Our 24 hour concierge helps reinvent your financial future</p>
         </li>
         <li>
-        <li>
           <i class="fa fa-lock" aria-hidden="true"></i>
           <h3><a href="#">Security</a></h3>
           <p>We never run your credit or require personal banking information</p>
         </li>
-        <li>
         <li>
           <i class="fa fa-thumbs-up" aria-hidden="true"></i>
           <h3><a href="#">Save Money</a></h3>
           <p>We will always offer the lowest market rates</p>
         </li>
         <li>
-        <li>
           <i class="fa fa-usd" aria-hidden="true"></i>
           <h3><a href="#">FLux Credit</a></h3>
           <p>Earn cash back on every settlement!</p>
         </li>
-        <li>
       </ul>
 
       <a class="btn" href="/register">Start Today</a>

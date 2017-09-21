@@ -384,6 +384,16 @@ hr {
   margin-bottom: 20px;
 }
 
+p.callout {
+  text-align: center;
+  color: #00d2c1;
+  line-height: 34px;
+}
+
+p.callout i {
+  font-size: 34px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -434,6 +444,15 @@ form p {
 
 form h1 {
   font-weight: 100;
+}
+
+form ul.features {
+  margin-top: 0;
+}
+
+form ul.features p {
+  padding-right: 0;
+  margin-right: 0;
 }
 
 form .actions {
