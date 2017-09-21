@@ -66,7 +66,7 @@
           </ul>
         </div>
         <div class="pricingTable-sign-up last-child">
-          <span class="price-value col-xs-12 np-lr">Up to $1500/Credit Line</span>
+          <span class="price-value col-xs-12 np-lr" style="margin-top: 15px;">Up to $1500/Credit Line</span>
           <p><small>*Subject to Bank of Louisiana approval</small></p>
           <a href="/flux-cash/" class="enroll-btn col-xs-12">LEARN MORE</a>
         </div>
