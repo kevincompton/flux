@@ -20,7 +20,7 @@
           </ul>
         </div>
         <div class="pricingTable-sign-up">
-          <span class="price-value col-xs-12 np-lr">$15<span class="month">/Monthly*</span></span>
+          <span class="price-value col-xs-12 np-lr">$9<span class="month">/Monthly*</span></span>
 
           <p class="col-xs-12 np-lr"><small>*Subject to flux approval</small></p>
           <a href="/flux-prime/" class="enroll-btn col-xs-12">LEARN MORE</a>
@@ -44,7 +44,7 @@
           </ul>
         </div>
         <div class="pricingTable-sign-up">
-          <span class="price-value col-xs-12 np-lr">$39<span class="month">/Monthly*</span></span>
+          <span class="price-value col-xs-12 np-lr">$49<span class="month">/Monthly*</span></span>
           <p><small>*Subject to flux approval</small></p>
           <a href="/flux-plus/" class="enroll-btn col-xs-12">LEARN MORE</a>
         </div>
