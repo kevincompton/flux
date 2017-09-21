@@ -18,6 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', 'UserController@contact');
+Route::get('/contact/send', 'UserController@sendMessage');
+
 Route::get('/signup', 'OnboardController@onboard');
 Route::get('/poa-placeholder', 'HomeController@poaPlaceholder');
 Route::get('/payment', 'HomeController@payment');

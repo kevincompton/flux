@@ -35,4 +35,20 @@ class UserController extends Controller
 
     }
 
+    public function contact()
+    {
+      $user = Auth::user();
+
+      $data = [
+        "user" => $user
+      ];
+
+      return view('contact')->with($data);
+    }
+
+    public function sendMessage(Request $request)
+    {
+      return "I need to add email sending still";
+    }
+
 }

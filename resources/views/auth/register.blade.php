@@ -10,9 +10,9 @@
                     <form method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <h1>Refine the Past – Reinvent Your Future</h1>
+                        <h1>Your Fresh Start To Financial Freedom Begins Today!</h1>
 
-                        <p>Your Fresh Start To Financial Freedom begins here! Please complete the form below to enroll in our program. Clients who successfully complete the Flux Credit program will become debt free, be awarded a Flux Visa Secured Credit Card with a limit of up to $1,500 and walk away with a savings account of up to $1,875!</p> 
+                        <p>Please complete the following information to enroll in our program. Clients who successfully complete the Flux Credit program will become debt free, be awarded a Flux Visa Secured Credit Card with a limit of up to $1,500 and walk away with a savings account of up to $1,875!</p> 
 
                         <ul class="features">
                             <li>

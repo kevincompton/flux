@@ -42,14 +42,13 @@
             <section class="form_budgeting">
                 <form role="form" class="small" method="POST" action="/budget/new">
                     {{ csrf_field() }}
+                    <h1>Refine The Past - Reinvent Your Future!</h1>
 
                     <h2>Net Monthly Income</h2>
-                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and
-            deductions (Your Net Income). This information will remain confidential and only used internally to help customize
-            the best solution for you.</p>
+                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and deductions (Your Net Income). This information will remain confidential and is only used internally to help tailor the perfect solution for you.</p>
 
                     <div id="income_range">
-                        <input name="income" id="income" type="range" value="2500" step="25" min="100" max="126000">
+                        <input name="income" id="income" type="range" value="2500" step="25" min="1000" max="20000">
 
                         <div class="range income">
                           <small class="min pull-left">Min</small>
@@ -62,13 +61,10 @@
                     <h2>Expenses</h2>
 
                     <h3>Balance Reductions</h3>
-                    <p>If you have any credit cards that are maxed out, personal loans, repossessions, evictions, medical bills or any other credit
-        account that you are behind on or struggling with, the Flux Credit balance reduction program may be right for you. Please
-        determine what your approximate total balance due is. Please only include those accounts that are closed or you intend
-        to close. Due not include the balances due on your current vehicles or rent/mortgage.</p>
+                    <p>If you have any credit cards that are maxed out, personal loans, repossessions, evictions, medical bills, or any other credit account that you are behind on or struggling with, the Flux Credit balance reduction program may be right for you. Please determine what your approximate total balance due is. Please only include those accounts that are closed or you intend to close. Do not include the balances due on your current vehicles or rent/mortgage.</p>
 
                     <div id="debt_range">
-                        <input name="debt" id="debt" type="range" value="2500" step="25" min="1000" max="126000">
+                        <input name="debt" id="debt" type="range" value="2500" step="25" min="0" max="150000">
 
                         <div class="range debt">
                           <small class="min pull-left">Min</small>
@@ -80,11 +76,12 @@
 
                     <h3>Fixed Monthly Expenses</h3>
                     <p>Please complete the section below to estimate what your fixed monthly expenses are. You should not include any payment
-        on any balance you included above for reduction.</p>
-
-                    <input type="text" name="mortgage" placeholder="Rent / Mortgage">
-                    <input type="text" name="car" placeholder="Car Payment(s)">
-                    <input type="text" name="other" placeholder="*Other">
+        on any balance you included above for reduction. <br> <span class="italic">*You should include everything else, such as: Insurance (not deducted from your pay check), Utilities, Student Loans, and personal food, clothes, entertainment and childcare expenses.</span></p>
+                    <div class="form-group-large">
+                        <input type="text" name="mortgage" placeholder="Rent / Mortgage">
+                        <input type="text" name="car" placeholder="Car Payment(s)">
+                        <input type="text" name="other" placeholder="*Other">
+                    </div>
 
                     <div class="actions">
                         <button type="submit">Continue</button>

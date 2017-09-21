@@ -355,6 +355,10 @@ a:hover {
   text-align: center;
 }
 
+.italic {
+  font-style: italic;
+}
+
 button,
 a.btn {
   background: rgba(0, 210, 193, 0.8);
@@ -433,6 +437,14 @@ form.small .actions {
 }
 
 form.small .actions:last-child {
+  margin-right: 0;
+}
+
+form.small input {
+  padding-right: 15%;
+}
+
+form.small p {
   margin-right: 0;
 }
 
@@ -547,6 +559,32 @@ div.wrapper {
 
 div.wrapper.page_wrap {
   margin-top: 120px;
+}
+
+section#contact-sticky {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #00d2c1;
+  text-align: right;
+  padding-right: 15px;
+  padding-left: 15px;
+  z-index: 9999;
+}
+
+section#contact-sticky a {
+  color: white;
+}
+
+section#contact-sticky i {
+  font-size: 25px;
+  line-height: 40px;
+  margin: 0 8px;
+}
+
+section#contact-sticky i.fa-phone {
+  font-size: 18px;
+  margin-right: 0;
 }
 
 header::after {

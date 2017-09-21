@@ -46,7 +46,7 @@
                         <a href="{{ route('login') }}">Already have an account?</a>
                         <a class="btn" href="/register">Start Today</a>
                     @endif
-                    <div class="concierge"><i class="fa fa-phone" aria-hidden="true"></i> 866.FLUX.218</div>
+                    <div class="concierge"><a href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i> 866.FLUX.218</a></div>
                 </div>
             </header>
         </div>
@@ -75,6 +75,8 @@
                 <span class="copyright" href="/">© 2017 FLUX CREDIT<span class="sep"> ALL RIGHTS RESERVED </span></span>
             </div>
         </footer>
+
+        @include('partials._contact-sticky')
 
         <script src="{{ asset('js/app.js') }}"></script>
 
