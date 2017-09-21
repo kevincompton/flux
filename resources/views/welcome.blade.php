@@ -41,4 +41,15 @@
     </div>
   </section>
 
+  @include('partials._products')
+
+@endsection
+
+@section('footer')
+    <script src="{{ asset('js/jquery.matchHeight-min.js') }}"></script>
+    <script>
+    $(document).ready(function() {
+        $('.pricingTable').matchHeight();
+    });
+    </script>
 @endsection
