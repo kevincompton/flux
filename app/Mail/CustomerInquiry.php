@@ -16,9 +16,9 @@ class CustomerInquiry extends Mailable
      *
      * @return void
      */
-    public function __construct(Request $request)
+    public function __construct(Message $message)
     {
-        $this->request = $request;
+        $this->message = $message;
     }
 
     /**
