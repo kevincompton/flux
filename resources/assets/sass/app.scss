@@ -155,6 +155,16 @@ h2, h3 {
   clear:both;
 }
 
+// SSN form
+.form_poa {
+  img {
+    width: 80px;
+    display: block;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+}
+
 // Layout
 
 body {
@@ -443,7 +453,7 @@ section.home_hero {
   background: url(/images/bg.jpg);
   background-size: cover;
   padding-top: 220px;
-  margin-top: -111px;
+  margin-top: -112px;
   padding-bottom: 120px;
   color: white;
   text-align: center;

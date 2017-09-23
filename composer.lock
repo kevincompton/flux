@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "32c9eea57332bdb45eccce2b2a733c7a",
+    "content-hash": "cb2b18a946e9d461056f521562fd3d0e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -848,16 +848,16 @@
         },
         {
             "name": "hellosign/hellosign-php-sdk",
-            "version": "v3.x-dev",
+            "version": "3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/HelloFax/hellosign-php-sdk.git",
-                "reference": "0c0d344b961be17b68a57e79a28fa25e481cc8a4"
+                "reference": "1102ec05125eb18bfafbdf6ddc56c027397918b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/HelloFax/hellosign-php-sdk/zipball/0c0d344b961be17b68a57e79a28fa25e481cc8a4",
-                "reference": "0c0d344b961be17b68a57e79a28fa25e481cc8a4",
+                "url": "https://api.github.com/repos/HelloFax/hellosign-php-sdk/zipball/1102ec05125eb18bfafbdf6ddc56c027397918b1",
+                "reference": "1102ec05125eb18bfafbdf6ddc56c027397918b1",
                 "shasum": ""
             },
             "require": {
@@ -878,12 +878,12 @@
             ],
             "authors": [
                 {
-                    "name": "HelloSign",
+                    "name": "Neal O'Mara",
                     "email": "apisupport@hellosign.com"
                 }
             ],
             "description": "This is the official PHP wrapper for HelloSign's API",
-            "time": "2017-09-06 20:32:41"
+            "time": "2016-10-17T18:09:36+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -4572,9 +4572,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "hellosign/hellosign-php-sdk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

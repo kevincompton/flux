@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', 'UserController@contact');
-Route::get('/contact/send', 'UserController@sendMessage');
+Route::post('/contact/send', 'UserController@sendMessage');
 
 Route::get('/signup', 'OnboardController@onboard');
 Route::get('/poa-placeholder', 'HomeController@poaPlaceholder');

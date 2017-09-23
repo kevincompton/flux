@@ -97,8 +97,13 @@
                 <br>
                 ${{ $budget->afford }}<br>
                 <br>
-                By maintaining this payment for X months, you should become Debt Free! In addition to the Flux
-                Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Acoount of at least $1,00</p>
+                By maintaining this payment for X months, you should become Debt Free!</p> 
+
+                <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Acoount of at least $1,00</p>
+
+                <p>If you can’t afford this payment, Flux Flex is there when you need it. Unlike other companies that automatically draft your account for a specific amount each month, we give you the power to control your financial future.</p>
+
+                <p>With Flux Flex, your estimated payment would be $___ per month.</p>
                 
                 <h2>Start Saving Today!</h2>
                  
@@ -125,12 +130,10 @@
             <section class="form_poa">
                 <form class="small" role="form" method="POST" action="/user/poa/">
                     <h2>Your Future Begins Now!</h2>
-                    <p>By making your initial Flux {{ $user->plan }} payment today, we can immediately start negotiating with your creditors to perfecting your cred....</p>
+                    <p>Please provide us your personal information to generate an official Power Of Attorney, which authorizes Flux Credit to communicate with your creditors. You are agreeing to cease all activity in relation to these accounts, including, but not limited to making purchases, sending in payments and communicating with your creditors.</p>
 
-                    payment total here, **Notation, This is a One-Time Payment Only.<br>
-                    <br>
+                    <img src="/images/trust-bbb.png" />
 
-                
                     {{ csrf_field() }}
                     <input type="number" name="ssn" placeholder="SSN">
                     <input type="number" name="dob" placeholder="DOB">

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Mail;
+use App\Mail\CustomerInquiry;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -48,7 +50,7 @@ class UserController extends Controller
 
     public function sendMessage(Request $request)
     {
-      return "I need to add email sending still";
+      Mail::to('ktcompton@gmail.com')->send(new CustomerInquiry($request));
     }
 
 }
