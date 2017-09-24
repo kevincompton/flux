@@ -24,7 +24,7 @@
                     <ul>
                         <li><a href="/">HOME</a></li>
                         <li><a href="/prime">PRIME</a></li>
-                        <li><a href="/">PLUS</a></li>
+                        <li><a href="/plus">PLUS</a></li>
                     </ul>
                 </nav>
 
