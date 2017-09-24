@@ -46,7 +46,7 @@
         <div class="pricingTable-sign-up">
           <span class="price-value col-xs-12 np-lr">$49<span class="month">/Monthly*</span></span>
           <p><small>*Subject to flux approval</small></p>
-          <a href="/flux-plus/" class="enroll-btn col-xs-12">LEARN MORE</a>
+          <a href="/plus/" class="enroll-btn col-xs-12">LEARN MORE</a>
         </div>
       </div>
       <div class="pricingTable col-xs-10 col-xs-offset-1 col-sm-3 np-lr shadow">
@@ -68,7 +68,7 @@
         <div class="pricingTable-sign-up last-child">
           <span class="price-value col-xs-12 np-lr" style="margin-top: 15px;">Up to $1500/Credit Line</span>
           <p><small>*Subject to Bank of Louisiana approval</small></p>
-          <a href="/flux-cash/" class="enroll-btn col-xs-12">LEARN MORE</a>
+          <a href="/cash/" class="enroll-btn col-xs-12">LEARN MORE</a>
         </div>
       </div>
     </div>
