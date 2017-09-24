@@ -547,6 +547,36 @@ h3 {
   clear: both;
 }
 
+#green_modal {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99999;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+#green_modal iframe {
+  border: 0;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  height: 80%;
+  display: block;
+}
+
+#green_form {
+  display: none;
+}
+
+#green_modal #green_form {
+  display: block;
+}
+
 .form_poa img {
   width: 80px;
   display: block;
