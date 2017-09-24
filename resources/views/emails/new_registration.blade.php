@@ -1,9 +1,9 @@
-Dear {{ $request->name }},
+Dear {{ $request['name'] }},
 
 Welcome to FluxCredit.com! You can login to your Flux dashboard at http://fluxcredit.com/dashboard with:
 
-{{ $request->email }}
-{{ $request->password }}
+{{ $request['email'] }}
+{{ $request['password'] }}
 
 Sincerely,
 
