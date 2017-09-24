@@ -19,7 +19,7 @@ class NewRegistration extends Mailable
      */
     public $request;
 
-    public function __construct(Request $request)
+    public function __construct($request)
     {
         $this->request = $request;
     }
