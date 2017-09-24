@@ -25,6 +25,28 @@ class UserController extends Controller
 
     }
 
+    public function prime()
+    {
+      $user = Auth::user();
+
+      $data = [
+        "user" => $user
+      ];
+
+      return view('prime')->with($data);
+    }
+
+    public function plus()
+    {
+      $user = Auth::user();
+
+      $data = [
+        "user" => $user
+      ];
+
+      return view('plus')->with($data);
+    }
+
     public function poa(Request $request)
     {
 

@@ -23,7 +23,7 @@
                 <nav class="main-nav">
                     <ul>
                         <li><a href="/">HOME</a></li>
-                        <li><a href="/">PRIME</a></li>
+                        <li><a href="/prime">PRIME</a></li>
                         <li><a href="/">PLUS</a></li>
                     </ul>
                 </nav>

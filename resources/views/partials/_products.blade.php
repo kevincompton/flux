@@ -23,7 +23,7 @@
           <span class="price-value col-xs-12 np-lr">$9<span class="month">/Monthly*</span></span>
 
           <p class="col-xs-12 np-lr"><small>*Subject to flux approval</small></p>
-          <a href="/flux-prime/" class="enroll-btn col-xs-12">LEARN MORE</a>
+          <a href="/prime/" class="enroll-btn col-xs-12">LEARN MORE</a>
         </div>
       </div>
       <div class="pricingTable col-xs-10 col-xs-offset-1 col-sm-3 np-lr shadow">

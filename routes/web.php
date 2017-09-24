@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/prime', 'UserController@prime');
+Route::get('/plus', 'UserController@plus');
 Route::get('/contact', 'UserController@contact');
 Route::get('/contact/confirm', 'UserController@confirmMessage');
 Route::post('/contact/send', 'UserController@sendMessage');
