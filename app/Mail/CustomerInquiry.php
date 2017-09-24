@@ -32,6 +32,8 @@ class CustomerInquiry extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.inquiry');
+        return $this->from($request->email)
+                    ->subject('Customer Inquiry')
+                    ->view('emails.inquiry');
     }
 }
