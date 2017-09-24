@@ -51,6 +51,14 @@ class UserController extends Controller
     public function sendMessage(Request $request)
     {
       Mail::to('ktcompton@gmail.com')->send(new CustomerInquiry($request));
+
+      return redirect('/contact/confirm');
+    }
+
+    public function confirmMessage()
+    {
+
+      return view('confirm');
     }
 
 }

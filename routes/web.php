@@ -19,6 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/contact', 'UserController@contact');
+Route::get('/contact/confirm', 'UserController@confirmMessage');
 Route::post('/contact/send', 'UserController@sendMessage');
 
 Route::get('/signup', 'OnboardController@onboard');
