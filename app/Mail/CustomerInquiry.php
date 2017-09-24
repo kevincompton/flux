@@ -32,7 +32,7 @@ class CustomerInquiry extends Mailable
      */
     public function build()
     {
-        return $this->from($request->email)
+        return $this->from($this->request->email)
                     ->subject('Customer Inquiry')
                     ->view('emails.inquiry');
     }
