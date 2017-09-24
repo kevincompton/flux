@@ -30,7 +30,7 @@ class NewRegistration extends Mailable
      */
     public function build()
     {
-        return $this->from($this->request->email)
+        return $this->from($this->request['email'])
                     ->subject('Welcome to FluxCredit.com!')
                     ->view('emails.new_registration');
     }
