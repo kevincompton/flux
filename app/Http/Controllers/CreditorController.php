@@ -26,8 +26,8 @@ class CreditorController extends Controller
 
       if(!empty($files)) {
         foreach ($files as $key => $file) {
-          $name = 'user_' . $user->id . $key;
-          Storage::disk('local')->file($file)->storeAs($name, $user->id);
+          $name = 'user_' . $user->id . 'file_' . $key;
+          Storage::disk('local')->put($name, $file);
         }
         
       }
