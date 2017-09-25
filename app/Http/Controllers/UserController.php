@@ -26,6 +26,29 @@ class UserController extends Controller
 
     }
 
+    public function cosign(Request $request)
+    {
+
+      $user = Auth::user();
+      
+      $cosigner = new \App\CoSigner;
+      $cosigner->user_id = $user->id;
+      $cosigner->name = $request->name;
+      $cosigner->email = $request->email;
+      $cosigner->phone = $request->phone;
+      $cosigner->address = $request->address;
+      $cosigner->city = $request->city;
+      $cosigner->state = $request->state;
+      $cosigner->zip = $request->zip;
+      $cosigner->phone = $request->phone;
+      $cosigner->ssn = $request->ssn;
+      $cosigner->dob = $request->months.$request->days.$request->years;
+      $cosigner->save();
+
+      return back();
+
+    }
+
     public function creditApplication()
     {
       $user = Auth::user();
@@ -68,7 +91,7 @@ class UserController extends Controller
 
       $user = Auth::user();
       $user->ssn = $request->ssn;
-      $user->dob = $request->dob;
+      $user->dob = $request->months.$request->days.$request->years;
       $user->save();
 
       return redirect('/poa');

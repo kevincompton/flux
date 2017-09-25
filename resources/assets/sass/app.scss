@@ -68,6 +68,10 @@ input[type="text"], input[type="email"], input[type="password"] {
   border-radius: 5px;
 }
 
+select.small {
+  display: inline-block;
+}
+
 form {
   @include span-columns(10);
   @include shift(2);
@@ -509,10 +513,11 @@ header {
   h2 {
     font-weight: 100;
     color: #00d2c1;
-    margin-top: 30px;
+    margin-top: 45px;
   }
 
   form {
+    @include clearfix();
     clear: both;
     float: none;
   }

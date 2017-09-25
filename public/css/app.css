@@ -405,6 +405,10 @@ input[type="password"] {
   border-radius: 5px;
 }
 
+select.small {
+  display: inline-block;
+}
+
 form {
   float: left;
   display: block;
@@ -878,12 +882,18 @@ header .concierge {
 .stats h2 {
   font-weight: 100;
   color: #00d2c1;
-  margin-top: 30px;
+  margin-top: 45px;
 }
 
 .stats form {
   clear: both;
   float: none;
+}
+
+.stats form::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .stats ul::after {

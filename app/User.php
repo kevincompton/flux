@@ -37,4 +37,9 @@ class User extends Authenticatable
         return $this->hasMany('App\Creditor');
     }
 
+    public function cosigners()
+    {
+        return $this->hasMany('App\CoSigner');
+    }
+
 }

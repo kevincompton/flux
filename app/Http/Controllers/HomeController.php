@@ -65,6 +65,7 @@ class HomeController extends Controller
         $user = Auth::user();
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
+        $cosigners = $user->cosigners()->get();
 
         if($budget) {
             $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
@@ -78,7 +79,8 @@ class HomeController extends Controller
         $data = [
             "user" => $user,
             "budget" => $budget,
-            "creditors" => $creditors
+            "creditors" => $creditors,
+            "cosigners" => $cosigners,
         ];
 
         return view('dashboard')->with($data);

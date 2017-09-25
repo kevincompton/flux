@@ -135,8 +135,14 @@
                     <img src="/images/trust-bbb.png" />
 
                     {{ csrf_field() }}
+                    <label>Social Secuirty #</label>
                     <input type="number" name="ssn" placeholder="SSN">
-                    <input type="number" name="dob" placeholder="DOB">
+                    
+                    <label>Birth date</label>
+
+                    <select class="dob" name="months" id="months"></select>
+                    <select class="dob" name="days" id="days"></select>
+                    <select class="dob" name="years" id="years"></select>
 
                     <div class="actions">
                         <button type="submit">Continue</button>
