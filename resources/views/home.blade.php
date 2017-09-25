@@ -92,18 +92,17 @@
         @if(!$user->plan && $user->budget)
             <section class="form_plan">
                 <h2>Congratulations {{ $user->name }},</h2>
-                <p>      
-                Based on the information you provided, you should be able to comfortably afford: <br> 
-                <br>
-                ${{ $budget->afford }}<br>
-                <br>
-                By maintaining this payment for X months, you should become Debt Free!</p> 
+                <p>Based on the information you provided, you should be able to comfortably afford:</p>
+                
+                <h2>${{ $budget->afford }}</h2>
+
+                <P>By maintaining this payment for <strong>{{ round(($budget->debt * 0.668) + $budget->afford) }} months</strong>, you should become Debt Free!</p> 
 
                 <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Acoount of at least $1,00</p>
 
                 <p>If you can’t afford this payment, Flux Flex is there when you need it. Unlike other companies that automatically draft your account for a specific amount each month, we give you the power to control your financial future.</p>
 
-                <p>With Flux Flex, your estimated payment would be $___ per month.</p>
+                <p>With Flux Flex, your estimated payment would be ${{ $budget->afford * 0.8 }} per month.</p>
                 
                 <h2>Start Saving Today!</h2>
                  
@@ -123,7 +122,7 @@
                 
                 <br>
                 <p>If you are unsure which program is right for you, please
-                read about the benefits of each. If you have any additional questions, please don't hesitate to <a href="#">contact us</a> 24/7 via Email/Chat/Phone.</p>
+                read about the benefits of each. If you have any additional questions, please don't hesitate to <a href="/contact">contact us 24/7 via Email or Phone.</a></p>
             </section>
         @endif
         @if($user->plan && !$user->ssn)
