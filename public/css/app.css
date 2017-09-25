@@ -755,7 +755,7 @@ header .concierge {
   float: left;
   display: block;
   margin-right: 2.35765202%;
-  width: 40.29136965%;
+  width: 48.82117399%;
   padding: 30px;
   background: white;
   color: black;
@@ -763,6 +763,14 @@ header .concierge {
 
 .dash_wrap section:last-child {
   margin-right: 0;
+}
+
+.dash_wrap section:nth-child(2n) {
+  margin-right: 0;
+}
+
+.dash_wrap section:nth-child(2n+1) {
+  clear: left;
 }
 
 .dash_wrap section form {
@@ -878,8 +886,10 @@ header .concierge {
   float: none;
 }
 
-.stats ul {
-  padding: 0;
+.stats ul::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .stats li {
