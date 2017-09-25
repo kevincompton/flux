@@ -173,7 +173,7 @@
         <fieldset>
           <h3>Add A Creditor</h3>
 
-          <form role="form" method="POST" action="/creditor/new">
+          <form role="form" method="POST" action="/creditor/new" enctype="multipart/form-data">
               {{ csrf_field() }}
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
@@ -183,9 +183,9 @@
               <input type="radio" name="type" value="consolidation"> Consolidation<br>
               <input type="radio" name="type" value="creditor" checked> Creditor
 
-              <label for="file">Upload Files</label>
+              <label for="file">Upload Files (you may choose multiple)</label>
               <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
-              <input type="file" id="file" name="file">
+              <input type="file" id="file" name="file[]" multiple>
 
               <div class="actions">
                 <button type="submit">Add Creditor</button>

@@ -787,6 +787,14 @@ header .concierge {
   clear: left;
 }
 
+.dash_wrap section a {
+  cursor: pointer;
+}
+
+.dash_wrap section a:hover {
+  color: black;
+}
+
 .dash_wrap section form {
   margin-left: 0;
 }

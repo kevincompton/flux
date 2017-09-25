@@ -771,6 +771,11 @@ $.ajaxSetup({
 
 $(function () {
 
+  /*$('.add_file').on('click', function() {
+    var count = $('.files input').length;
+    $('.files').append('<input type="file" id="file' + count + '" name="file' + count + '">');
+  });*/
+
   for (i = new Date().getFullYear(); i > 1900; i--) {
     $('#years').append($('<option />').val(i).html(i));
   }

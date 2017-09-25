@@ -366,6 +366,12 @@ header {
     padding: 30px;
     background: white;
     color: black;
+    a {
+      cursor: pointer;
+    }
+    a:hover {
+      color: black;
+    }
     form {
       margin-left: 0;
     }
