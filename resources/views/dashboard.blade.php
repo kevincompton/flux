@@ -4,11 +4,14 @@
   <div class="wrapper page_wrap dash_wrap">
     <h2>Welcome, {{ $user->name }}!</h2>
 
+    <p>Thanks for taking the first step towards reinventing your financial future!<br> Once we’ve established contact with your creditors, our personal concierge will contact you with a formal customized program to become Debt Free!
+    </p>
+
     @if(isset($budget->income))
       <section class="stats">
         <h3>Your Budget</h3>
         <ul>
-          <li>${{ $budget->income }}<span>Income</span></li>
+          <li>${{ $budget->income }}<span>Monthly Income</span></li>
           <li>${{ $budget->debt }}<span>Debt</span></li>
           <li>${{ $budget->afford }}<span>Payment</span></li>
         </ul>
@@ -51,6 +54,10 @@
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
               <input name="phone" type="text" placeholder="Creditor Phone">
+
+              <label for="file">Upload Files</label>
+              <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
+              <input type="file" id="file" name="file">
 
               <button type="submit">Add Creditor</button>
           </form>

@@ -18,6 +18,26 @@
 
     </head>
     <body class="@yield('body_class')">
+
+        <i class="fa fa-bars mobile-toggle" aria-hidden="true"></i>
+        <ul class="mobile-nav">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/prime">PRIME</a></li>
+            <li><a href="/plus">PLUS</a></li>
+            @if(Auth::user())
+                <li>
+                    <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                </li>
+                <li><a href="/dashboard">DASHBOARD</a></li>
+            @else
+                <li><a href="/register">START TODAY</a></li>
+            @endif
+        </ul>
+
         <div class="wrapper">
             <header>
                 <nav class="main-nav">

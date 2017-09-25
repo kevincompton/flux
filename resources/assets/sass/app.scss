@@ -2,6 +2,10 @@
 @import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
 @import "node_modules/bourbon-bitters/app/assets/stylesheets/bitters";
 
+// Responsive
+
+$tablet: new-breakpoint(max-width 980px 4);
+$mobile: new-breakpoint(max-width 480px 4);
 
 // Typography
 
@@ -237,12 +241,47 @@ section#contact-sticky {
 
 // Header
 
+.mobile-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 32px;
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  color: #00d2c1;
+  z-index: 9999;
+  @include media($tablet) {
+    display: block;
+  }
+}
+ul.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: black;
+  z-index: 8888;
+  li {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin: 15px 0;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(275,275,275,0.2);
+  }
+}
+
 header {
   @include clearfix();
   a:hover {
     color: white;
   }
   nav.main-nav {
+    @include media($tablet) {
+      display: none;
+    }
     line-height: 40px;
     position: relative;
     z-index: 222;
@@ -270,6 +309,9 @@ header {
     margin-top: -28px;
     position: relative;
     z-index: 222;
+    @include media($tablet) {
+      display: none;
+    }
     a {
       font-size: 12px;
       display: inline-block;
@@ -509,11 +551,21 @@ ul.features {
   margin-bottom: 80px;
   @include span-columns(11);
   @include shift(1); 
+  @include media($tablet) { 
+    @include span-columns(12);
+    @include shift(0);
+    width: 100%;
+  }
   li {
     @include span-columns(3);
     @include omega();
     text-align: left;
     position: relative;
+    @include media($tablet) {
+      @include span-columns(5);
+      @include omega();
+      width: 50%;
+    }
   }
   i {
     font-size: 28px;

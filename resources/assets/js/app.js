@@ -228,6 +228,10 @@ function updateHandle(el, val) {
 
 $(document).ready(function(){
   
+  $(".mobile-toggle").on('click', function() {
+    $('.mobile-nav').fadeToggle();
+  });
+
   //when slider changes, hide start message
   $("input#income").on("change", function() {
     $("#helper.income").fadeOut("slow");
