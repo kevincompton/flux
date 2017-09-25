@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 Route::get('/prime', 'UserController@prime');
 Route::get('/plus', 'UserController@plus');
+Route::get('/cash', 'UserController@cash');
 Route::get('/contact', 'UserController@contact');
 Route::get('/contact/confirm', 'UserController@confirmMessage');
 Route::post('/contact/send', 'UserController@sendMessage');

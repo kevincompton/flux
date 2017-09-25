@@ -86,6 +86,17 @@ class UserController extends Controller
       return view('plus')->with($data);
     }
 
+    public function cash()
+    {
+      $user = Auth::user();
+
+      $data = [
+        "user" => $user
+      ];
+
+      return view('cash')->with($data);
+    }
+
     public function poa(Request $request)
     {
 

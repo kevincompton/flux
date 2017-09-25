@@ -24,6 +24,7 @@
             <li><a href="/">HOME</a></li>
             <li><a href="/prime">PRIME</a></li>
             <li><a href="/plus">PLUS</a></li>
+            <li><a href="/cash">CASH</a></li>
             @if(Auth::user())
                 <li>
                     <a href="{{ route('logout') }}"
@@ -45,6 +46,7 @@
                         <li><a href="/">HOME</a></li>
                         <li><a href="/prime">PRIME</a></li>
                         <li><a href="/plus">PLUS</a></li>
+                        <li><a href="/cash">CASH</a></li>
                     </ul>
                 </nav>
 
