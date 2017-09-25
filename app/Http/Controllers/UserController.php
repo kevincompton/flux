@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Mail;
 use App\Mail\CustomerInquiry;
+use App\Mail\CustomerCreditApplication;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -23,6 +24,21 @@ class UserController extends Controller
 
       return back();
 
+    }
+
+    public function creditApplication()
+    {
+      $user = Auth::user();
+      $user->flux_credit = "pending";
+      $user->save();
+
+      $data = [
+        "user" => $user
+      ];
+
+      Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($user));
+
+      return back();
     }
 
     public function prime()
@@ -72,7 +88,7 @@ class UserController extends Controller
 
     public function sendMessage(Request $request)
     {
-      Mail::to('ktcompton@gmail.com')->send(new CustomerInquiry($request));
+      Mail::to(env('ADMIN_EMAIL'))->send(new CustomerInquiry($request));
 
       return redirect('/contact/confirm');
     }

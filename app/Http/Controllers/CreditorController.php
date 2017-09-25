@@ -16,6 +16,7 @@ class CreditorController extends Controller
       $creditor->name = $request->name;
       $creditor->account = $request->account;
       $creditor->phone = $request->phone;
+      $creditor->type = $request->type;
       $creditor->save();
 
       return back();

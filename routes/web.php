@@ -24,6 +24,8 @@ Route::get('/contact', 'UserController@contact');
 Route::get('/contact/confirm', 'UserController@confirmMessage');
 Route::post('/contact/send', 'UserController@sendMessage');
 
+Route::get('/credit/apply', 'UserController@creditApplication');
+
 Route::get('/signup', 'OnboardController@onboard');
 Route::get('/poa-placeholder', 'HomeController@poaPlaceholder');
 Route::get('/payment', 'HomeController@payment');

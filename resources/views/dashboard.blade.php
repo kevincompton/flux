@@ -26,13 +26,18 @@
             <button type="submit">Invite Co-Signer</button>
         </form>
 
-        <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
-        <div class="text-center">
-          <a href="#" class="btn">Apply Now </a>
-          <hr>
-          <img src="/images/visa.png" />
-          <img src="/images/bofl.png" />
-        </div>
+        @if($user->flux_credit == "pending")
+          <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
+          <p>Your application is pending, we will get back to you shortly</p>
+        @elseif($user->flux_credit != "denied")
+          <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
+          <div class="text-center">
+            <a href="/credit/apply" class="btn">Apply Now </a>
+            <hr>
+            <img src="/images/visa.png" />
+            <img src="/images/bofl.png" />
+          </div>
+        @endif
       </section>
     @endif
 
