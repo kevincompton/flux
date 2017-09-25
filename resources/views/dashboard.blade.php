@@ -1,3 +1,5 @@
+@section('body_class', 'body__dashboard')
+
 @extends('layouts.client')
 
 @section('content')
@@ -105,14 +107,20 @@
                 <input name="zip" type="text" placeholder="zip" required>
             </div>
 
-            <label>Social Secuirty #</label>
-            <input type="number" name="ssn" placeholder="SSN">
+            <hr class="clear">
+
+            <div class="form-group">
+              <label>Social Secuirty #</label>
+              <input type="number" name="ssn" placeholder="SSN">
+            </div>
             
-            <label>Birth date</label>
-            
-            <select class="small" name="months" id="months"></select>
-            <select class="small" name="days" id="days"></select>
-            <select class="small" name="years" id="years"></select>
+            <div class="form-group">
+              <label>Birth date</label>
+              
+              <select class="small" name="months" id="months"></select>
+              <select class="small" name="days" id="days"></select>
+              <select class="small" name="years" id="years"></select>
+            </div>
 
             <div class="actions">
               <button type="submit">Add Co-Signer</button>

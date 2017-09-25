@@ -50,6 +50,11 @@ hr {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    &.clear {
+      border-top: none;
+      width: 100%;
+      clear: both;
+    }
 }
 
 p.callout {
@@ -354,6 +359,7 @@ header {
 
 // Dashboard
 .dash_wrap {
+  margin-top: 0 !important;
   section {
     @include span-columns(6);
     @include omega(2n);
