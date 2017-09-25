@@ -8,7 +8,7 @@
       <h1>Make A Payment</h1>
 
       <label>Payment Type</label>
-      <input type="radio" name="payment" value="settlement"> Settlement<br>
+      <input type="radio" name="payment" value="settlement" checked> Settlement<br>
       <input type="radio" name="payment" value="other"> Other
       <label>Amount in Dollars</label>
       <input type="text" name="amount" id="amount" placeholder="Amount in Dollars">

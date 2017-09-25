@@ -15,15 +15,25 @@
           <li>${{ $budget->debt }}<span>Debt</span></li>
           <li>${{ $budget->afford }}<span>Payment</span></li>
         </ul>
+        <a href="/payment" class="btn">Make A Payment</a>
+
+        <h3>Invite A Co-Signer</h3>
+        <form role="form" method="POST" action="/cosigner/new">
+            {{ csrf_field() }}
+            <input id="name" placeholder="Name" type="text" name="name" required>
+            <input id="email" placeholder="Email" type="text" name="email" required>
+
+            <button type="submit">Invite Co-Signer</button>
+        </form>
       </section>
     @endif
 
     @if(isset($budget->debt))
       <section class="form_creditors">
         <h3>Creditor Information</h3>
-        <p>{{ $user->name }},<br> 
+        <p>{{ $user->name }},
         <br>
-        you mentioned earlier that you had approximately {{ $budget->debt }} in debt that needed resolution...</p>
+        you mentioned earlier that you had approximately ${{ $budget->debt }} in debt that needed resolution.</p>
 
         @if(count($creditors) > 0)
           <h3>Your Creditors</h3>
@@ -54,6 +64,10 @@
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
               <input name="phone" type="text" placeholder="Creditor Phone">
+
+              <label>Creditor Type</label>
+              <input type="radio" name="type" value="consolidation"> Consolidation<br>
+              <input type="radio" name="type" value="creditor" checked> Creditor
 
               <label for="file">Upload Files</label>
               <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>

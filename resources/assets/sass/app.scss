@@ -489,6 +489,10 @@ header {
   $action-color: #477dca !default;
   $stats-color: lighten($action-color, 10%);
 
+  button {
+    margin: 25px 0;
+  }
+
   padding: $base-spacing / 2;
 
   ul {
