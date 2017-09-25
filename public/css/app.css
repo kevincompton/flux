@@ -547,6 +547,10 @@ h3 {
   clear: both;
 }
 
+.form_creditors label {
+  margin: 25px 0 10px 0;
+}
+
 #green_modal {
   display: none;
   background: rgba(0, 0, 0, 0.8);

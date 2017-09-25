@@ -81,7 +81,9 @@
               <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
               <input type="file" id="file" name="file">
 
-              <button type="submit">Add Creditor</button>
+              <div class="actions">
+                <button type="submit">Add Creditor</button>
+              </div>
           </form>
         </fieldset>
 
