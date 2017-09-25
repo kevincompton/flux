@@ -25,6 +25,14 @@
 
             <button type="submit">Invite Co-Signer</button>
         </form>
+
+        <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
+        <div class="text-center">
+          <a href="#" class="btn">Apply Now </a>
+          <hr>
+          <img src="/images/visa.png" />
+          <img src="/images/bofl.png" />
+        </div>
       </section>
     @endif
 
