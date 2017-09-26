@@ -108,17 +108,7 @@
                  
                 <p>To get started, please choose between:</p> 
 
-                <div class="section-actions">
-                    <form role="form" method="POST" action="/plan/plus">
-                        {{ csrf_field() }}
-                        <button type="submit">Flux Plus</button> 
-                    </form>
-
-                    <form role="form" method="POST" action="/plan/prime">
-                        {{ csrf_field() }}
-                        <button type="submit">Flux Prime</button> 
-                    </form>
-                </div>
+                @include('partials._products-select')
                 
                 <br>
                 <p>If you are unsure which program is right for you, please
@@ -153,4 +143,13 @@
 
 
     </div>
+@endsection
+
+@section('footer')
+    <script src="{{ asset('js/jquery.matchHeight-min.js') }}"></script>
+    <script>
+    $(document).ready(function() {
+        $('.pricingTable').matchHeight();
+    });
+    </script>
 @endsection

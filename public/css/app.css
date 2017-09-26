@@ -1272,6 +1272,16 @@ footer.main-footer .footer-branding a {
   display: block;
 }
 
+.container-fluid.products.product-select {
+  padding: 0;
+  background: transparent;
+  color: white;
+}
+
+.container-fluid.products.product-select .pricingTable {
+  margin-top: 0;
+}
+
 .container-fluid.products a {
   color: white;
 }
