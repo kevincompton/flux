@@ -127,7 +127,14 @@
             </div>
         </form>
 
-        @if($user->flux_credit == "pending")
+        <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
+        <p class="text-center">Coming Soon</p>
+        <div class="text-center">
+          <img src="/images/visa.png" />
+          <img src="/images/bofl.png" />
+        </div>
+
+        <!-- @if($user->flux_credit == "pending")
           <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
           <p class="text-center">Your application is pending, we will get back to you shortly</p>
         @elseif($user->flux_credit != "denied")
@@ -138,7 +145,7 @@
             <img src="/images/visa.png" />
             <img src="/images/bofl.png" />
           </div>
-        @endif
+        @endif -->
       </section>
     @endif
 
