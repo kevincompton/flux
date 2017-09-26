@@ -36,6 +36,8 @@ Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProvider
 
 Auth::routes();
 
+Route::post('/cosigner/new', 'UserController@cosign');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 
