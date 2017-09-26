@@ -96,7 +96,7 @@
                 
                 <h2>${{ $budget->afford }}</h2>
 
-                <P>By maintaining this payment for <strong>{{ round(($budget->debt * 0.668) + $budget->afford) }} months</strong>, you should become Debt Free!</p> 
+                <P>By maintaining this payment for <strong>{{ round(($budget->expenses * 0.668) + $budget->afford) }} months</strong>, you should become Debt Free!</p> 
 
                 <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Acoount of at least $1,00</p>
 
