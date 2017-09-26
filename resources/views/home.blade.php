@@ -129,9 +129,9 @@
                     
                     <label>Birth date</label>
 
-                    <select class="dob" name="months" id="months"></select>
-                    <select class="dob" name="days" id="days"></select>
-                    <select class="dob" name="years" id="years"></select>
+                    <select class="small" name="months" id="months"></select>
+                    <select class="small" name="days" id="days"></select>
+                    <select class="small" name="years" id="years"></select>
 
                     <div class="actions">
                         <button type="submit">Continue</button>

@@ -12,7 +12,7 @@
      // Set the sign_url passed from the controller.
      url: "{{ $sign_url }}",
      allowCancel: false,
-     redirectUrl: 'http://staging.fluxcredit.com/payment',
+     redirectUrl: 'http://staging.fluxcredit.com/dashboard',
      skipDomainVerification: false,
      height: 800,
      // Set the debug mode based on the test mode toggle.
@@ -22,7 +22,7 @@
      // Define a callback for processing events.
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
-         window.location.replace("http://staging.fluxcredit.com/payment");
+         window.location.replace("http://staging.fluxcredit.com/dashboard");
        }
      }
    });
