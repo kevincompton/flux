@@ -12,7 +12,7 @@
 
                         <h1>Your Fresh Start To Financial Freedom Begins Today!</h1>
 
-                        <p>Please complete the following information to enroll in our program. Clients who successfully complete the Flux Credit program will become debt free, be awarded a Flux Visa Secured Credit Card with a limit of up to $1,500 and walk away with a savings account of up to $1,875!</p> 
+                        <p>Please complete the section below. Clients who successfully complete the Flux Credit program will become debt free, be awarded a Flux Visa Secured Credit Card with a limit of up to $1,500 and walk away with a savings account of up to $1,875!</p> 
 
                         <ul class="features">
                             <li>
@@ -31,16 +31,6 @@
                                 <p>We respect your privacy and will not sell or share your information</p>
                             </li>
                         </ul>
-
-                        @if ($errors->any())
-                            <div class="alert alert-danger">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
@@ -94,7 +84,12 @@
 
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Phone</label>
-                            <input name="phone" type="text" placeholder="phone" required>
+                            <input class="input-phone" name="phone" type="text" placeholder="ie 555-555-5555" required>
+                            @if ($errors->has('phone'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('phone') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="form-group">
@@ -109,12 +104,17 @@
 
                         <div class="form-group small">
                             <label for="password-confirm" class="col-md-4 control-label">State</label>
-                            <input name="state" type="text" placeholder="state" required>
+                            @include('partials._state-select')
                         </div>
 
                         <div class="form-group small">
                             <label for="password-confirm" class="col-md-4 control-label">Zip</label>
-                            <input name="zip" type="text" placeholder="zip" required>
+                            <input name="zip" type="text" placeholder="zip" maxlength="5" required>
+                            @if ($errors->has('zip'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('zip') }}</strong>
+                                </span>
+                            @endif
                         </div>
 
                         <div class="actions">

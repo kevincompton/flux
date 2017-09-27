@@ -6,12 +6,29 @@
  */
 
 require('./bootstrap');
+var Cleave = require('cleave.js');
+require('cleave.js/dist/addons/cleave-phone.us');
 
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
 });
+
+if($('.input-phone').length) {
+  var phoneCleave = new Cleave('.input-phone', {
+      phone: true,
+      phoneRegionCode: 'US',
+      delimiter: '-',
+      prefix: '1'
+  });
+}
+if($('.input-social').length) {
+  var socialCleave = new Cleave('.input-social', {
+    blocks: [3, 2, 4],
+    uppercase: true
+  });
+} 
 
  $(function () {
 

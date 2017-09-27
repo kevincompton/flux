@@ -45,7 +45,7 @@
                     <h1>Refine The Past - Reinvent Your Future!</h1>
 
                     <h2>Net Monthly Income</h2>
-                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and deductions (Your Net Income). This information will remain confidential and is only used internally to help tailor the perfect solution for you.</p>
+                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and deductions, including alimony, disability and social security. This information will remain confidential and is only used internally to help tailor the perfect solution for you.</p>
 
                     <div id="income_range">
                         <input name="income" id="income" type="range" value="2500" step="25" min="1000" max="20000">
@@ -92,17 +92,15 @@
         @if(!$user->plan && $user->budget)
             <section class="form_plan">
                 <h2>Congratulations {{ $user->name }},</h2>
-                <p>Based on the information you provided, you should be able to comfortably afford:</p>
-                
-                <h2>${{ $budget->afford }}</h2>
+                <p>Based on the information you provided, you should be able to comfortably afford <strong>${{ $budget->afford }} per month</strong>.</p>
 
-                <P>By maintaining this payment for <strong>{{ round(($budget->expenses * 0.668) + $budget->afford) }} months</strong>, you should become Debt Free!</p> 
+                <P>By maintaining this payment for <strong>{{ round(($budget->debt * 0.64321) / $budget->afford) }} months</strong>, you should become Debt Free!</p> 
 
-                <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Acoount of at least $1,00</p>
+                <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Account of at least <strong>$1,000</strong></p>
 
                 <p>If you can’t afford this payment, Flux Flex is there when you need it. Unlike other companies that automatically draft your account for a specific amount each month, we give you the power to control your financial future.</p>
 
-                <p>With Flux Flex, your estimated payment would be ${{ $budget->afford * 0.8 }} per month.</p>
+                <p>With Flux Flex, your estimated payment would be <strong>${{ round($budget->afford * 0.78765, 2) }} per month</strong>.</p>
                 
                 <h2>Start Saving Today!</h2>
                  
@@ -119,23 +117,33 @@
             <section class="form_poa">
                 <form class="small" role="form" method="POST" action="/user/poa/">
                     <h2>Your Future Begins Now!</h2>
-                    <p>Please provide us your personal information to generate an official Power Of Attorney, which authorizes Flux Credit to communicate with your creditors. You are agreeing to cease all activity in relation to these accounts, including, but not limited to making purchases, sending in payments and communicating with your creditors.</p>
+                    <p>Please provide us your personal information to generate an official Power Of Attorney, which authorizes Flux Credit to communicate with your creditors.</p>
 
-                    <img src="/images/trust-bbb.png" />
+                    <div class="ssl row">
+                        <p class="col-xs-12">Site Secured By</p>
+                        <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="//fluxcredit.com/wp-content/themes/fluxcredit/img/lets-encrypt-logo.svg" alt=""></a>     
+                    </div>
 
                     {{ csrf_field() }}
-                    <label>Social Secuirty #</label>
-                    <input type="number" name="ssn" placeholder="SSN">
-                    
-                    <label>Birth date</label>
-
-                    <select class="small" name="months" id="months"></select>
-                    <select class="small" name="days" id="days"></select>
-                    <select class="small" name="years" id="years"></select>
-
-                    <div class="actions">
-                        <button type="submit">Continue</button>
+                    <div class="form-group">
+                        <label for="ssn">Social Secuirty #</label>
+                        <input class="input-social" type="text" name="ssn" placeholder="SSN" required>
+                        @if ($errors->has('ssn'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('ssn') }}</strong>
+                            </span>
+                        @endif
                     </div>
+                    
+                    <div class="form-group">
+                        <label>Birth date</label>
+
+                        <select class="small" name="months" id="months" required></select>
+                        <select class="small" name="days" id="days" required></select>
+                        <select class="small" name="years" id="years" required></select>
+                    </div>
+
+                    <button type="submit">Continue</button>
                 </form>
 
             </section>

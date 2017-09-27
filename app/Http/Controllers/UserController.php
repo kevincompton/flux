@@ -30,6 +30,12 @@ class UserController extends Controller
     {
 
       $user = Auth::user();
+
+      $request->validate([
+        'phone' => 'required|string|max:10|min:9',
+        'ssn' => 'required|min:9|max:9',
+        'zip' => 'required|string|max:5|min:5',
+      ]);
       
       $cosigner = new \App\CoSigner;
       $cosigner->user_id = $user->id;
@@ -99,6 +105,10 @@ class UserController extends Controller
 
     public function poa(Request $request)
     {
+
+      $request->validate([
+        'ssn' => 'required|min:9|max:9'
+      ]);
 
       $user = Auth::user();
       $user->ssn = $request->ssn;

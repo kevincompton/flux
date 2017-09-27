@@ -38,9 +38,9 @@
         <div class="pricingContent">
           <ul>
             <li>1.5% Cashback</li>
-            <li>Attorney Representation</li>
-            <li>Tax Defense Service</li>
-            <li>Credit Repair Service</li>
+            <li>Tax Defense / Credit Repair</li>
+            <li>Credit Repair</li>
+            <li>No Transaction Fees</li>
           </ul>
         </div>
         <div class="pricingTable-sign-up">

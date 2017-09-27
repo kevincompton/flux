@@ -39,6 +39,7 @@ class HomeController extends Controller
             if($budget->afford < 250) {
                 $budget->afford = 250;
             }
+
         }
 
         $data = [
@@ -66,6 +67,7 @@ class HomeController extends Controller
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
         $cosigners = $user->cosigners()->get();
+
 
         if($budget) {
             $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
