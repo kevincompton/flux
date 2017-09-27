@@ -32,7 +32,7 @@ class UserController extends Controller
       $user = Auth::user();
 
       $request->validate([
-        'phone' => 'required|string|max:10|min:9',
+        'phone' => 'required|string|min:9',
         'ssn' => 'required|min:9|max:9',
         'zip' => 'required|string|max:5|min:5',
       ]);
