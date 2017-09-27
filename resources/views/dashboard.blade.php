@@ -15,7 +15,8 @@
         <ul>
           <li>${{ $budget->income }}<span>Monthly Income</span></li>
           <li>${{ $budget->debt }}<span>Debt</span></li>
-          <li>${{ $budget->afford }}<span>Payment</span></li>
+          <li>${{ $budget->afford }}<span>Monthly Payment</span></li>
+          <li>${{ round($budget->afford * 0.78765, 2) }}<span>Flex Monthly Payment</span></li>
         </ul>
         <a href="/payment" class="btn">Make A Payment</a>
 
@@ -166,10 +167,7 @@
 
     @if(isset($budget->debt))
       <section class="form_creditors">
-        <h3>Creditor Information</h3>
-        <p>{{ $user->name }},
-        <br>
-        you mentioned earlier that you had approximately ${{ $budget->debt }} in debt that needed resolution.</p>
+        
 
         @if(count($creditors) > 0)
           <h3>Your Creditors</h3>
@@ -195,15 +193,27 @@
         <fieldset>
           <h3>Add A Creditor</h3>
 
-          <form role="form" method="POST" action="/creditor/new" enctype="multipart/form-data">
+          <form role="form" class="creditor-form creditor" method="POST" action="/creditor/new" enctype="multipart/form-data">
               {{ csrf_field() }}
+              <label>Creditor Type</label>
+              <input class="type-toggle creditor" type="radio" name="type" value="creditor" checked> Creditor<br>
+              <input class="type-toggle consolidation" type="radio" name="type" value="consolidation"> Consolidation
+
+              <div class="creditor-tab">
+                <h2>Creditor Information</h2>
+                <p>{{ $user->name }},
+                <br>
+                you mentioned earlier that you had approximately ${{ $budget->debt }} in debt that needed resolution.<br> <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small></p>
+              </div>
+
+              <div class="consolidation-tab" style="display: none;">
+                <h2>Consolidation</h2>
+                <p>You may include your rent/mortgage, car payment or other fixed monthly expenses for one convenient monthly payment with no additional fee.</p>
+              </div>
+
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
               <input name="phone" type="text" placeholder="Creditor / Agency Phone">
-
-              <label>Creditor Type</label>
-              <input type="radio" name="type" value="consolidation"> Consolidation<br>
-              <input type="radio" name="type" value="creditor" checked> Creditor
 
               <label for="file">Upload Files (you may choose multiple)</label>
               <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>

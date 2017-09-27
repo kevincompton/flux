@@ -110,7 +110,7 @@
                 
                 <br>
                 <p>If you are unsure which program is right for you, please
-                read about the benefits of each. If you have any additional questions, please don't hesitate to <a href="/contact">contact us 24/7 via Email or Phone.</a></p>
+                read about the benefits of each. If you have any additional questions, please don't hesitate to contact us 24/7 via Email or Phone.</p>
             </section>
         @endif
         @if($user->plan && !$user->ssn)
