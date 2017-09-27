@@ -96,7 +96,7 @@
 
                 <P>By maintaining this payment for <strong>{{ round(($budget->debt * 0.64321) / $budget->afford) }} months</strong>, you should become Debt Free!</p> 
 
-                <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Account of at least <strong>$1,000</strong></p>
+                <p>In addition to the Flux Credit Card you will soon receive, you'll earn Cash Back and a Federally Insured Savings Account of at least <strong>$1,000</strong>.</p>
 
                 <p>If you can’t afford this payment, Flux Flex is there when you need it. Unlike other companies that automatically draft your account for a specific amount each month, we give you the power to control your financial future.</p>
 

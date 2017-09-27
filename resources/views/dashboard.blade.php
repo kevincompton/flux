@@ -203,7 +203,7 @@
                 <h2>Creditor Information</h2>
                 <p>{{ $user->name }},
                 <br>
-                you mentioned earlier that you had approximately ${{ $budget->debt }} in debt that needed resolution.<br> <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small></p>
+                You mentioned earlier that you had approximately ${{ $budget->debt }} in debt that needed resolution.</p>
               </div>
 
               <div class="consolidation-tab" style="display: none;">
@@ -214,6 +214,8 @@
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
               <input name="phone" type="text" placeholder="Creditor / Agency Phone">
+
+              <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small>
 
               <label for="file">Upload Files (you may choose multiple)</label>
               <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
