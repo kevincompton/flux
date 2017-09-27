@@ -110,8 +110,10 @@ class UserController extends Controller
         'ssn' => 'required|min:9'
       ]);
 
+      $ssn = str_replace(' ', '', $request->ssn);
+
       $user = Auth::user();
-      $user->ssn = $request->ssn;
+      $user->ssn = $ssn;
       $user->dob = $request->months.$request->days.$request->years;
       $user->save();
 
