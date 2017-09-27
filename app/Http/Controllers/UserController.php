@@ -107,7 +107,7 @@ class UserController extends Controller
     {
 
       $request->validate([
-        'ssn' => 'required|min:9|max:9'
+        'ssn' => 'required|min:9'
       ]);
 
       $user = Auth::user();
