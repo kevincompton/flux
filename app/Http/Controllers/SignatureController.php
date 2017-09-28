@@ -18,6 +18,8 @@ class SignatureController extends Controller
     {
       $response = $this->getEmbeddedSignatureRequest();
 
+      var_dump($response);
+
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
 
@@ -116,6 +118,8 @@ class SignatureController extends Controller
 
         if (getenv('HELLOSIGN_TEST_MODE') == 1) {
             $data['test_mode'] = 1;
+        } else {
+          $data['test_mode'] = 0;
         }
 
         $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
