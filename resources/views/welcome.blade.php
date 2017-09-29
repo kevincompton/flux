@@ -39,13 +39,27 @@
 
   @include('partials._products')
 
+  @include('partials._comparison')
+
+  @include('partials._newsletter')
+
 @endsection
 
 @section('footer')
+  <link href="{{ asset('js/slick/slick.css') }}" rel="stylesheet">
+
+    <script src="{{ asset('js/slick/slick.min.js') }}"></script>
     <script src="{{ asset('js/jquery.matchHeight-min.js') }}"></script>
     <script>
     $(document).ready(function() {
-        $('.pricingTable').matchHeight();
+      $('.pricingTable').matchHeight();
+      $('.newsletter .col-sm-6').matchHeight();
+      $('.customer-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 8000,
+        arrows: false,
+        dots: false,
+      });
     });
     </script>
 @endsection
