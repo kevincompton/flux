@@ -121,7 +121,7 @@
 
                     <div class="ssl row">
                         <p class="col-xs-12">Site Secured By</p>
-                        <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="//fluxcredit.com/wp-content/themes/fluxcredit/img/lets-encrypt-logo.svg" alt=""></a>     
+                        <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="/images/lets-encrypt-logo.svg" alt=""></a>     
                     </div>
 
                     {{ csrf_field() }}
