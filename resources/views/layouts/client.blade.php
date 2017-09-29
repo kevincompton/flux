@@ -78,6 +78,38 @@
         </div>
 
         <footer class="main-footer">
+            <div class="container footer-nav">
+
+                <!--First column-->
+                <div class="footer-col">
+                    <h5><img src="/images/fluxcredit-logo.png" alt="Flux Credit"></h5>
+                    <hr>
+                    <p>Your Finances...Reinvented</p>
+                    <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="/flux-prime/">Flux Prime</a></li>
+                        <li><a href="/flux-plus/">Flux Plus</a></li>
+                        <li><a href="/flux-flex/">Flux Flex</a></li>
+                        <li><a href="/flux-cash/">Flux Cash</a></li>
+                    </ul>
+                </div>
+                <!--/.Second column-->
+
+
+                <!--Third column-->
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="/payment/">Make A Payment</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                
             <div class="site-info">
                 <div class="social">
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
