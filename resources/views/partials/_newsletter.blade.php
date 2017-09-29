@@ -51,7 +51,7 @@
     </div>
     @endif
     
-    <form class="small" action="/subscribe">
+    <form class="small" action="/subscribe" method="POST">
       {{ csrf_field() }}
       <input type="email" placeholder="Email">
       <button type="submit">Subscribe</button>
