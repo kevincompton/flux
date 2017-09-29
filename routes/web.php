@@ -24,6 +24,7 @@ Route::get('/', function () {
 });
 
 Route::get('/prime', 'UserController@prime');
+Route::get('/flex', 'UserController@prime');
 Route::get('/plus', 'UserController@plus');
 Route::get('/cash', 'UserController@cash');
 Route::get('/contact', 'UserController@contact');

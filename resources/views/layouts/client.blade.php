@@ -92,10 +92,10 @@
                 <!--Second column-->
                 <div class="footer-col">
                     <ul>
-                        <li><a href="/flux-prime/">Flux Prime</a></li>
-                        <li><a href="/flux-plus/">Flux Plus</a></li>
-                        <li><a href="/flux-flex/">Flux Flex</a></li>
-                        <li><a href="/flux-cash/">Flux Cash</a></li>
+                        <li><a href="/prime/">Flux Prime</a></li>
+                        <li><a href="/plus/">Flux Plus</a></li>
+                        <li><a href="/flex/">Flux Flex</a></li>
+                        <li><a href="/cash/">Flux Cash</a></li>
                     </ul>
                 </div>
                 <!--/.Second column-->
