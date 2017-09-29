@@ -729,6 +729,7 @@ div.wrapper.page_wrap {
   font-size: 3.1em;
   color: #23292f;
   font-weight: 800;
+  padding-top: 1.5rem;
 }
 
 .newsletter .slick-slide p {
@@ -782,10 +783,6 @@ div.wrapper.page_wrap {
 
 .customer i {
   color: #23292f;
-}
-
-.customer-testimonials .section-header {
-  padding-top: 1.5rem;
 }
 
 .customer-testimonials h3 {

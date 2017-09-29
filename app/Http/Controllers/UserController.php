@@ -103,6 +103,11 @@ class UserController extends Controller
       return view('cash')->with($data);
     }
 
+    public function payment()
+    {
+        return view('payment');
+    }
+
     public function poa(Request $request)
     {
 

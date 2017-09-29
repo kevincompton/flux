@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/payment', 'UserController@payment');
 
 Route::get('/poa', 'SignatureController@sign');
 
@@ -33,7 +34,6 @@ Route::get('/credit/apply', 'UserController@creditApplication');
 
 Route::get('/signup', 'OnboardController@onboard');
 Route::get('/poa-placeholder', 'HomeController@poaPlaceholder');
-Route::get('/payment', 'HomeController@payment');
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
