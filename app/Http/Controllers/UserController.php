@@ -33,7 +33,7 @@ class UserController extends Controller
 
       $request->validate([
         'phone' => 'required|string|min:9',
-        'ssn' => 'required|min:9|max:9',
+        'ssn' => 'required|min:9',
         'zip' => 'required|string|max:5|min:5',
       ]);
       

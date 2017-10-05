@@ -126,7 +126,7 @@
 
                     {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="ssn">Social Secuirty #</label>
+                        <label for="ssn">Social Security #</label>
                         <input class="input-social" type="text" name="ssn" placeholder="SSN" required>
                         @if ($errors->has('ssn'))
                             <span class="help-block">

@@ -120,7 +120,7 @@
               <hr class="clear">
 
               <div class="form-group">
-                <label>Social Secuirty #</label>
+                <label>Social Security #</label>
                 <input class="input-social" type="text" name="ssn" placeholder="SSN">
                 @if ($errors->has('ssn'))
                           <span class="help-block">

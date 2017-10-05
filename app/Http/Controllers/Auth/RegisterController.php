@@ -71,6 +71,8 @@ class RegisterController extends Controller
     {
         Mail::to($data['email'])->send(new NewRegistration($data));
 
+        // send email to admin
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
