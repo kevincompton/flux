@@ -82,6 +82,49 @@ p.callout {
   }
 }
 
+.help-block {
+  display: block;
+  color: red;
+  margin-bottom: 15px;
+}
+
+a.btn {
+  @extend button;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #00d2c1;
+  @include media($mobile) {
+    font-size: 1.8rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+  &.h1 {
+    font-size: 2.4rem;
+  }
+}
+
+h2.section-heading {
+  clear: both;
+  margin-top: 45px;
+}
+
+p {
+  font-weight: 100;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  @include media($mobile) {
+    line-height: 1.4;
+  }
+}
+
+h2, h3 {
+  clear:both;
+}
+
 // Forms 
 
 input[type="text"], input[type="email"], input[type="password"] {
@@ -155,42 +198,7 @@ label {
   }
 }
 
-.help-block {
-  display: block;
-  color: red;
-  margin-bottom: 15px;
-}
 
-a.btn {
-  @extend button;
-}
-
-h1 {
-  font-size: 2.4rem;
-  color: #00d2c1;
-}
-
-h2 {
-  font-size: 1.8rem;
-  &.h1 {
-    font-size: 2.4rem;
-  }
-}
-
-h2.section-heading {
-  clear: both;
-  margin-top: 45px;
-}
-
-p {
-  font-weight: 100;
-  line-height: 1.8;
-  letter-spacing: 1px;
-}
-
-h2, h3 {
-  clear:both;
-}
 
 // Creditor form
 .form_creditors {
@@ -301,14 +309,28 @@ div.wrapper {
     margin-left: 0;
     display: block;
     float: none;
+    @include media($mobile) {
+      width: 100%;
+    }
     @include clearfix();
     input {
       @include span-columns(7);
       @include omega();
+      @include media($mobile) {
+        @include span-columns(4);
+        @include omega();
+      }
     }
     button {
       @include span-columns(5);
       @include omega();
+      @include media($mobile) {
+        @include span-columns(4);
+        @include omega();
+        font-size: 14px;
+        margin-bottom: 30px;
+        margin-left: 0;
+      }
       padding-top: 8px;
       padding-bottom: 9px;
       margin-left: 10px;
@@ -328,6 +350,10 @@ div.wrapper {
   .col-sm-6 {
     width: 50%;
     float: left;
+    @include media($mobile) {
+      width: 100%;
+      float: none;
+    }
   }
   .email-signup {
     padding: 0 2rem 0rem 2rem;
@@ -414,8 +440,9 @@ section#contact-sticky {
   cursor: pointer;
   font-size: 32px;
   position: fixed;
+  padding-top: 15px;
   left: 15px;
-  top: 15px;
+  top: 10px;
   color: #00d2c1;
   z-index: 9999;
   @include media($tablet) {
@@ -424,7 +451,7 @@ section#contact-sticky {
 }
 ul.mobile-nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -434,9 +461,9 @@ ul.mobile-nav {
   z-index: 8888;
   li {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 22px;
     margin: 15px 0;
-    padding: 15px 0;
+    padding: 0 0 15px 0;
     border-bottom: 1px solid rgba(275,275,275,0.2);
   }
 }
@@ -497,6 +524,9 @@ header {
     right: 0;
     img {
       width: 250px;
+      @include media($mobile) {
+        width: 150px;
+      }
     }
   }
   .concierge {
@@ -731,6 +761,10 @@ section.home_hero {
   color: white;
   text-align: center;
   border-top: 3px solid #00d2c1;
+  @include media($mobile) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   h3.heading {
     font-size: 24px;
     margin-top: 25px;
@@ -741,6 +775,10 @@ section.home_hero {
     width: 55%;
     margin: auto;
     margin-top: 30px;
+    @include media($mobile) {
+      width: 90%;
+      font-size: 14px;
+    }
   }
 }
 
@@ -781,6 +819,9 @@ ul.features {
   p, h3 {
     padding-left: 55px;
     padding-right: 40px;
+    @include media($mobile) {
+      padding-right: 0;
+    }
   }
   p {
     font-size: 13px;
@@ -826,6 +867,11 @@ footer.main-footer {
     @include clearfix();
     width: 70%;
     margin:auto;
+    ul {
+      @include media($mobile) {
+        display: none;
+      }
+    }
   }
   .footer-col {
     @include span-columns(3);
@@ -971,6 +1017,9 @@ footer.main-footer {
   .pricingTable {
     @include span-columns(4)
     @include omega(3n);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
     position: relative;
     text-align: center;
     background: #23292f;

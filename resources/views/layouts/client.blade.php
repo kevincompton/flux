@@ -25,6 +25,8 @@
             <li><a href="/prime">PRIME</a></li>
             <li><a href="/plus">PLUS</a></li>
             <li><a href="/cash">CASH</a></li>
+            <li><a href="/flex">FLEX</a></li>
+            <li><a href="/payment">Make A Payment</a></li>
             @if(Auth::user())
                 <li>
                     <a href="{{ route('logout') }}"

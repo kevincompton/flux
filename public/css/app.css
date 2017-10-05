@@ -420,6 +420,53 @@ p.callout i {
   font-size: 34px;
 }
 
+.help-block {
+  display: block;
+  color: red;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #00d2c1;
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h2.h1 {
+  font-size: 2.4rem;
+}
+
+h2.section-heading {
+  clear: both;
+  margin-top: 45px;
+}
+
+p {
+  font-weight: 100;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 480px) {
+  p {
+    line-height: 1.4;
+  }
+}
+
+h2,
+h3 {
+  clear: both;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -546,41 +593,6 @@ label {
   margin-right: 0;
 }
 
-.help-block {
-  display: block;
-  color: red;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: 2.4rem;
-  color: #00d2c1;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-h2.h1 {
-  font-size: 2.4rem;
-}
-
-h2.section-heading {
-  clear: both;
-  margin-top: 45px;
-}
-
-p {
-  font-weight: 100;
-  line-height: 1.8;
-  letter-spacing: 1px;
-}
-
-h2,
-h3 {
-  clear: both;
-}
-
 .form_creditors label {
   margin: 15px 0 10px 0;
   font-weight: 200;
@@ -690,6 +702,12 @@ div.wrapper.page_wrap {
   float: none;
 }
 
+@media screen and (max-width: 480px) {
+  .newsletter form {
+    width: 100%;
+  }
+}
+
 .newsletter form::after {
   clear: both;
   content: "";
@@ -706,6 +724,20 @@ div.wrapper.page_wrap {
 
 .newsletter form input:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter form input {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .newsletter form input:last-child {
+    margin-right: 0;
+  }
 }
 
 .newsletter form button,
@@ -725,6 +757,25 @@ div.wrapper.page_wrap {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .newsletter form button,
+  .newsletter form a.btn {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-right: 0;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+
+  .newsletter form button:last-child,
+  .newsletter form a.btn:last-child {
+    margin-right: 0;
+  }
+}
+
 .newsletter .section-header {
   font-size: 3.1em;
   color: #23292f;
@@ -741,6 +792,13 @@ div.wrapper.page_wrap {
 .newsletter .col-sm-6 {
   width: 50%;
   float: left;
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter .col-sm-6 {
+    width: 100%;
+    float: none;
+  }
 }
 
 .newsletter .email-signup {
@@ -834,8 +892,9 @@ section#contact-sticky i.fa-phone {
   cursor: pointer;
   font-size: 32px;
   position: fixed;
+  padding-top: 15px;
   left: 15px;
-  top: 15px;
+  top: 10px;
   color: #00d2c1;
   z-index: 9999;
 }
@@ -848,7 +907,7 @@ section#contact-sticky i.fa-phone {
 
 ul.mobile-nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -860,9 +919,9 @@ ul.mobile-nav {
 
 ul.mobile-nav li {
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 22px;
   margin: 15px 0;
-  padding: 15px 0;
+  padding: 0 0 15px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -941,6 +1000,12 @@ header span.logo {
 
 header span.logo img {
   width: 250px;
+}
+
+@media screen and (max-width: 480px) {
+  header span.logo img {
+    width: 150px;
+  }
 }
 
 header .concierge {
@@ -1151,6 +1216,13 @@ section.home_hero {
   border-top: 3px solid #00d2c1;
 }
 
+@media screen and (max-width: 480px) {
+  section.home_hero {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 section.home_hero h3.heading {
   font-size: 24px;
   margin-top: 25px;
@@ -1162,6 +1234,13 @@ section.home_hero p.tagline {
   width: 55%;
   margin: auto;
   margin-top: 30px;
+}
+
+@media screen and (max-width: 480px) {
+  section.home_hero p.tagline {
+    width: 90%;
+    font-size: 14px;
+  }
 }
 
 ul.features {
@@ -1241,6 +1320,13 @@ ul.features h3 {
   padding-right: 40px;
 }
 
+@media screen and (max-width: 480px) {
+  ul.features p,
+  ul.features h3 {
+    padding-right: 0;
+  }
+}
+
 ul.features p {
   font-size: 13px;
   line-height: 1.4;
@@ -1315,6 +1401,12 @@ footer.main-footer .footer-nav::after {
   clear: both;
   content: "";
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  footer.main-footer .footer-nav ul {
+    display: none;
+  }
 }
 
 footer.main-footer .footer-col {
@@ -1537,6 +1629,19 @@ footer.main-footer .footer-branding a {
 
 .container-fluid.products .pricingTable:nth-child(3n+1) {
   clear: left;
+}
+
+@media screen and (max-width: 480px) {
+  .container-fluid.products .pricingTable {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .container-fluid.products .pricingTable:last-child {
+    margin-right: 0;
+  }
 }
 
 .container-fluid.products .pricingTable-header,
