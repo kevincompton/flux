@@ -20,7 +20,7 @@
         </ul>
         <a href="/payment" class="btn">Make A Payment</a>
 
-        @if($creditors)
+        @if(count($cosigners) > 0)
           <h3>Your Co-Signer</h3>
 
           <table>
