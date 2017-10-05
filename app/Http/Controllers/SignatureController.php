@@ -16,6 +16,9 @@ class SignatureController extends Controller
 
     public function sign()
     {
+      if(env('APP_VERSION' != 'production')) {
+        return redirect('/dashboard');
+      }
       $response = $this->getEmbeddedSignatureRequest();
 
       $signature_request_id = $response["signature_request"]["signature_request_id"];

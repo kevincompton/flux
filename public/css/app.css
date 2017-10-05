@@ -408,6 +408,7 @@ hr.clear {
   border-top: none;
   width: 100%;
   clear: both;
+  margin: 0;
 }
 
 p.callout {
@@ -654,6 +655,19 @@ label {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .form-group.small {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .form-group.small:last-child {
+    margin-right: 0;
+  }
+}
+
 .form_creditors label {
   margin: 15px 0 10px 0;
   font-weight: 200;
@@ -686,11 +700,17 @@ label {
 
 #green_modal iframe {
   border: 0;
-  width: 80%;
+  width: 522px;
   margin: auto;
   margin-top: 30px;
   height: 80%;
   display: block;
+}
+
+@media screen and (max-width: 480px) {
+  #green_modal iframe {
+    width: 100%;
+  }
 }
 
 #green_form {
@@ -714,6 +734,12 @@ label {
 body {
   margin: 0;
   background: #101010;
+}
+
+.content::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
 div.wrapper {
@@ -1082,6 +1108,20 @@ header .concierge {
   margin-top: 0 !important;
 }
 
+@media screen and (max-width: 480px) {
+  .dash_wrap {
+    margin-top: 80px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .dash_wrap::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
 .dash_wrap section {
   float: left;
   display: block;
@@ -1104,6 +1144,20 @@ header .concierge {
   clear: left;
 }
 
+@media screen and (max-width: 480px) {
+  .dash_wrap section {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dash_wrap section:last-child {
+    margin-right: 0;
+  }
+}
+
 .dash_wrap section a {
   cursor: pointer;
 }
@@ -1118,6 +1172,8 @@ header .concierge {
 
 .dash_wrap section form {
   margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .body__onboard {
@@ -1249,6 +1305,12 @@ header .concierge {
   font-size: 1.2em;
   line-height: 1.1em;
   padding: 0 0.7em;
+}
+
+@media screen and (max-width: 480px) {
+  .stats li {
+    margin-bottom: 15px;
+  }
 }
 
 .stats li:first-child {
@@ -1403,6 +1465,21 @@ ul.features p {
 
 .form_plan:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .form_plan {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-left: 0%;
+    padding: 0 25px 25px 25px;
+  }
+
+  .form_plan:last-child {
+    margin-right: 0;
+  }
 }
 
 .form_plan h2 {
@@ -1658,6 +1735,19 @@ footer.main-footer .footer-branding a {
 
 .container-fluid.products.product-select .pricingTable:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .container-fluid.products.product-select .pricingTable {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .container-fluid.products.product-select .pricingTable:last-child {
+    margin-right: 0;
+  }
 }
 
 .container-fluid.products a {

@@ -99,7 +99,7 @@
 
               <div class="form-group small">
                   <label for="city" class="col-md-4 control-label">City</label>
-                  <input name="city" type="text" placeholder="city" required>
+                  <input name="city" type="text" placeholder="City" required>
               </div>
 
               <div class="form-group small">

@@ -70,6 +70,7 @@ hr {
       border-top: none;
       width: 100%;
       clear: both;
+      margin: 0;
     }
 }
 
@@ -219,6 +220,9 @@ label {
   margin-bottom: 12px;
   &.small {
     @include span-columns(2);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
   }
 }
 
@@ -257,11 +261,14 @@ label {
 
 #green_modal iframe {
     border: 0;
-    width: 80%;
+    width: 522px;
     margin: auto;
     margin-top: 30px;
     height: 80%;
     display:block;
+    @include media($mobile) {
+      width: 100%;
+    }
 }
 
 #green_form {
@@ -290,6 +297,10 @@ label {
 body {
   margin: 0;
   background: #101010;
+}
+
+.content {
+  @include clearfix();
 }
 
 div.wrapper {
@@ -566,9 +577,19 @@ header {
 // Dashboard
 .dash_wrap {
   margin-top: 0 !important;
+  @include media($mobile) {
+    @include clearfix();
+    margin-top: 80px !important;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   section {
     @include span-columns(6);
     @include omega(2n);
+    @include media($mobile) {
+      @include span-columns(4);
+      padding: 15px;
+    }
     padding: 30px;
     background: white;
     color: black;
@@ -583,6 +604,8 @@ header {
     }
     form {
       margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
@@ -757,7 +780,9 @@ header {
     font-size: 1.2em;
     line-height: 1.1em;
     padding: 0 0.7em;
-
+    @include media($mobile) {
+      margin-bottom: 15px;
+    }
     &:first-child {
       padding-left: 0;
     }
@@ -857,6 +882,11 @@ ul.features {
 .form_plan {
   @include span-columns(8);
   @include shift(2);
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+    padding: 0 25px 25px 25px;
+  }
   h2 {
     margin-bottom: 30px;
   }
@@ -1032,7 +1062,10 @@ footer.main-footer {
     color: white;
     .pricingTable {
       margin-top: 0;
-      @include span-columns(5)
+      @include span-columns(5);
+      @include media($mobile) {
+        @include span-columns(4);
+      }
     }
   }
   a {
