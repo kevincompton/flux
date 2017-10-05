@@ -28,7 +28,7 @@
         </li>
         <li>
           <i class="fa fa-usd" aria-hidden="true"></i>
-          <h3><a href="#">FLux Credit</a></h3>
+          <h3><a href="#">Flux Credit</a></h3>
           <p>Earn cash back on every settlement!</p>
         </li>
       </ul>
