@@ -2050,6 +2050,23 @@ footer.main-footer .footer-branding a {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  #income_range,
+  #debt_range {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-left: 0%;
+    padding: 25px 0;
+  }
+
+  #income_range:last-child,
+  #debt_range:last-child {
+    margin-right: 0;
+  }
+}
+
 .min {
   padding-top: 12px;
   padding-left: 10px;
