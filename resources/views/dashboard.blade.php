@@ -84,7 +84,7 @@
 
               <div class="form-group">
                   <label for="password-confirm" class="col-md-4 control-label">Phone</label>
-                  <input class="input-phone" name="phone" type="text" placeholder="phone" required>
+                  <input class="input-phone" name="phone" type="text" placeholder="Phone" required>
                   @if ($errors->has('phone'))
                           <span class="help-block">
                               <strong>{{ $errors->first('phone') }}</strong>
@@ -94,7 +94,7 @@
 
               <div class="form-group">
                   <label for="address" class="col-md-4 control-label">Address</label>
-                  <input name="address" type="text" placeholder="address" required>
+                  <input name="address" type="text" placeholder="Address" required>
               </div>
 
               <div class="form-group small">
@@ -109,7 +109,7 @@
 
               <div class="form-group small">
                   <label for="zip" class="col-md-4 control-label">Zip</label>
-                  <input name="zip" type="text" placeholder="zip" maxlength="5" required>
+                  <input name="zip" type="text" placeholder="Zip" maxlength="5" required>
                   @if ($errors->has('zip'))
                           <span class="help-block">
                               <strong>{{ $errors->first('zip') }}</strong>
