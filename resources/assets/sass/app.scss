@@ -134,6 +134,9 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 select {
   height: 48px;
+  @include media($mobile) {
+    background: white;
+  }
 }
 
 select.full {
@@ -147,6 +150,12 @@ select.small {
 form {
   @include span-columns(10);
   @include shift(2);
+  @include media($mobile) {
+    @include span-columns(4);
+    margin-left: 0;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
   &.small {
     @include span-columns(8);
     @include shift(2);
@@ -164,6 +173,9 @@ form {
     margin-right: 15%;
     margin-bottom: 40px;
     font-size: 14px;
+    @include media($mobile) {
+      margin-right: 0;
+    }
   }
   h1 {
     font-weight: 100;
@@ -173,6 +185,14 @@ form {
     p {
       padding-right: 0;
       margin-right: 0;
+    }
+    @include media($mobile) {
+      margin-bottom: 20px;
+    }
+  }
+  .form-group {
+    @include media($mobile) {
+      @include span-columns(4);
     }
   }
 }

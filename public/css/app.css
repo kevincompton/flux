@@ -478,6 +478,12 @@ select {
   height: 48px;
 }
 
+@media screen and (max-width: 480px) {
+  select {
+    background: white;
+  }
+}
+
 select.full {
   width: 100%;
 }
@@ -496,6 +502,22 @@ form {
 
 form:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  form:last-child {
+    margin-right: 0;
+  }
 }
 
 form.small {
@@ -535,6 +557,12 @@ form p {
   font-size: 14px;
 }
 
+@media screen and (max-width: 480px) {
+  form p {
+    margin-right: 0;
+  }
+}
+
 form h1 {
   font-weight: 100;
 }
@@ -546,6 +574,25 @@ form ul.features {
 form ul.features p {
   padding-right: 0;
   margin-right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  form ul.features {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  form .form-group {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  form .form-group:last-child {
+    margin-right: 0;
+  }
 }
 
 form .actions {
