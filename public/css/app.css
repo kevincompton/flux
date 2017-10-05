@@ -532,6 +532,20 @@ form.small:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  form.small {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  form.small:last-child {
+    margin-right: 0;
+  }
+}
+
 form.small .actions {
   float: left;
   display: block;
