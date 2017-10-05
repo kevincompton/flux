@@ -69,7 +69,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Mail::to($data['email'])->send(new NewRegistration($data));
+        
+        if(env('APP_VERSION') == 'production') {
+            Mail::to($data['email'])->send(new NewRegistration($data));
+        }
 
         // send email to admin
 

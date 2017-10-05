@@ -101,8 +101,11 @@ function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
 
+require('rangeslider.js/dist/rangeslider.min.js');
+
 //slider javascript
 /*! rangeslider.js - v2.0.2 | (c) 2015 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */
+/*
 ! function(a) {
   "use strict";
   "function" == typeof define && define.amd ? define(["jquery"], a) : a("object" == typeof exports ? require("jquery") : jQuery)
@@ -279,7 +282,7 @@ function daysInMonth(month, year) {
       e || d.data("plugin_" + k, e = new j(this, b)), "string" == typeof b && e[b].apply(e, c)
     })
   }
-});
+}); */
 
 //custom slider javascript
 var $income = $('input[type="range"]#income');
