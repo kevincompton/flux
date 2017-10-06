@@ -12,6 +12,7 @@
         <script src="https://use.fontawesome.com/c753f43933.js"></script>
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="shortcut icon" href="{{{ asset('images/favicon.png') }}}">
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -80,39 +81,23 @@
         </div>
 
         <footer class="main-footer">
+            
             <div class="container footer-nav">
+                <ul>
+                    <li><a href="/payment/">Make A Payment</a></li>
+                    <li><a href="/prime/">Flux Prime</a></li>
+                    <li><a href="/plus/">Flux Plus</a></li>
+                    <li><a href="/flex/">Flux Flex</a></li>
+                    <li><a href="/cash/">Flux Cash</a></li>
+                </ul>
 
                 <!--First column-->
-                <div class="footer-col">
+                <div class="footer-col footer-cta">
                     <h5><img src="/images/fluxcredit-logo.png" alt="Flux Credit"></h5>
                     <hr>
                     <p>Your Finances...Reinvented</p>
                     <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
                 </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="/prime/">Flux Prime</a></li>
-                        <li><a href="/plus/">Flux Plus</a></li>
-                        <li><a href="/flex/">Flux Flex</a></li>
-                        <li><a href="/cash/">Flux Cash</a></li>
-                    </ul>
-                </div>
-                <!--/.Second column-->
-
-
-                <!--Third column-->
-                <div class="footer-col">
-                    <ul>
-                        <li><a href="/payment/">Make A Payment</a></li>
-                    </ul>
-                </div>
-            </div>
-
-                
-            <div class="site-info">
                 <div class="social">
                     <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                         <a href="https://www.facebook.com/FluxCredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-3x fa-facebook"></i></a>
@@ -120,6 +105,12 @@
                         <a href="https://www.yelp.com/biz/flux-credit-woodland-hills" class="p-type col-xs-4" target="_blank"><i class="fa fa-3x fa-yelp"></i></a>
                     </div>
                 </div>
+                <!--/.First column-->
+            </div>
+
+                
+            <div class="site-info">
+                
                 <div class="ssl row">
                     <p class="col-xs-12">Site Secured By</p>
                     <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="/images/lets-encrypt-logo.svg" alt=""></a>     

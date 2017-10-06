@@ -916,7 +916,17 @@ footer.main-footer {
   @include clearfix();
   clear: both;
   padding-top: 80px;
-  margin-top: 80px;
+  .footer-nav ul {
+    text-align: center;
+    width: 100%;
+    li {
+      display: inline-block;
+      margin: 0 8px;
+    }
+    @include media($tablet) {
+        display: none;
+      }
+  }
   .footer-nav {
     @include clearfix();
     width: 70%;
@@ -926,6 +936,12 @@ footer.main-footer {
         display: none;
       }
     }
+  }
+  .footer-cta.footer-col {
+    margin-top: 45px;
+    @include media($tablet) {
+        display: none;
+      }
   }
   .footer-col {
     @include span-columns(3);
@@ -964,7 +980,13 @@ footer.main-footer {
       color: rgba(0, 210, 193, 1);
   }
   .social {
-      margin-bottom: 45px;
+      float: right;
+      @include media($tablet) {
+        float: none;
+        margin-right: 0;
+      }
+      margin-top: 120px;
+      margin-right: 18%;
       color: rgba(0, 210, 193, 1);
   }
   .social a {
@@ -1008,11 +1030,7 @@ footer.main-footer {
       margin: 0;
       padding: 0;
   }
-  @media screen and (min-width:992px) {
-      .footer-nav ul {
-          margin: 55px 0 0 0;
-      }
-  }
+  
   .footer-nav ul li {
       text-align: center;
   }
@@ -1026,16 +1044,7 @@ footer.main-footer {
       transition: all 0.4s ease 0s;
       font-weight: 100;
   }
-  @media screen and (min-width:992px) {
-      .footer-nav ul li a {
-          font-size: .9em;
-      }
-  }
-  @media screen and (min-width:1100px) {
-      .footer-nav ul li a {
-          font-size: 1.1em;
-      }
-  }
+
   .footer-nav ul li a:hover {
       text-decoration: none;
   }
