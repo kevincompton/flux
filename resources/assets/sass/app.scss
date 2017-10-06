@@ -922,6 +922,8 @@ footer.main-footer {
     li {
       display: inline-block;
       margin: 0 8px;
+      a { font-size: 16px;
+      letter-spacing: 1px; }
     }
     @include media($tablet) {
         display: none;
@@ -1040,7 +1042,6 @@ footer.main-footer {
       }
   }
   .footer-nav ul li a {
-      font-size: 1.4em;
       transition: all 0.4s ease 0s;
       font-weight: 100;
   }

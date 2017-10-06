@@ -1539,6 +1539,11 @@ footer.main-footer .footer-nav ul li {
   margin: 0 8px;
 }
 
+footer.main-footer .footer-nav ul li a {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 980px) {
   footer.main-footer .footer-nav ul {
     display: none;
@@ -1705,7 +1710,6 @@ footer.main-footer .footer-nav ul li {
 }
 
 footer.main-footer .footer-nav ul li a {
-  font-size: 1.4em;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   font-weight: 100;
