@@ -1165,6 +1165,7 @@ footer.main-footer {
   .pricingTable > .pricingTable-header p {
       margin-bottom: 0;
       font-weight: 400;
+      min-height: 56px;
   }
   .pricingTable .pricingTable-header > .heading {
       display: block;
@@ -1178,6 +1179,7 @@ footer.main-footer {
       margin: 0;
       text-transform: uppercase;
       font-weight: bold;
+      min-height: 129px;
   }
   .pricingTable-sign-up {
       color: #fff;

@@ -1893,6 +1893,7 @@ footer.main-footer .footer-branding a {
 .container-fluid.products .pricingTable > .pricingTable-header p {
   margin-bottom: 0;
   font-weight: 400;
+  min-height: 56px;
 }
 
 .container-fluid.products .pricingTable .pricingTable-header > .heading {
@@ -1909,6 +1910,7 @@ footer.main-footer .footer-branding a {
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
+  min-height: 129px;
 }
 
 .container-fluid.products .pricingTable-sign-up {
