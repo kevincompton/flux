@@ -2317,6 +2317,7 @@ body.modal-open .modal-fade-screen {
 
 #contact-sticky .phone-handle {
   line-height: 65px;
+  cursor: default;
 }
 
 .modal label {
