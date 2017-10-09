@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use Mail;
 use App\Mail\CustomerInquiry;
+use App\Mail\AdminDashUpdate;
 use App\Mail\CustomerCreditApplication;
 use Illuminate\Http\Request;
 

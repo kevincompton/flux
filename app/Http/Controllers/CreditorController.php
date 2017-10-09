@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use Mail;
+use App\Mail\AdminDashUpdate;
 use Storage;
 use Illuminate\Http\File;
 
