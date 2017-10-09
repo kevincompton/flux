@@ -102,7 +102,7 @@ class SignatureController extends Controller
               ],
               [
                 'name' => 'dob',
-                'value' => $dob
+                'value' => $user->dob
               ],
               [
                 'name' => 'address',
