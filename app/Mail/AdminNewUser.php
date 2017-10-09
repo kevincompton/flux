@@ -30,6 +30,8 @@ class AdminNewUser extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.admin_new_user');
+        return $this->from(env('ADMIN_EMAIL'))
+                    ->subject('New User Registration')
+                    ->view('emails.admin_new_user');
     }
 }
