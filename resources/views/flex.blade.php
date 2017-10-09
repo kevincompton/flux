@@ -3,7 +3,7 @@
 @section('content')
     <div class="wrapper page_wrap">
 
-        <div class="container product-info text-center">
+        <div class="container product-info text-center info-page">
             <h2>Flux Flex... There when you need it!</h2>
             <h2>Settlement Approved!</h2>
             <hr>

@@ -3,7 +3,7 @@
 @section('content')
     <div class="wrapper page_wrap">
 
-        <div class="container product-info text-center">
+        <div class="container product-info text-center info-page">
             <h2>Flux Plus offers our clients a unique way to take advantage of all the valuable benefits of FLUX PRIME, plus:</h2>
             <h2>1.5 % Cash Back Rewards!</h2>
             <hr>

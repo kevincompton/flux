@@ -751,6 +751,13 @@ div.wrapper.page_wrap {
   margin-top: 120px;
 }
 
+@media screen and (max-width: 480px) {
+  div.wrapper.page_wrap .info-page {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 .comp-chart {
   text-align: center;
   padding-bottom: 0rem;

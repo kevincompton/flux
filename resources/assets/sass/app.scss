@@ -308,6 +308,12 @@ div.wrapper {
   margin: auto;
   &.page_wrap {
     margin-top: 120px;
+    .info-page {
+      @include media($mobile) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
   }
 }
 

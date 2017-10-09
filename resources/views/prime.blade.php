@@ -3,7 +3,7 @@
 @section('content')
     <div class="wrapper page_wrap">
 
-        <div class="container product-info text-center">
+        <div class="container product-info text-center info-page">
             <h2>Is your Credit in Flux?</h2>
             <hr>
             <p>Are you barely making your minimum payment(s)? Are the interest and late fees weighing you down? Does your credit card statement tell you that it will take 20+ years to pay off the account at more than double the current balance owed? Perhaps Flux Credit is right for you!</p>
