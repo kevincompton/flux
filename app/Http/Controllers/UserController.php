@@ -58,7 +58,7 @@ class UserController extends Controller
           $cosigner = get_object_vars($cosigner);
 
           $data = [
-            "cosigner" => $cosigner,
+            "update" => $cosigner,
             "name" => $user->name,
             "action" => 'added a co-signer'
           ];

@@ -38,7 +38,7 @@ class CreditorController extends Controller
           $creditor = get_object_vars($creditor);
 
           $data = [
-            "creditor" => $creditor,
+            "update" => $creditor,
             "name" => $user->name,
             "action" => 'added a creditor'
           ];
