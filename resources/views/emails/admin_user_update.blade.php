@@ -4,8 +4,6 @@
 
 <?php 
   
-  foreach($request['update'] as $child) {
-   echo $child . "\n";
-  }
+  print_r($request['update']);
 
 ?>
