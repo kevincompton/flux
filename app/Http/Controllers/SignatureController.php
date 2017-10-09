@@ -74,7 +74,7 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
       $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
-      $dob = preg_match("^\\d{1,2}/\\d{2}/\\d{4}^", $user->dob);
+      $dob = preg_replace ('/^(\d{2})(\d{2})(\d{4})$/', '$1/$2/$3', $user->dob);
 
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
