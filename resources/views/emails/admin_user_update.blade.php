@@ -4,7 +4,7 @@
 
 <?php 
   
-  foreach($request[0] as $child) {
+  foreach($request as $child) {
    echo $child . "\n";
   }
 
