@@ -73,6 +73,7 @@ class SignatureController extends Controller
     private function getEmbeddedSignatureRequest()
     {
       $user = Auth::user();
+      $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
 
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
@@ -96,7 +97,7 @@ class SignatureController extends Controller
               ],
               [
                 'name' => 'ssn',
-                'value' => $user->ssn
+                'value' => $ssn
               ],
               [
                 'name' => 'dob',
