@@ -213,7 +213,7 @@
 
               <input name="name" type="text" placeholder="Creditor Name">
               <input name="account" type="text" placeholder="Account #">
-              <input name="phone" type="text" placeholder="Creditor / Agency Phone">
+              <input class="input-phone" name="phone" type="text" placeholder="Creditor / Agency Phone">
 
               <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small>
 
