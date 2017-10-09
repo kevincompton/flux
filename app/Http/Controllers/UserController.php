@@ -121,7 +121,7 @@ class UserController extends Controller
 
       $user = Auth::user();
       $user->ssn = $ssn;
-      $user->dob = $request->months.$request->days.$request->years;
+      $user->dob = $request->months.'/'.$request->days.'/'.$request->years;
       $user->save();
 
       return redirect('/poa');
