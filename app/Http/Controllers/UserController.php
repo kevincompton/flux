@@ -55,7 +55,6 @@ class UserController extends Controller
       $cosigner->save();
 
       if(env('APP_VERSION') == 'production') {
-          $cosigner = get_object_vars($cosigner);
 
           $data = [
             "update" => $cosigner,

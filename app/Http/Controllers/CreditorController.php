@@ -35,7 +35,6 @@ class CreditorController extends Controller
       }
 
       if(env('APP_VERSION') == 'production') {
-          $creditor = get_object_vars($creditor);
 
           $data = [
             "update" => $creditor,
