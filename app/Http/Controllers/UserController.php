@@ -53,6 +53,17 @@ class UserController extends Controller
       $cosigner->dob = $request->months.$request->days.$request->years;
       $cosigner->save();
 
+      if(env('APP_VERSION') == 'production') {
+          $cosigner = get_object_vars($cosigner);
+
+          $data = [
+            "cosigner" => $cosigner,
+            "name" => $user->name
+          ];
+
+          Mail::to(env('ADMIN_EMAIL'))->send(new AdminDashUpdate($data));
+      }
+
       return back();
 
     }

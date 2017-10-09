@@ -32,6 +32,17 @@ class CreditorController extends Controller
         
       }
 
+      if(env('APP_VERSION') == 'production') {
+          $creditor = get_object_vars($creditor);
+
+          $data = [
+            "creditor" => $creditor,
+            "name" => $user->name
+          ];
+
+          Mail::to(env('ADMIN_EMAIL'))->send(new AdminDashUpdate($data));
+      }
+
       return back();
 
     }
