@@ -37,7 +37,8 @@ class CreditorController extends Controller
 
           $data = [
             "creditor" => $creditor,
-            "name" => $user->name
+            "name" => $user->name,
+            "action" => 'added a creditor'
           ];
 
           Mail::to(env('ADMIN_EMAIL'))->send(new AdminDashUpdate($data));

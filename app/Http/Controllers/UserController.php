@@ -58,7 +58,8 @@ class UserController extends Controller
 
           $data = [
             "cosigner" => $cosigner,
-            "name" => $user->name
+            "name" => $user->name,
+            "action" => 'added a co-signer'
           ];
 
           Mail::to(env('ADMIN_EMAIL'))->send(new AdminDashUpdate($data));
