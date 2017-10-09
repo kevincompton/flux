@@ -91,6 +91,10 @@ class SignatureController extends Controller
                 'value' => $user->name
               ],
               [
+                'name' => 'customer_name2',
+                'value' => $user->name
+              ],
+              [
                 'name' => 'ssn',
                 'value' => $user->ssn
               ],
