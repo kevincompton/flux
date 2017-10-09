@@ -2,8 +2,8 @@
 
 {{ $request['name'] }} has just {{ $request['action'] }}.
 
-<?php 
+<pre><code><?php 
   
   var_export($request['update']);
 
-?>
+?></code></pre>
