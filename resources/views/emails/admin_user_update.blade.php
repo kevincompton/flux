@@ -4,6 +4,6 @@
 
 <?php 
   
-  print_r($request['update']);
+  var_export($request['update']);
 
 ?>
