@@ -33,6 +33,12 @@ class SignatureController extends Controller
       return view('documents.poa_form')->with('sign_url', $sign_url);
     }
 
+    private function getDocument()
+    {
+      $dest_file_path = storage_path();
+      $client->getFiles('fa5c8a0b0f492d768749333ad6fcc214c111e967', $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+    }
+
     private function getEmbeddedSignUrl($signature_id)
     {
 

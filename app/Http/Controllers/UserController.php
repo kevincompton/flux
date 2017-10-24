@@ -95,6 +95,17 @@ class UserController extends Controller
       return view('prime')->with($data);
     }
 
+    public function flex()
+    {
+      $user = Auth::user();
+
+      $data = [
+        "user" => $user
+      ];
+
+      return view('flex')->with($data);
+    }
+
     public function plus()
     {
       $user = Auth::user();
