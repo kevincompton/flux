@@ -497,8 +497,9 @@ form {
   float: left;
   display: block;
   margin-right: 2.35765202%;
-  width: 82.94039133%;
-  margin-left: 17.05960867%;
+  width: 65.88078266%;
+  margin: auto !important;
+  float: none;
 }
 
 form:last-child {
@@ -567,7 +568,6 @@ form.small p {
 }
 
 form p {
-  margin-right: 15%;
   margin-bottom: 40px;
   font-size: 14px;
 }
