@@ -35,7 +35,8 @@ class SocialAuthController extends Controller
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
-            'provider_id' => $user->id
+            'provider_id' => $user->id,
+            'onboard_step' => 0
         ]);
     }
     
