@@ -72,7 +72,7 @@ class DashController extends Controller
             $user->plan = $request->plan;
             $user->onboard_step = 3;
             $user->save();
-        } elseif($user->onboard_step = 4) {
+        } elseif($user->onboard_step = 3) {
             $ssn = str_replace(' ', '', $request->ssn);
             $user->ssn = (int)$ssn;
             $user->dob = $request->months.'/'.$request->days.'/'.$request->years;

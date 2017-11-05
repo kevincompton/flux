@@ -14,6 +14,10 @@ $(function() {
         event.preventDefault();
         data = $(this).serialize();
 
+        if(step == 4) {
+            location.reload();
+        }
+
         postData(data);
         next();
 
