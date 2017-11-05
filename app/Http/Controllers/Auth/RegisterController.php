@@ -77,7 +77,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'],
-            'onboard_step' => 0]),
+            'onboard_step' => 0,
         ]);
     }
 }
