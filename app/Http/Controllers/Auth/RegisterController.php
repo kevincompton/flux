@@ -86,7 +86,8 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'city' => $data['city'],
             'state' => $data['state'],
-            'zip' => $data['zip']
+            'zip' => $data['zip'],
+            'onboard_step' => 0
         ]);
     }
 }
