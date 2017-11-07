@@ -16,6 +16,11 @@ class DashController extends Controller
     public function dashboard()
     {
         $user = Auth::user();
+
+        if($user->admin ==1) {
+            return redirect('/dashboard/admin');
+        }
+
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
         $cosigners = $user->cosigners()->get();
@@ -73,9 +78,9 @@ class DashController extends Controller
             $user->onboard_step = 3;
             $user->save();
         } elseif($user->onboard_step = 3) {
-            $ssn = str_replace(' ', '', $request->ssn);
+            $ssn = str_replace('-', '', $request->ssn);
             $user->ssn = (int)$ssn;
-            $user->dob = $request->months.'/'.$request->days.'/'.$request->years;
+            $user->dob = $request->dob;
             $user->onboard_step = 4;
             $user->save();
         }

@@ -1,10 +1,16 @@
 /* Form wizard */
+
+// need to activate if element is present
+
 $(function() {
     "use strict";
+    var parent = this;
 
     var data;
     var tabs = $('#form-wizard ul li');
     var step;
+
+    fetchStep();
 
     $('#form-wizard').bootstrapWizard({
         'tabClass': ''
@@ -14,11 +20,14 @@ $(function() {
         event.preventDefault();
         data = $(this).serialize();
 
-        if(step == 4) {
+        if(parent.step == 4) {
             location.reload();
+        } else {
+            parent.step = parent.step + 1;
         }
 
         postData(data);
+
         next();
 
     });
@@ -26,8 +35,6 @@ $(function() {
     $("button.plan_select").on("click", function() {
         $("input#plan").val($(this).data("plan"));
     });
-
-    fetchStep();
 
     function next() {
         enable();
@@ -77,6 +84,7 @@ $(function() {
             dataType: 'json',
             processData:false,
             success : function(data) {
+                parent.step = data;
                 setStep(data);
             }
         });

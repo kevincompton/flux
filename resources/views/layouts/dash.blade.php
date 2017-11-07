@@ -156,6 +156,46 @@
         <script type="text/javascript" src="/dash/js-core/modernizr.js"></script>
         <script type="text/javascript" src="/dash/js-core/jquery-cookie.js"></script>
 
+        <script type="text/javascript" src="/dash/widgets/datatable/datatable.js"></script>
+        <script type="text/javascript" src="/dash/widgets/datatable/datatable-bootstrap.js"></script>
+        <script type="text/javascript" src="/dash/widgets/datatable/datatable-tabletools.js"></script>
+        <script type="text/javascript" src="/dash/widgets/datatable/datatable-reorder.js"></script>
+
+        <script type="text/javascript">
+
+            /* Datatables export */
+
+            $(document).ready(function() {
+                var table = $('#datatable-tabletools').DataTable();
+                var tt = new $.fn.dataTable.TableTools( table );
+
+                $( tt.fnContainer() ).insertBefore('#datatable-tabletools_wrapper div.dataTables_filter');
+
+                $('.DTTT_container').addClass('btn-group');
+                $('.DTTT_container a').addClass('btn btn-default btn-md');
+
+                $('.dataTables_filter input').attr("placeholder", "Search...");
+
+            } );
+
+            /* Datatables reorder */
+
+            $(document).ready(function() {
+                $('#datatable-reorder').DataTable( {
+                    dom: 'Rlfrtip'
+                });
+
+                $('#datatable-reorder_length').hide();
+                $('#datatable-reorder_filter').hide();
+
+            });
+
+            $(document).ready(function() {
+                $('.dataTables_filter input').attr("placeholder", "Search...");
+            });
+
+        </script>
+
 
         <link href="{{ asset('css/dash.css') }}" rel="stylesheet">
 
@@ -187,11 +227,11 @@
                         <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
                     </div>
                     <div id="header-logo" class="logo-bg">
-                        <a href="index.html" class="logo-content-big" title="MonarchUI">
+                        <a href="/dashboard" class="logo-content-big" title="MonarchUI">
                             FLUX <i>CREDIT</i>
                             <span>Personalized Dashboard</span>
                         </a>
-                        <a href="index.html" class="logo-content-small" title="MonarchUI">
+                        <a href="/dashboard" class="logo-content-small" title="MonarchUI">
                             FLUX <i>CREDIT</i>
                             <span>Personalized Dashboard</span>
                         </a>
@@ -472,36 +512,59 @@
         <div id="page-sidebar">
     <div class="scroll-sidebar">
         
-
-    <ul id="sidebar-menu">
-        <li>
-            <a href="/dashboard" title="Dashboard">
-                <i class="glyph-icon icon-linecons-tv"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="/dashboard/cosigner" title="Add a Co-Signer">
-                <i class="glyph-icon icon-linecons-pencil"></i>
-                <span>Add a Co-Applicant</span>
-            </a>
-        </li>
-        <li>
-            <a href="/dashboard/creditors" title="Manage Creditors">
-                <i class="glyph-icon icon-linecons-note"></i>
-                <span>Manage Creditors</span>
-            </a>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <a href="#" title="Flux Plus">
-                <i class="glyph-icon icon-linecons-money"></i>
-                <span>Flux Plus</span>
-                <span class="bs-label label-primary">Upgrade</span>
-            </a>
-        </li>
-    </ul><!-- #sidebar-menu -->
+        @if($user->admin == 0)
+            <ul id="sidebar-menu">
+                <li>
+                    <a href="/dashboard" title="Dashboard">
+                        <i class="glyph-icon icon-linecons-tv"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="/dashboard/cosigner" title="Add a Co-Signer">
+                        <i class="glyph-icon icon-linecons-pencil"></i>
+                        <span>Add a Co-Applicant</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/creditors" title="Manage Creditors">
+                        <i class="glyph-icon icon-linecons-note"></i>
+                        <span>Manage Creditors</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="#" title="Flux Plus">
+                        <i class="glyph-icon icon-linecons-money"></i>
+                        <span>Flux Plus</span>
+                        <span class="bs-label label-primary">Upgrade</span>
+                    </a>
+                </li>
+            </ul><!-- #sidebar-menu -->
+        @else
+           <ul id="sidebar-menu">
+                <li>
+                    <a href="/dashboard/admin" title="Dashboard">
+                        <i class="glyph-icon icon-linecons-tv"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="/dashboard/admin/cosigners" title="Add a Co-Signer">
+                        <i class="glyph-icon icon-linecons-pencil"></i>
+                        <span>Co-Signers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard/admin/creditors" title="Manage Creditors">
+                        <i class="glyph-icon icon-linecons-note"></i>
+                        <span>Creditors</span>
+                    </a>
+                </li>
+            </ul><!-- #sidebar-menu --> 
+        @endif
 
 
     </div>

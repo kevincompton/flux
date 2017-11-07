@@ -47,7 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Dashboard Routes
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
-Route::get('/dashboard/cosigner', 'DashController@cosigner');
+Route::get('/dashboard/cosigner', 'DashController@cosigners');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 
   // Dashboard Actions
@@ -61,3 +61,7 @@ Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
 
+// Admin Routes
+Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');
+Route::get('/dashboard/admin/cosigners', 'AdminController@cosigners')->middleware('admin');
+Route::get('/dashboard/admin/creditors', 'AdminController@creditors')->middleware('admin');

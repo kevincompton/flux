@@ -27,6 +27,11 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function isAdmin()
+    {
+        return $this->admin;
+    }
+
     public function budget()
     {
         return $this->hasOne('App\Budget');
