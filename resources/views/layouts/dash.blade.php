@@ -684,5 +684,7 @@
         <script type="text/javascript" src="/dash/widgets/wizard/wizard.js"></script>
         <script type="text/javascript" src="/dash/widgets/wizard/wizard-demo.js"></script>
 
+        @yield('footer')
+        
     </body>
 </html>

@@ -1,4 +1,6 @@
-@extends('layouts.client')
+@section('body_class', 'body__dashboard')
+
+@extends('layouts.dash')
 
 @section('content')
   <div id="hs-container"></div>

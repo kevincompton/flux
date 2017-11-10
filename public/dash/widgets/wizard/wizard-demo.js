@@ -21,7 +21,7 @@ $(function() {
         data = $(this).serialize();
 
         if(parent.step == 4) {
-            location.reload();
+            window.location.replace("/poa");
         } else {
             parent.step = parent.step + 1;
         }

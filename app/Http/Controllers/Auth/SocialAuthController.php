@@ -22,7 +22,7 @@ class SocialAuthController extends Controller
 
         $authUser = $this->findOrCreateUser($user, $provider);
         Auth::login($authUser, true);
-        return redirect('/home');
+        return redirect('/dashboard');
     }
 
     public function findOrCreateUser($user, $provider)
