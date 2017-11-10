@@ -20,7 +20,7 @@ $(function() {
         event.preventDefault();
         data = $(this).serialize();
 
-        if(parent.step == 4) {
+        if(parent.step == 3) {
             window.location.replace("/poa");
         } else {
             parent.step = parent.step + 1;

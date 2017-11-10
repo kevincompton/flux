@@ -16,6 +16,8 @@ class SignatureController extends Controller
 
     public function sign()
     {
+      $user = Auth::user();
+
       if(env('APP_VERSION' != 'production')) {
         return redirect('/dashboard');
       }
@@ -30,7 +32,12 @@ class SignatureController extends Controller
 
       $sign_url = $response["embedded"]["sign_url"];
 
-      return view('documents.poa_form')->with('sign_url', $sign_url);
+      $data = [
+        "user" => $user,
+        "sign_url" => $sign_url
+      ];
+
+      return view('documents.poa_form')->with($data);
     }
 
     private function getDocument()
