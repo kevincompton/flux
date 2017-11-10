@@ -65,3 +65,4 @@ Route::post('/creditor/new', 'CreditorController@create');
 Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');
 Route::get('/dashboard/admin/cosigners', 'AdminController@cosigners')->middleware('admin');
 Route::get('/dashboard/admin/creditors', 'AdminController@creditors')->middleware('admin');
+Route::get('/dashboard/admin/budget/{budget}', 'AdminController@showBudget')->middleware('admin');

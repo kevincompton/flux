@@ -21,6 +21,21 @@ class AdminController extends Controller
       return view('dashboard.admin.index')->with($data);
     }
 
+    public function showBudget($id)
+    {
+      $user = Auth::user();
+      $budget = \App\Budget::find($id);
+      $client = $budget->user;
+
+      $data = [
+        "user" => $user,
+        "budget" => $budget,
+        "client" => $client
+      ];
+
+      return view('dashboard.admin.budget')->with($data);
+    }
+
     public function cosigners()
     {
       $user = Auth::user();

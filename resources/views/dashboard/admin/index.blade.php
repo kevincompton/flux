@@ -75,7 +75,7 @@
                     </td>
                     <td>
                       @if($user->budget)
-                        <a href="#">View</a>
+                        <a href="/dashboard/admin/budget/{{ $user->budget->id }}">View</a>
                       @else
                         Not Completed
                       @endif
