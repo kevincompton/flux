@@ -161,40 +161,44 @@
         <script type="text/javascript" src="/dash/widgets/datatable/datatable-tabletools.js"></script>
         <script type="text/javascript" src="/dash/widgets/datatable/datatable-reorder.js"></script>
 
-        <script type="text/javascript">
+        @if($user->admin == 1)
 
-            /* Datatables export */
+            <script type="text/javascript">
 
-            $(document).ready(function() {
-                var table = $('#datatable-tabletools').DataTable();
-                var tt = new $.fn.dataTable.TableTools( table );
+                /* Datatables export */
 
-                $( tt.fnContainer() ).insertBefore('#datatable-tabletools_wrapper div.dataTables_filter');
+                $(document).ready(function() {
+                    var table = $('#datatable-tabletools').DataTable();
+                    var tt = new $.fn.dataTable.TableTools( table );
 
-                $('.DTTT_container').addClass('btn-group');
-                $('.DTTT_container a').addClass('btn btn-default btn-md');
+                    $( tt.fnContainer() ).insertBefore('#datatable-tabletools_wrapper div.dataTables_filter');
 
-                $('.dataTables_filter input').attr("placeholder", "Search...");
+                    $('.DTTT_container').addClass('btn-group');
+                    $('.DTTT_container a').addClass('btn btn-default btn-md');
 
-            } );
+                    $('.dataTables_filter input').attr("placeholder", "Search...");
 
-            /* Datatables reorder */
+                } );
 
-            $(document).ready(function() {
-                $('#datatable-reorder').DataTable( {
-                    dom: 'Rlfrtip'
+                /* Datatables reorder */
+
+                $(document).ready(function() {
+                    $('#datatable-reorder').DataTable( {
+                        dom: 'Rlfrtip'
+                    });
+
+                    $('#datatable-reorder_length').hide();
+                    $('#datatable-reorder_filter').hide();
+
                 });
 
-                $('#datatable-reorder_length').hide();
-                $('#datatable-reorder_filter').hide();
+                $(document).ready(function() {
+                    $('.dataTables_filter input').attr("placeholder", "Search...");
+                });
 
-            });
+            </script>
 
-            $(document).ready(function() {
-                $('.dataTables_filter input').attr("placeholder", "Search...");
-            });
-
-        </script>
+        @endif
 
 
         <link href="{{ asset('css/dash.css') }}" rel="stylesheet">
@@ -685,6 +689,6 @@
         <script type="text/javascript" src="/dash/widgets/wizard/wizard-demo.js"></script>
 
         @yield('footer')
-        
+
     </body>
 </html>
