@@ -4,17 +4,21 @@
 $tablet: new-breakpoint(max-width 980px 4);
 $mobile: new-breakpoint(max-width 480px 4);
 
-// Wizard
-
-section.form_budgeting {
-  padding: 0 25px;
-  .form-group {
+.body__dashboard {
+.form-group {
     margin-left: 0;
     margin-right: 0;
     &.copy {
       padding: 60px 0;
     }
   }
+}
+
+// Wizard
+
+section.form_budgeting {
+  padding: 0 25px;
+  
   h2 {
     margin-bottom: 25px;
   }

@@ -3,28 +3,19 @@
 @extends('layouts.dash')
 
 @section('content')
-  @if(count($cosigners) > 0)
-          <h3>Your Co-Signer</h3>
+      
+      <div class="panel">
+          <div class="panel-body">
+              <h3 class="title-hero">
+                  Add a Co-Applicant
+              </h3>
+            <div class="example-box-wrapper">
+        @if($cosigner)
+          <h2>Your Co-Applicant is {{ $cosigner->name }}
+        @else
 
-          <table>
-            <tbody>
-             <tr>
-               <th>Name</th>
-               <th>Phone</th>
-               <th>Email</th>
-             </tr> 
-              @foreach($cosigners as $cosigner)
-                  <tr>
-                    <td>{{ $cosigner->name }}</td>
-                    <td>{{ $cosigner->phone }}</td>
-                    <td>{{ $cosigner->email }}</td>
-                  </tr>
-              @endforeach
-            </tbody>
-          </table>
-        @else 
-          <h3>Add a Co-Applicant</h3>
-          <form role="form" method="POST" action="/cosigner/new">
+       
+          <form class="form-horizontal bordered-row" role="form" method="POST" action="/cosigner/new">
               {{ csrf_field() }}
 
               @if ($errors->any())
@@ -67,62 +58,72 @@
 
               <div class="form-group">
                   <label for="password-confirm" class="col-md-4 control-label">Phone</label>
-                  <input class="input-phone" name="phone" type="text" placeholder="Phone" required>
-                  @if ($errors->has('phone'))
-                          <span class="help-block">
-                              <strong>{{ $errors->first('phone') }}</strong>
-                          </span>
-                      @endif
+                  <div class="col-md-6">
+                    <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                    @if ($errors->has('phone'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('phone') }}</strong>
+                            </span>
+                        @endif
+                  </div>
               </div>
 
               <div class="form-group">
                   <label for="address" class="col-md-4 control-label">Address</label>
-                  <input name="address" type="text" placeholder="Address" required>
+                  <div class="col-md-6">
+                    <input name="address" type="text" class="form-control" placeholder="Address" required>
+                  </div>
               </div>
-
-              <div class="form-group small">
-                  <label for="city" class="col-md-4 control-label">City</label>
-                  <input name="city" type="text" placeholder="City" required>
-              </div>
-
-              <div class="form-group small">
-                  <label for="state" class="col-md-4 control-label">State</label>
-                  @include('partials._state-select')
-              </div>
-
-              <div class="form-group small">
-                  <label for="zip" class="col-md-4 control-label">Zip</label>
-                  <input name="zip" type="text" placeholder="Zip" maxlength="5" required>
-                  @if ($errors->has('zip'))
-                          <span class="help-block">
-                              <strong>{{ $errors->first('zip') }}</strong>
-                          </span>
-                      @endif
-              </div>
-
-              <hr class="clear">
 
               <div class="form-group">
-                <label>Social Security #</label>
-                <input class="input-social" type="text" name="ssn" placeholder="SSN">
-                @if ($errors->has('ssn'))
-                          <span class="help-block">
-                              <strong>{{ $errors->first('ssn') }}</strong>
-                          </span>
-                      @endif
+                  <label for="city" class="col-md-4 control-label">City</label>
+                  <div class="col-md-6">
+                    <input class="form-control" name="city" type="text" placeholder="City" required>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="state" class="col-md-4 control-label">State</label>
+                  <div class="col-md-6">
+                    @include('partials._state-select')
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="zip" class="col-md-4 control-label">Zip</label>
+                  <div class="col-md-6">
+                    <input class="form-control" name="zip" type="text" placeholder="Zip" maxlength="5" required>
+                    @if ($errors->has('zip'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('zip') }}</strong>
+                            </span>
+                        @endif
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-4 control-label">Social Security #</label>
+                <div class="col-sm-6">
+                                    <input type="text" name="ssn" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;999-99-9999&apos;">
+                                    <div class="help-block">999-99-9999</div>
+                                </div>
               </div>
               
               <div class="form-group">
-                <label>Birth date</label>
-                
-                <select class="small" name="months" id="months"></select>
-                <select class="small" name="days" id="days"></select>
-                <select class="small" name="years" id="years"></select>
+                <label class="col-md-4 control-label">Birth date</label>
+                <div class="col-sm-6">
+                    <input type="text" name="dob" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;99-99-9999&apos;">
+                    <div class="help-block">MM-DD-YYYY</div>
+                </div>
               </div>
 
-              <div class="actions">
-                <button type="submit">Add Co-Applicant</button>
+              <div class="form-group text-right">
+                <button class="btn btn-lg btn-primary" type="submit">Add Co-Applicant</button>
               </div>
           </form>
-        @endif
+      @endif
+
+      </div>
+      </div>
+
 @endsection

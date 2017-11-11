@@ -3,7 +3,12 @@
 @extends('layouts.dash')
 
 @section('content')
-  <section class="form_creditors">
+  <div class="panel">
+          <div class="panel-body">
+              <h3 class="title-hero">
+                  Add a Creditor or Consolidation
+              </h3>
+            <div class="example-box-wrapper">
         
 
         @if(count($creditors) > 0)
@@ -28,38 +33,45 @@
         @endif
 
         <fieldset>
-          <h3>Add A Creditor</h3>
 
-          <form role="form" class="creditor-form creditor" method="POST" action="/creditor/new" enctype="multipart/form-data">
+          <form role="form" class="form-horizontal bordered-row" method="POST" action="/creditor/new" enctype="multipart/form-data">
               {{ csrf_field() }}
-              <label>Creditor Type</label>
-              <input class="type-toggle creditor" type="radio" name="type" value="creditor" checked> Creditor<br>
-              <input class="type-toggle consolidation" type="radio" name="type" value="consolidation"> Consolidation
 
-              <div class="creditor-tab">
-                <h2>Creditor Information</h2>
+              <div class="form-group">
+                <label for="name" class="col-md-4 control-label">Creditor Name</label>
+                <div class="col-md-6">
+                  <input class="form-control" name="name" type="text" placeholder="Creditor Name">
+                </div>
               </div>
 
-              <div class="consolidation-tab" style="display: none;">
-                <h2>Consolidation</h2>
-                <p>You may include your rent/mortgage, car payment or other fixed monthly expenses for one convenient monthly payment with no additional fee.</p>
+              <div class="form-group">
+                <label for="account" class="col-md-4 control-label">Account #</label>
+                <div class="col-md-6">
+                  <input name="account" type="text" class="form-control" placeholder="Account #">
+                </div>
               </div>
 
-              <input name="name" type="text" placeholder="Creditor Name">
-              <input name="account" type="text" placeholder="Account #">
-              <input class="input-phone" name="phone" type="text" placeholder="Creditor / Agency Phone">
+              <div class="form-group">
+                <label for="phone" class="col-md-4 control-label">Creditor / Agency Phone</label>
+                <div class="col-md-6">
+                  <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                </div>
+              </div>
 
-              <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small>
+              <div class="form-group copy"
+                <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small>
 
-              <label for="file">Upload Files (you may choose multiple)</label>
-              <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
-              <input type="file" id="file" name="file[]" multiple>
+                <label for="file">Upload Files (you may choose multiple)</label>
+                <small>*Feel free to upload your bills, collector notifications, credit report, etc.</small>
+                <input type="file" id="file" name="file[]" multiple>
+              </div>
 
-              <div class="actions">
-                <button type="submit">Add Creditor</button>
+              <div class="form-group text-right">
+                <button class="btn btn-lg btn-primary" type="submit">Add Creditor</button>
               </div>
           </form>
         </fieldset>
 
-      </section>
+      </div>
+    </div>
 @endsection

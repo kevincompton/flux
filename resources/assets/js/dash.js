@@ -13,6 +13,16 @@ $.ajaxSetup({
 
  $(function () {
 
+    $('.type-toggle').click(function() {
+    if($('.type-toggle.consolidation').is(':checked')) { 
+      $('.consolidation-tab').show();
+      $('.creditor-tab').hide();
+    } else {
+      $('.consolidation-tab').hide();
+      $('.creditor-tab').show();
+    }
+  });
+
     /*$('.add_file').on('click', function() {
       var count = $('.files input').length;
       $('.files').append('<input type="file" id="file' + count + '" name="file' + count + '">');

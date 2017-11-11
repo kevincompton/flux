@@ -10,17 +10,17 @@ html {
           box-sizing: inherit;
 }
 
-section.form_budgeting {
-  padding: 0 25px;
-}
-
-section.form_budgeting .form-group {
+.body__dashboard .form-group {
   margin-left: 0;
   margin-right: 0;
 }
 
-section.form_budgeting .form-group.copy {
+.body__dashboard .form-group.copy {
   padding: 60px 0;
+}
+
+section.form_budgeting {
+  padding: 0 25px;
 }
 
 section.form_budgeting h2 {

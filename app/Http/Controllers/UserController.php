@@ -51,7 +51,7 @@ class UserController extends Controller
       $cosigner->zip = $request->zip;
       $cosigner->phone = $request->phone;
       $cosigner->ssn = $ssn;
-      $cosigner->dob = $request->months.$request->days.$request->years;
+      $cosigner->dob = $request->dob;
       $cosigner->save();
 
       if(env('APP_VERSION') == 'production') {

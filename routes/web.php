@@ -47,7 +47,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Dashboard Routes
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
-Route::get('/dashboard/cosigner', 'DashController@cosigners');
+Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 
   // Dashboard Actions

@@ -93,11 +93,11 @@ class DashController extends Controller
     public function cosigner()
     {
         $user = Auth::user();
-        $cosigners = $user->cosigners()->get();
+        $cosigner = $user->cosigners->first();
 
         $data = [
             "user" => $user,
-            "cosigners" => $cosigners
+            "cosigner" => $cosigner
         ];
 
         return view('dashboard.cosigner')->with($data);
