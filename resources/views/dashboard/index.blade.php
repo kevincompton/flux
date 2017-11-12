@@ -269,7 +269,7 @@
 
                 <form style="clear:both;" role="form" class="form-horizontal bordered-row" method="POST" action="/budget/new">
                   <div class="form-group text-right">
-                      <button class="btn btn-lg btn-primary" type="submit">Make A Payment</button>
+                      <a href="/payment" class="btn btn-lg btn-primary" type="submit">Make A Payment</a>
                   </div>
                 </form>
                     
