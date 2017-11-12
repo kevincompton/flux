@@ -104,7 +104,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Social Security #</label>
                 <div class="col-sm-6">
-                                    <input type="text" name="ssn" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;999-99-9999&apos;">
+                                    <input type="text" name="ssn" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;999-99-9999&apos;" required>
                                     <div class="help-block">999-99-9999</div>
                                 </div>
               </div>
@@ -112,7 +112,7 @@
               <div class="form-group">
                 <label class="col-md-4 control-label">Birth date</label>
                 <div class="col-sm-6">
-                    <input type="text" name="dob" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;99-99-9999&apos;">
+                    <input type="text" name="dob" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;99-99-9999&apos;" required>
                     <div class="help-block">MM-DD-YYYY</div>
                 </div>
               </div>

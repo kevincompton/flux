@@ -306,7 +306,7 @@
                     </div><!-- #header-nav-left -->
 
     <div id="header-nav-right">
-        
+        <!--
 
         <div class="dropdown" id="notifications-btn">
             <a data-toggle="dropdown" href="#" title="">
@@ -509,7 +509,7 @@
             </div>
         </div>
 
-
+        -->
     </div><!-- #header-nav-right -->
 
 </div>

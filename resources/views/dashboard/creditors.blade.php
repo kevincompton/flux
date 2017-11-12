@@ -40,14 +40,14 @@
               <div class="form-group">
                 <label for="name" class="col-md-4 control-label">Creditor Name</label>
                 <div class="col-md-6">
-                  <input class="form-control" name="name" type="text" placeholder="Creditor Name">
+                  <input class="form-control" name="name" type="text" placeholder="Creditor Name" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="account" class="col-md-4 control-label">Account #</label>
                 <div class="col-md-6">
-                  <input name="account" type="text" class="form-control" placeholder="Account #">
+                  <input name="account" type="text" class="form-control" placeholder="Account #" required>
                 </div>
               </div>
 
