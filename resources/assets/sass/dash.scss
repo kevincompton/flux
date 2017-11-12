@@ -37,6 +37,11 @@ section.form_budgeting {
     height: 62px;
 
   }
+  .input-group-addon {
+    @include media($mobile) {
+      display: none;
+    }
+  }
 }
 
 #form-wizard {
@@ -104,6 +109,9 @@ section.form_budgeting {
       bottom: 0;
       left: 0;
       right: 0;
+      @include media($mobile) {
+        bottom: -20px;
+      }
   }
   .best-value-icon {
       width: 85px;

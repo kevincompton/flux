@@ -45,6 +45,12 @@ section.form_budgeting .slider_output .form-control {
   height: 62px;
 }
 
+@media screen and (max-width: 480px) {
+  section.form_budgeting .input-group-addon {
+    display: none;
+  }
+}
+
 #form-wizard .container-fluid {
   padding: 60px 0;
   margin-right: 10%;
@@ -161,6 +167,12 @@ section.form_budgeting .slider_output .form-control {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .container-fluid.products .enroll-btn {
+    bottom: -20px;
+  }
 }
 
 .container-fluid.products .best-value-icon {
