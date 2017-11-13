@@ -1,3 +1,5 @@
+@section('body_class', 'body__onboard')
+
 @extends('layouts.client')
 
 @section('content')
@@ -31,6 +33,11 @@
                                 <p>We respect your privacy and will not sell or share your information</p>
                             </li>
                         </ul>
+
+                        <section class="onboard_signup">
+                            <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Login with Facebook</a>
+                            <span class="or">or</span>
+                        </section>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
@@ -80,41 +87,6 @@
                             <div class="col-md-6">
                                 <input id="password-confirm" placeholder="Confirm Password" type="password" class="form-control" name="password_confirmation" required>
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Phone</label>
-                            <input class="input-phone" name="phone" type="text" placeholder="ie 555-555-5555" required>
-                            @if ($errors->has('phone'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('phone') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Address</label>
-                            <input name="address" type="text" placeholder="Address" required>
-                        </div>
-
-                        <div class="form-group small">
-                            <label for="password-confirm" class="col-md-4 control-label">City</label>
-                            <input name="city" type="text" placeholder="City" required>
-                        </div>
-
-                        <div class="form-group small">
-                            <label for="password-confirm" class="col-md-4 control-label">State</label>
-                            @include('partials._state-select')
-                        </div>
-
-                        <div class="form-group small">
-                            <label for="password-confirm" class="col-md-4 control-label">Zip</label>
-                            <input name="zip" type="text" placeholder="Zip" maxlength="5" required>
-                            @if ($errors->has('zip'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('zip') }}</strong>
-                                </span>
-                            @endif
                         </div>
 
                         <div class="actions">

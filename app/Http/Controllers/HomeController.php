@@ -56,31 +56,6 @@ class HomeController extends Controller
         return view('poa_placeholder');
     }
 
-    public function dashboard()
-    {
-        $user = Auth::user();
-        $budget = $user->budget()->get()->first();
-        $creditors = $user->creditors()->get();
-        $cosigners = $user->cosigners()->get();
-
-
-        if($budget) {
-            $budget->expenses = $budget->car + $budget->mortgage + $budget->other;
-            $budget->afford = ($budget->income - $budget->expenses) * 0.6;
-
-            if($budget->afford < 250) {
-                $budget->afford = 250;
-            }
-        }
-
-        $data = [
-            "user" => $user,
-            "budget" => $budget,
-            "creditors" => $creditors,
-            "cosigners" => $cosigners,
-        ];
-
-        return view('dashboard')->with($data);
-    }
+    
 
 }

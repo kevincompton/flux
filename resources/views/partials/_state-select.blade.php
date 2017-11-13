@@ -1,4 +1,4 @@
-<select name="state" class="full" required>
+<select name="state" class="form-control" id="state" required>
   <option value="AL">AL</option>
   <option value="AK">AK</option>
   <option value="AR">AR</option>  

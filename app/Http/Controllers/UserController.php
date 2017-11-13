@@ -38,7 +38,7 @@ class UserController extends Controller
         'zip' => 'required|string|max:5|min:5',
       ]);
 
-      $ssn = str_replace(' ', '', $request->ssn);
+      $ssn = str_replace('-', '', $request->ssn);
       
       $cosigner = new \App\CoSigner;
       $cosigner->user_id = $user->id;
@@ -50,8 +50,8 @@ class UserController extends Controller
       $cosigner->state = $request->state;
       $cosigner->zip = $request->zip;
       $cosigner->phone = $request->phone;
-      $cosigner->ssn = $ssn;
-      $cosigner->dob = $request->months.$request->days.$request->years;
+      $cosigner->ssn = (int)$ssn;
+      $cosigner->dob = $request->dob;
       $cosigner->save();
 
       if(env('APP_VERSION') == 'production') {

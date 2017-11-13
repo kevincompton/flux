@@ -149,8 +149,9 @@ select.small {
 }
 
 form {
-  @include span-columns(10);
-  @include shift(2);
+  @include span-columns(8);
+  margin: auto !important;
+  float: none;
   @include media($mobile) {
     @include span-columns(4);
     margin-left: 0;
@@ -175,7 +176,6 @@ form {
     }
   }
   p {
-    margin-right: 15%;
     margin-bottom: 40px;
     font-size: 14px;
     @include media($mobile) {

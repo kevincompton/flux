@@ -1,4 +1,6 @@
-@extends('layouts.client')
+@section('body_class', 'body__dashboard')
+
+@extends('layouts.dash')
 
 @section('content')
   <div id="hs-container"></div>
@@ -21,7 +23,7 @@
      // Define a callback for processing events.
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
-         window.location.replace("http://fluxcredit.com/dashboard");
+         window.location.replace("http://staging.fluxcredit.com/dashboard");
        }
      }
    });
