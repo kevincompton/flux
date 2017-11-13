@@ -14,7 +14,7 @@
      // Set the sign_url passed from the controller.
      url: "{{ $sign_url }}",
      allowCancel: false,
-     redirectUrl: 'http://staging.fluxcredit.com/dashboard',
+     redirectUrl: 'http://fluxcredit.com/dashboard',
      height: 800,
      // Set the debug mode based on the test mode toggle.
      debug: {{ (getenv('HELLOSIGN_TEST_MODE') == 1 ? "true" : "false") }},
@@ -23,7 +23,7 @@
      // Define a callback for processing events.
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
-         window.location.replace("http://staging.fluxcredit.com/dashboard");
+         window.location.replace("http://fluxcredit.com/dashboard");
        }
      }
    });
