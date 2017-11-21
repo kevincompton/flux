@@ -38,7 +38,7 @@ return [
     'facebook' => [
         'client_id' => '271818749975282',
         'client_secret' => 'c653c167bcd3914dc8ae780a738370c5',
-        'redirect' => 'http://staging.fluxcredit.com/auth/facebook/callback',
+        'redirect' => 'http://fluxcredit.com/auth/facebook/callback',
     ],
 
     'google' => [
