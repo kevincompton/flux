@@ -11,11 +11,11 @@ class AdminController extends Controller
     public function index()
     {
       $user = Auth::user();
-      $users = \App\User::all();
+      $customers = \App\User::all();
 
       $data = [
-          "user" => $user,
-          "users" => $users
+          "admin_user" => $user,
+          "customers" => $customers
       ];
 
       return view('dashboard.admin.index')->with($data);

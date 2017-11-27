@@ -52,43 +52,43 @@
 
             <tbody>
               
-              @foreach($users as $user)
-                @if($user->admin == 0)
+              @foreach($customers as $customer)
+                @if($customer->admin == 0)
 
                   <tr>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->address }}</td>
-                    <td>{{ $user->city }}</td>
-                    <td>{{ $user->state }}</td>
-                    <td>{{ $user->zip }}</td>
-                    <td>{{ $user->phone }}</td>
-                    <td>{{ $user->dob }}</td>
-                    <td>{{ $user->ssn }}</td>
-                    <td>{{ $user->plan }}</td>
+                    <td>{{ $customer->name }}</td>
+                    <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->address }}</td>
+                    <td>{{ $customer->city }}</td>
+                    <td>{{ $customer->state }}</td>
+                    <td>{{ $customer->zip }}</td>
+                    <td>{{ $customer->phone }}</td>
+                    <td>{{ $customer->dob }}</td>
+                    <td>{{ $customer->ssn }}</td>
+                    <td>{{ $customer->plan }}</td>
                     <td>
-                      @if($user->onboard_step < 4)
-                        {{ $user->onboard_step + 1 }}
+                      @if($customer->onboard_step < 4)
+                        {{ $customer->onboard_step + 1 }}
                       @else
                         completed
                       @endif
                     </td>
                     <td>
-                      @if($user->budget)
-                        <a href="/dashboard/admin/budget/{{ $user->budget->id }}">View</a>
+                      @if($customer->budget)
+                        <a href="/dashboard/admin/budget/{{ $customer->budget->id }}">View</a>
                       @else
                         Not Completed
                       @endif
                     </td>
                     <td>
-                      @if($user->cosigner)
+                      @if($customer->cosigner)
                         <a href="#">View</a>
                       @else
                         None
                       @endif
                     </td>
                     <td>
-                      @if(count($user->creditors) > 0)
+                      @if(count($customer->creditors) > 0)
                         <a href="#">View</a>
                       @else
                         None
