@@ -83,6 +83,7 @@ function daysInMonth(month, year) {
 }
 
 
+
 var greenButton = document.getElementById('payment_form');
 
     if(greenButton != null) {
