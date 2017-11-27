@@ -82,64 +82,6 @@ function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
 }
 
-require('rangeslider.js/dist/rangeslider.min.js');
-
-//custom slider javascript
-var $income = $('input[type="range"]#income');
-var $debt = $('input[type="range"]#debt');
-var $handle;
-var $handle2;
-
-$income
-  .rangeslider({
-    polyfill: false,
-    onInit: function() {
-      $handle = $("#income_range").find('.rangeslider__handle', this.$range);
-      updateHandle($handle[0], this.value);
-    }
-  })
-  .on('input', function() {
-    updateHandle($handle[0], this.value);
-  });
-$debt
-  .rangeslider({
-    polyfill: false,
-    onInit: function() {
-      $handle2 = $("#debt_range").find('.rangeslider__handle', this.$range);
-      updateHandle($handle2[0], this.value);
-    }
-  })
-  .on('input', function() {
-    updateHandle($handle2[0], this.value);
-  });
-
-function updateHandle(el, val) {
-  el.textContent = " " + "$" + val + " ";
-}
-
-$(document).ready(function(){
-  
-  $(".mobile-toggle").on('click', function() {
-    $('.mobile-nav').fadeToggle();
-  });
-
-  //when slider changes, hide start message
-  $("input#income").on("change", function() {
-    $("#helper.income").fadeOut("slow");
-  });
-
-  $("input#debt").on("change", function() {
-    $("#helper.debt").fadeOut("slow");
-  });
-
-  //promo-box
-  $("#js-promo-box").hide();
-  $("#promo-link").on("click", function(){
-    $("#js-promo-box").slideToggle();
-    return false;
-  });
-  
-});
 
 var greenButton = document.getElementById('payment_form');
 
