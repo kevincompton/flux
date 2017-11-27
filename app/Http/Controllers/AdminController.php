@@ -14,7 +14,7 @@ class AdminController extends Controller
       $customers = \App\User::all();
 
       $data = [
-          "admin_user" => $user,
+          "user" => $user,
           "customers" => $customers
       ];
 
