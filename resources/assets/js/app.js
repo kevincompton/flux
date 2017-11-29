@@ -22,6 +22,9 @@ $(function() {
     }
   });
 
+  $('.mobile-toggle').on('click', function() {
+    $('.mobile-nav').toggleClass('active');
+  });
 
   $("#contact-modal").on("change", function() {
     if ($(this).is(":checked")) {
