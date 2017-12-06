@@ -80,28 +80,37 @@
         <footer class="main-footer">
             
             <div class="container footer-nav">
-                <ul>
-                    <li><a href="/payment/">Make A Payment</a></li>
-                    <li><a href="/prime/">Flux Prime</a></li>
-                    <li><a href="/plus/">Flux Plus</a></li>
-                </ul>
 
-                <!--First column-->
-                <div class="footer-col footer-cta">
+                <div class="footer-col footer_cta">
                     <h5><img src="/images/fluxcredit-logo.png" alt="Flux Credit"></h5>
                     <hr>
-                    <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
-                </div>
-                <div class="social">
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                        <a href="https://www.facebook.com/FluxCredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-3x fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/fluxcredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-3x fa-instagram"></i></a>
-                        <a href="https://www.yelp.com/biz/flux-credit-woodland-hills" class="p-type col-xs-4" target="_blank"><i class="fa fa-3x fa-yelp"></i></a>
+                    <div class="footer_cta">
+                        <a href="#" class="btn">Prime</a>
+                        <a href="#" class="btn">Plus</a>
+                        <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
                     </div>
                 </div>
-                <!--/.First column-->
+                
+                <ul>
+                    <li>Already have an account?<br>
+                        <a href="#" class="btn">Login</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="/payment/">MAKE A PAYMENT</a></li>
+                    <li><a href="#">BECOME AN AFFILIATE</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+
             </div>
 
+            <div class="social">
+                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+                        <a href="https://www.facebook.com/FluxCredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/fluxcredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.yelp.com/biz/flux-credit-woodland-hills" class="p-type col-xs-4" target="_blank"><i class="fa fa-yelp"></i></a>
+                    </div>
+                </div>
                 
             <div class="site-info">
                 

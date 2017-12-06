@@ -912,25 +912,65 @@ footer.main-footer {
   background: #02152F;
   @include clearfix();
   clear: both;
-  padding-top: 80px;
   .footer-nav ul {
     text-align: center;
     width: 100%;
+    border-left: 1px solid rgba(275,275,275,0.1);
+    padding-left: 45px !important;
+
     li {
       display: inline-block;
       margin: 0 8px;
+      font-size: 12px;
       a { font-size: 16px;
-      letter-spacing: 1px; }
+      letter-spacing: 1px; 
+      color: white;
+      line-height: 2;
+    }
+    }
+    .btn {
+      line-height: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: 400;
+      border-radius: 30px;
+      margin-bottom: 30px;
+      margin-top: 15px;
+      font-size: 14px;
     }
     @include media($tablet) {
         display: none;
       }
+  }
+  .footer_cta {
+    margin-top: 45px;
+    .btn {
+      border-radius: 30px;
+      background: transparent;
+      border: 1px solid #00C4B3;
+      color: #00C4B3;
+      line-height: 20px;
+      padding-left: 25px;
+      padding-right: 25px;
+      margin: 0 25px;
+      &.cta-btn {
+        background: #00C4B3;
+        color: white;
+        border: 0;
+      }
+    }
   }
   .footer-nav {
     @include clearfix();
     width: 70%;
     margin:auto;
     ul {
+      @include span-columns(3);
+      float: right;
+
+      li {
+        display: block;
+      }
       @include media($mobile) {
         display: none;
       }
@@ -943,7 +983,7 @@ footer.main-footer {
       }
   }
   .footer-col {
-    @include span-columns(3);
+    @include span-columns(6);
   }
   .site-info {
       margin-top: 30px;
@@ -960,7 +1000,9 @@ footer.main-footer {
       text-align: center;
   }
   .copyright {
-      @include span-columns(12);
+      @include span-columns(3);
+      float: right;
+      text-align: right;
       font-size: 11px;
       text-decoration: none;
       padding: 45px 0;
@@ -979,14 +1021,17 @@ footer.main-footer {
       color: rgba(0, 210, 193, 1);
   }
   .social {
-      float: right;
+      @include clearfix();
       @include media($tablet) {
         float: none;
         margin-right: 0;
       }
-      margin-top: 120px;
-      margin-right: 18%;
+      margin-top: 80px;
+      margin-bottom: 60px;
       color: rgba(0, 210, 193, 1);
+      i {
+        font-size: 2em;
+      }
   }
   .social a {
     margin: 0 12px;
@@ -995,6 +1040,11 @@ footer.main-footer {
   }
   .social a:hover {
       color: rgba(0, 210, 193, 1);
+  }
+  .ssl {
+    margin-left: 25px;
+    float: left;
+    width: 250px;
   }
   .ssl p {
       margin-bottom: 0;
