@@ -1,75 +1,29 @@
 <div class="container-fluid products">
     <div class="container np-lr">
-      <h2 class="section-header h1 text-center">Open, Upfront Pricing</h2>
-      <p class="text-center black"><em>Live life debt free!</em></p>
-      <hr>
-      <div id="pricing" class="pricingTable col-xs-10 col-xs-offset-1 col-sm-3 np-lr shadow">
-        <div class="pricingTable-header">
-          <span id="flux-prime-header" class="heading">
-            <h3><img src="/images/fluxprime-logo.svg" alt="Flux Prime"></h3>
-            <hr>
-            <p>Eliminate and/or consolidate your debts at the lowest market rate</p>
-          </span>
-        </div>
-        <div class="pricingContent">
-          <ul>
-            <li>1% Cashback</li>
-            <li>Prevent Bankruptcy/Litigation</li>
-            <li>Secured Future Savings</li>
-            <li>Road to Financial Freedom</li>
-          </ul>
-        </div>
-        <div class="pricingTable-sign-up">
-          <span class="price-value col-xs-12 np-lr">$9<span class="month">/Monthly*</span></span>
-
-          <p class="col-xs-12 np-lr"><small>*Subject to flux approval</small></p>
-          <a href="/prime/" class="enroll-btn col-xs-12">LEARN MORE</a>
-        </div>
-      </div>
-      <div class="pricingTable col-xs-10 col-xs-offset-1 col-sm-3 np-lr shadow">
-        <img class="best-value-icon" src="/images/best-value-icon.svg">
-        <div class="pricingTable-header">
-          <span class="heading">
-            <h3><img src="/images/fluxplus-logo.svg" alt="Flux Plus"></h3>
-            <hr>
-            <p>All the valuable benefits of fluxprime, plus:</p>
-          </span>
-        </div>
-        <div class="pricingContent">
-          <ul>
-            <li>1.5% Cashback</li>
-            <li>Attorney Representation</li>
-            <li>Tax Defense / Credit Repair</li>
-            <li>No Transaction Fees</li>
-          </ul>
-        </div>
-        <div class="pricingTable-sign-up">
-          <span class="price-value col-xs-12 np-lr">$49<span class="month">/Monthly*</span></span>
-          <p><small>*Subject to flux approval</small></p>
-          <a href="/plus/" class="enroll-btn col-xs-12">LEARN MORE</a>
-        </div>
-      </div>
-      <div class="pricingTable col-xs-10 col-xs-offset-1 col-sm-3 np-lr shadow">
-        <div class="pricingTable-header">
-          <span class="heading">
-            <h3><img src="/images/fluxcredit-logo2.png" alt="Flux Flex"></h3>
-            <hr>
-            <p>Refine The Past - Reinvent Your Future</p>
-          </span>
-        </div>
-        <div class="pricingContent">
-          <ul>
-            <li>Rebuild Your Credit</li>
-            <li>Earn Cash Back</li>
-            <li>Secured Future Savings</li>
-            <li>Fresh Start</li>
-          </ul>
-        </div>
-        <div class="pricingTable-sign-up last-child">
-          <span class="price-value col-xs-12 np-lr" style="margin-top: 15px;">Up to $1500/Credit Line</span>
-          <p><small>*Subject to Bank of Louisiana approval</small></p>
-          <a href="/cash/" class="enroll-btn col-xs-12">LEARN MORE</a>
-        </div>
+      <img class="iphone" src="/images/iphone.png"/>
+      <div class="copy">
+        <img class="flux_prime" src="/images/flux_prime.png"/>
+        <h2>Eliminate Your Debts</h2>
+        <ul>
+          <li>Only pay on debts settled <span>*Lowest market rate</span></li>
+          <li>Flux Flex Lending <span>*6.9% + interest rate</span></li>
+          <li>1% Cash Back towards a Visa Secuired Credit Card</li>
+          <li>No hidden fees</li>
+        </ul>
       </div>
     </div>
-  </div>
+</div>
+<div class="container-fluid products plus">
+    <div class="container np-lr">
+      <div class="copy">
+        <img class="flux_prime" src="/images/flux_plus.png"/>
+        <h2>Perfect Your Credit Score</h2>
+        <ul>
+          <li>Credit Repair <span>*FICO</span></li>
+          <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
+          <li>Attorney Representation *Included w/ Flux Prime</li>
+        </ul>
+      </div>
+      <img class="phone" src="/images/laptop.png"/>
+    </div>
+</div>
