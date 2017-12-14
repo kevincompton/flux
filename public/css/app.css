@@ -462,6 +462,10 @@ h2.section-heading {
   margin-top: 45px;
 }
 
+h5 {
+  font-size: 1.2rem;
+}
+
 p {
   font-weight: 100;
   line-height: 1.8;
@@ -855,7 +859,7 @@ div.wrapper.page_wrap {
   float: left;
   display: block;
   margin-right: 2.35765202%;
-  width: 57.35097832%;
+  width: 74.41058699%;
   margin-right: 0;
 }
 
@@ -951,6 +955,14 @@ div.wrapper.page_wrap {
   background: url(/images/plus_bg.png);
   background-size: cover;
   border-left: 5px solid #00d2c1;
+}
+
+.newsletter .email-signup p {
+  margin-bottom: 25px;
+}
+
+.newsletter .email-signup .section-header {
+  padding-top: 80px;
 }
 
 .customer-testimonials {
@@ -1408,6 +1420,7 @@ section.home_hero .wrapper > img {
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 30vw;
 }
 
 @media screen and (max-width: 480px) {
@@ -1502,8 +1515,28 @@ section.home_hero p.tagline {
   margin: 60px auto;
 }
 
+ul#partners {
+  border-left: 0;
+  padding-left: 0 !important;
+  width: 100%;
+  margin-top: 25px;
+  text-align: left;
+  padding-bottom: 0 !important;
+}
+
+ul#partners li {
+  display: inline-block;
+  margin-right: 45px;
+  margin-bottom: 45px;
+}
+
+ul#partners li img {
+  opacity: 0.25;
+}
+
 footer.main-footer {
   background: #02152F;
+  position: relative;
   clear: both;
   padding: 2em 1em;
   text-align: center;
@@ -1521,6 +1554,8 @@ footer.main-footer .footer-nav ul {
   width: 100%;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   padding-left: 45px !important;
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
 }
 
 footer.main-footer .footer-nav ul li {
@@ -1555,6 +1590,16 @@ footer.main-footer .footer-nav ul .btn {
 
 footer.main-footer .footer_cta {
   margin-top: 45px;
+  text-align: left;
+}
+
+footer.main-footer .footer_cta > img {
+  margin-bottom: -10px;
+}
+
+footer.main-footer .footer_cta .concierge {
+  line-height: 50px;
+  margin-left: 45px;
 }
 
 footer.main-footer .footer_cta .btn {
@@ -1565,7 +1610,7 @@ footer.main-footer .footer_cta .btn {
   line-height: 20px;
   padding-left: 25px;
   padding-right: 25px;
-  margin: 0 25px;
+  margin-right: 25px;
 }
 
 footer.main-footer .footer_cta .btn.cta-btn {
@@ -1575,7 +1620,7 @@ footer.main-footer .footer_cta .btn.cta-btn {
 }
 
 footer.main-footer .footer-nav {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
@@ -1621,7 +1666,7 @@ footer.main-footer .footer-col {
   float: left;
   display: block;
   margin-right: 2.35765202%;
-  width: 48.82117399%;
+  width: 65.88078266%;
 }
 
 footer.main-footer .footer-col:last-child {
@@ -1684,15 +1729,10 @@ footer.main-footer span.sep:hover {
 }
 
 footer.main-footer .social {
-  margin-top: 80px;
-  margin-bottom: 60px;
-  color: #00d2c1;
-}
-
-footer.main-footer .social::after {
   clear: both;
-  content: "";
-  display: block;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  color: #00d2c1;
 }
 
 @media screen and (max-width: 980px) {
@@ -1718,9 +1758,10 @@ footer.main-footer .social a:hover {
 }
 
 footer.main-footer .ssl {
-  margin-left: 25px;
-  float: left;
   width: 250px;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
 }
 
 footer.main-footer .ssl p {
@@ -1728,8 +1769,9 @@ footer.main-footer .ssl p {
 }
 
 footer.main-footer h5 {
-  color: #fff;
-  font-size: 1.6em;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 80px;
+  font-size: 14px;
 }
 
 footer.main-footer img {
@@ -1854,6 +1896,7 @@ footer.main-footer .footer-branding a {
 
 .container-fluid.products .laptop {
   margin-left: 80px;
+  width: 40vw;
 }
 
 .container-fluid.products .iphone {

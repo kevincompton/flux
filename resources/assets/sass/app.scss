@@ -118,6 +118,10 @@ h2.section-heading {
   margin-top: 45px;
 }
 
+h5 {
+  font-size: 1.2rem;
+}
+
 p {
   font-weight: 100;
   line-height: 1.8;
@@ -385,7 +389,7 @@ div.wrapper {
     }
     @include clearfix();
     input {
-      @include span-columns(7);
+      @include span-columns(9);
       @include omega();
       @include media($mobile) {
         @include span-columns(4);
@@ -439,6 +443,12 @@ div.wrapper {
     background: url(/images/plus_bg.png);
     background-size: cover;
     border-left: 5px solid rgba(0, 210, 193, 1);
+    p {
+      margin-bottom: 25px;
+    }
+    .section-header {
+      padding-top: 80px;
+    }
   }
 }
 
@@ -868,6 +878,7 @@ section.home_hero {
     position: absolute;
     left: 0;
     bottom: 0;
+    width: 30vw;
   }
   @include media($mobile) {
     padding-left: 25px;
@@ -928,8 +939,26 @@ section.home_hero {
 }
 
 // Footer
+ul#partners {
+      border-left: 0;
+      padding-left: 0 !important;
+      width: 100%;
+      margin-top: 25px;
+      text-align: left;
+      padding-bottom: 0 !important;
+      li {
+        display: inline-block;
+        margin-right: 45px;
+        margin-bottom: 45px;
+        img {
+          opacity: 0.25;
+        }
+      }
+    }
+
 footer.main-footer {
   background: #02152F;
+  position: relative;
   @include clearfix();
   clear: both;
   .footer-nav ul {
@@ -937,7 +966,8 @@ footer.main-footer {
     width: 100%;
     border-left: 1px solid rgba(275,275,275,0.1);
     padding-left: 45px !important;
-
+    padding-top: 55px !important;
+    padding-bottom: 55px !important;
     li {
       display: inline-block;
       margin: 0 8px;
@@ -964,6 +994,14 @@ footer.main-footer {
   }
   .footer_cta {
     margin-top: 45px;
+    text-align: left;
+    > img {
+      margin-bottom: -10px;
+    }
+    .concierge {
+      line-height: 50px;
+      margin-left: 45px;
+    }
     .btn {
       border-radius: 30px;
       background: transparent;
@@ -972,7 +1010,7 @@ footer.main-footer {
       line-height: 20px;
       padding-left: 25px;
       padding-right: 25px;
-      margin: 0 25px;
+      margin-right: 25px;
       &.cta-btn {
         background: #00C4B3;
         color: white;
@@ -982,7 +1020,7 @@ footer.main-footer {
   }
   .footer-nav {
     @include clearfix();
-    width: 70%;
+    width: 80%;
     margin:auto;
     ul {
       @include span-columns(3);
@@ -1003,7 +1041,7 @@ footer.main-footer {
       }
   }
   .footer-col {
-    @include span-columns(6);
+    @include span-columns(8);
   }
   .site-info {
       margin-top: 30px;
@@ -1041,13 +1079,14 @@ footer.main-footer {
       color: rgba(0, 210, 193, 1);
   }
   .social {
-      @include clearfix();
+      clear: both;
+
       @include media($tablet) {
         float: none;
         margin-right: 0;
       }
-      margin-top: 80px;
-      margin-bottom: 60px;
+      margin-top: 0px;
+      margin-bottom: 40px;
       color: rgba(0, 210, 193, 1);
       i {
         font-size: 2em;
@@ -1062,9 +1101,10 @@ footer.main-footer {
       color: rgba(0, 210, 193, 1);
   }
   .ssl {
-    margin-left: 25px;
-    float: left;
     width: 250px;
+    position: absolute; 
+    left: 15px;
+    bottom: 15px;
   }
   .ssl p {
       margin-bottom: 0;
@@ -1076,8 +1116,9 @@ footer.main-footer {
       color: #fff;
 
    h5 {
-      color: #fff;
-      font-size: 1.6em;
+      color: rgba(275,275,275,0.3);
+      margin-top: 80px;
+      font-size: 14px;
   }
    img {
       max-width: 200px;
@@ -1182,6 +1223,7 @@ footer.main-footer {
   }
   .laptop {
     margin-left: 80px;
+    width: 40vw;
   }
   .iphone {
     @include shift(2)

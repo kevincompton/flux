@@ -4,7 +4,7 @@
 
   <section class="home_hero">
     <div class="wrapper">
-      <img src="/images/flux-card.png" />
+      <img class="flux-card" src="/images/flux-card.png" />
       <h1>Settle debts,<br>
         perfect credit,<br>
         earn cash back.

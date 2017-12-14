@@ -62,7 +62,7 @@
                 
             </div>
 
-            <div class="concierge"><a href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i>1-866-FLUX-218</a></div>
+            <div class="concierge"><a href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i> 1-866-FLUX-218</a></div>
 
             <nav class="main-nav">
                 <ul>
@@ -82,16 +82,39 @@
             <div class="container footer-nav">
 
                 <div class="footer-col footer_cta">
-                    <h5><img src="/images/fluxcredit-logo.png" alt="Flux Credit"></h5>
-                    <hr>
+                    <img src="/images/logo.png" alt="Flux Credit">
+
+                    <a class="concierge" href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i> 1-866-FLUX-218</a>
+
                     <div class="footer_cta">
                         <a href="#" class="btn">Prime</a>
                         <a href="#" class="btn">Plus</a>
                         <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
                     </div>
+
+                    <h5>FLUX CREDIT IS A TRUSTED NAME IN PERSONAL FINANCE AND CREDIT REPAIR.  WE WORK ALONGSIDE:</h5>
+
+                    <ul id="partners">
+                        <li><img src="/images/bbb.png" /></li>
+                        <li><img src="/images/visa.png" /></li>
+                        <li><img src="/images/equifax.png" /></li>
+                        <li><img src="/images/bofl.png" /></li>
+                        <li><img src="/images/experian.png" /></li>
+                        <li><img src="/images/credit_karma.png" /></li>
+                        <li><img src="/images/transunion.png" /></li>
+                    </ul>
                 </div>
-                
+
                 <ul>
+                    <li>
+                        <div class="social">
+                            <div>
+                                <a href="https://www.facebook.com/FluxCredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/fluxcredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.yelp.com/biz/flux-credit-woodland-hills" class="p-type col-xs-4" target="_blank"><i class="fa fa-yelp"></i></a>
+                            </div>
+                        </div>
+                    </li>
                     <li>Already have an account?<br>
                         <a href="#" class="btn">Login</a></li>
                     <li><a href="#">CONTACT US</a></li>
@@ -104,13 +127,6 @@
 
             </div>
 
-            <div class="social">
-                    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-                        <a href="https://www.facebook.com/FluxCredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/fluxcredit/" class="p-type col-xs-4" target="_blank"><i class="fa fa-instagram"></i></a>
-                        <a href="https://www.yelp.com/biz/flux-credit-woodland-hills" class="p-type col-xs-4" target="_blank"><i class="fa fa-yelp"></i></a>
-                    </div>
-                </div>
                 
             <div class="site-info">
                 
@@ -121,6 +137,7 @@
                 
                 <span class="copyright" href="/">© 2017 FLUX CREDIT<span class="sep"> ALL RIGHTS RESERVED </span></span>
             </div>
+
         </footer>
 
         @include('partials._contact-sticky')
