@@ -10,6 +10,8 @@
           <li>1% Cash Back towards a Visa Secuired Credit Card</li>
           <li>No hidden fees</li>
         </ul>
+        <a class="btn" href="/register">Sign Up For Free</a>
+        <a class="learn_more" href="/prime">Learn More</a>
       </div>
     </div>
 </div>
@@ -23,7 +25,9 @@
           <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
           <li>Attorney Representation *Included w/ Flux Prime</li>
         </ul>
+        <a class="btn" href="/register">$49 per Month</a>
+        <a class="learn_more" href="/plus">Learn More</a>
       </div>
-      <img class="phone" src="/images/laptop.png"/>
+      <img class="laptop" src="/images/laptop.png"/>
     </div>
 </div>

@@ -4,12 +4,13 @@
 
   <section class="home_hero">
     <div class="wrapper">
+      <img src="/images/flux-card.png" />
       <h1>Settle debts,<br>
         perfect credit,<br>
         earn cash back.
       </h1>
 
-      <a class="btn" href="/register">Start Now For Free</a>
+      <a class="btn" href="/register">Sign Up For Free</a>
       
     </div>
   </section>

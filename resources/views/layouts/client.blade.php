@@ -8,7 +8,7 @@
         <title>Flux Credit</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
         <script src="https://use.fontawesome.com/c753f43933.js"></script>
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -62,7 +62,7 @@
                 
             </div>
 
-            <div class="concierge"><a href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i> 866.FLUX.218</a></div>
+            <div class="concierge"><a href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i>1-866-FLUX-218</a></div>
 
             <nav class="main-nav">
                 <ul>

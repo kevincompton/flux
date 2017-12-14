@@ -32,7 +32,7 @@
   </div>
   <!-- NEWSLETTER SECTION -->
   <!-- NEWSLETTER SECTION -->
-  <div class="col-sm-6 email-signup text-center">
+  <div class="email-signup text-center col-sm-6">
     <h2 class="section-header"><i class="fa fa-envelope-o"></i>Flux Perks</h2>
     <hr>
     <p class="col-12 col-sm-10 col-sm-offset-1 col-md-10 col-lg-6 col-lg-offset-3">For tips to eliminate your debts and perfect your credit, please fill out the form below. <br> <small><em>We promise to not send spam.</em></small></p>

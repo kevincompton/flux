@@ -27,7 +27,10 @@ $mobile: new-breakpoint(max-width 480px 4);
 
 body {
   color: white;
+  font-family: 'Nunito Sans', sans-serif;
 }
+
+h1, h2, h3, h4, h5 { font-family: 'Nunito Sans', sans-serif; }
 
 a {
   color: #00d2c1;
@@ -52,6 +55,8 @@ button {
   text-transform: uppercase;
   transition: all 0.4s ease 0s;
   line-height: 50px;
+  border-radius: 40px;
+  font-family: 'Nunito Sans', sans-serif;
   &:hover {
     background: rgba(0, 210, 193, 1);
   }
@@ -131,6 +136,7 @@ h2, h3 {
 input[type="text"], input[type="email"], input[type="password"] {
   line-height: 30px;
   border-radius: 5px;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 select {
@@ -327,7 +333,8 @@ div.wrapper {
     padding-left: 10vw;
     padding-right: 10vw;
     color: black;
-    padding: 45px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     table {
       text-align: center;
       td {
@@ -386,7 +393,7 @@ div.wrapper {
       }
     }
     button {
-      @include span-columns(5);
+      @include span-columns(3);
       @include omega();
       @include media($mobile) {
         @include span-columns(4);
@@ -399,10 +406,17 @@ div.wrapper {
       padding-bottom: 9px;
       margin-left: 10px;
     }
+    input {
+      line-height: 48px;
+      border-radius: 40px;
+      text-indent: 25px;
+      font-size: 18px;
+
+    }
   }
   .section-header {
     font-size: 3.1em;
-    color: #23292f;
+    color: white;
     font-weight: 800;
     padding-top: 1.5rem;
   }
@@ -421,21 +435,21 @@ div.wrapper {
   }
   .email-signup {
     padding: 0 2rem 0rem 2rem;
-    color: #23292f;
-    background-color: #f4f3f0;
-    border-top: 2px solid rgba(0, 210, 193, 1);
+    color: white;
+    background: url(/images/plus_bg.png);
+    background-size: cover;
+    border-left: 5px solid rgba(0, 210, 193, 1);
   }
 }
 
 .customer-testimonials {
-    background: url(/images/customer-pattern-bg.png);
+    background: url(/images/blue_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    border-top: 2px solid rgba(0, 210, 193, 1);
+    padding-top: 80px;
 }
 @media screen and (min-width:768px) {
     .customer-testimonials {
-        border-right: 2px solid rgba(0, 210, 193, 1);
     }
 }
 @media screen and (min-width:1024px) {
@@ -466,7 +480,7 @@ div.wrapper {
 .customer-testimonials p {
     font-weight: 100;
     font-size: 1.1em;
-    color: #222;
+    color: white;
     line-height: 1.5em;
     margin-bottom: 0;
 }
@@ -849,6 +863,12 @@ section.home_hero {
   padding-bottom: 120px;
   color: white;
   text-align: center;
+  position: relative;
+  .wrapper > img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
   @include media($mobile) {
     padding-left: 25px;
     padding-right: 25px;
@@ -1108,13 +1128,26 @@ footer.main-footer {
 .container-fluid.products {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 65px;
-  padding-bottom: 45px;
+  padding-top: 85px;
+  padding-bottom: 85px;
   background: white;
   @include clearfix();
   color: #00C4B3;
   &.plus {
     background: url(/images/plus_bg.png);
+    background-size: cover;
+    color: white;
+    padding: 120px 10%;
+    .copy {
+      margin-left: 0;
+    }
+  }
+  .learn_more {
+    margin-left: 77px;
+    text-decoration: underline;
+    &:hover {
+      color: #333;
+    }
   }
   h2 {
     font-weight: 200;
@@ -1124,6 +1157,7 @@ footer.main-footer {
   ul {
     margin-top: 50px;
     padding-left: 25px;
+    margin-bottom: 50px;
   }
   li {
     position: relative;
@@ -1146,12 +1180,15 @@ footer.main-footer {
       font-weight: normal;
     }
   }
+  .laptop {
+    margin-left: 80px;
+  }
   .iphone {
     @include shift(2)
     @include span-columns(3);
   }
   .copy {
-    
+    margin-left: 10%;
     @include span-columns(5);
   }
 }
