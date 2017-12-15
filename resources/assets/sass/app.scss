@@ -630,6 +630,10 @@ header {
     }
   }
   span.logo {
+    float: left;
+    @include media($tablet) {
+      float: none;
+    }
     img {
       width: 180px;
       @include media($mobile) {

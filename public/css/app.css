@@ -1170,6 +1170,16 @@ header div.top-right .btn {
   border-radius: 30px;
 }
 
+header span.logo {
+  float: left;
+}
+
+@media screen and (max-width: 1300px) {
+  header span.logo {
+    float: none;
+  }
+}
+
 header span.logo img {
   width: 180px;
 }
