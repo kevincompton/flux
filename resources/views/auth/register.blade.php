@@ -3,6 +3,8 @@
 @extends('layouts.client')
 
 @section('content')
+<h1>Start Today For Free!</h1>
+
 <div class="wrapper page_wrap">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -12,31 +14,12 @@
                     <form method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
-                        <h1>Your Fresh Start To Financial Freedom Begins Today!</h1>
-
-                        <p>Please complete the section below. Clients who successfully complete the Flux Credit program will become debt free, be awarded a Flux Visa Secured Credit Card with a limit of up to $1,500 and walk away with a savings account of up to $1,875!</p> 
-
-                        <ul class="features">
-                            <li>
-                              <i class="fa fa-clock-o" aria-hidden="true"></i>
-                              <h3><a href="#">24hr Service</a></h3>
-                              <p>if you have any questions please contact us via phone, chat or email</p>
-                            </li>
-                            <li>
-                              <i class="fa fa-lock" aria-hidden="true"></i>
-                              <h3><a href="#">Security</a></h3>
-                              <p>We never run your credit or require personal banking information</p>
-                            </li>
-                            <li>
-                                <i class="fa fa-shield" aria-hidden="true"></i>
-                                <h3><a href="#">Privacy</a></h3>
-                                <p>We respect your privacy and will not sell or share your information</p>
-                            </li>
-                        </ul>
+                        <h3><span>Your fresh start to financial freedom starts today!</span></h3>
 
                         <section class="onboard_signup">
-                            <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Login with Facebook</a>
-                            <span class="or">or</span>
+                            <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Sign Up with Facebook</a>
+                            <a href="{{ url('/auth/google') }}" class="btn btn-google"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign Up with Google</a>
+                            <span class="or">Or Create A New Account Below</span>
                         </section>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -91,7 +74,7 @@
 
                         <div class="actions">
                             <button type="submit" class="btn btn-primary">
-                                Register
+                                SIGN UP
                             </button>
                         </div>
 

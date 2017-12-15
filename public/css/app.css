@@ -356,6 +356,7 @@ picture {
 body {
   color: white;
   font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 1px;
 }
 
 h1,
@@ -750,7 +751,7 @@ label {
 body {
   margin: 0;
   margin-top: 60px;
-  background: #101010;
+  background: white;
 }
 
 .content::after {
@@ -759,12 +760,20 @@ body {
   display: block;
 }
 
+section.section-header {
+  background: url(/images/plus_bg.png);
+  background-size: cover;
+  padding: 80px 20vw 60px 20vw;
+}
+
 div.wrapper {
   max-width: 1400px;
   margin: auto;
+  margin-bottom: 120px;
 }
 
 div.wrapper.page_wrap {
+  color: #333;
   margin-top: 120px;
 }
 
@@ -1255,8 +1264,61 @@ header .concierge {
 }
 
 .body__onboard {
-  background: #101010 url(/images/bg.jpg);
+  background: #101010 url(/images/start-today-bg.png);
   background-size: cover;
+}
+
+.body__onboard div.wrapper.page_wrap {
+  margin-top: 0;
+  color: white;
+}
+
+.body__onboard .form-group {
+  width: 46%;
+  float: left;
+  margin-right: 2%;
+}
+
+.body__onboard .actions {
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 45px;
+  width: 100%;
+}
+
+.body__onboard .actions button.btn,
+.body__onboard .actions a.btn {
+  margin-left: 0;
+}
+
+.body__onboard h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 85px;
+  padding-bottom: 65px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 100;
+}
+
+.body__onboard h3 {
+  line-height: 92px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.body__onboard h3 span {
+  position: relative;
+  padding-left: 120px;
+}
+
+.body__onboard h3 span:before {
+  background: url(/images/money_icon.png);
+  content: '';
+  width: 85px;
+  height: 92px;
+  position: absolute;
+  left: 0;
 }
 
 .body__onboard section.onboard_signup {
@@ -1270,12 +1332,19 @@ header .concierge {
   text-align: center;
   margin: 45px 0;
   color: white;
+  text-transform: uppercase;
 }
 
 .body__onboard section.onboard_signup button,
 .body__onboard section.onboard_signup a.btn {
   background-color: #4267b2;
-  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.body__onboard section.onboard_signup button.btn-google,
+.body__onboard section.onboard_signup a.btn-google.btn {
+  background-color: #df4a32;
+  margin-left: 30px;
 }
 
 .body__onboard section.onboard_signup button:hover,

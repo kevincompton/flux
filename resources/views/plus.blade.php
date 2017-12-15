@@ -1,6 +1,12 @@
 @extends('layouts.client')
 
 @section('content')
+
+    <section class="section-header prime">
+        <img src="/images/flux_plus.png" />
+        <h2>Perfect Your Credit Score</h2>
+    </section>
+
     <div class="wrapper page_wrap">
 
         <div class="container product-info text-center info-page">

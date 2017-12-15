@@ -28,6 +28,7 @@ $mobile: new-breakpoint(max-width 480px 4);
 body {
   color: white;
   font-family: 'Nunito Sans', sans-serif;
+  letter-spacing: 1px;
 }
 
 h1, h2, h3, h4, h5 { font-family: 'Nunito Sans', sans-serif; }
@@ -307,17 +308,26 @@ label {
 body {
   margin: 0;
   margin-top: 60px;
-  background: #101010;
+  background: white;
+
 }
 
 .content {
   @include clearfix();
 }
 
+section.section-header {
+  background: url(/images/plus_bg.png);
+  background-size: cover;
+  padding: 80px 20vw 60px 20vw;
+}
+
 div.wrapper {
   max-width: 1400px;
   margin: auto;
+  margin-bottom: 120px;
   &.page_wrap {
+    color: #333;
     margin-top: 120px;
     .info-page {
       @include media($mobile) {
@@ -678,8 +688,52 @@ header {
 // Onboard Signup
 
 .body__onboard {
-  background: #101010 url(/images/bg.jpg);
+  background: #101010 url(/images/start-today-bg.png);
   background-size: cover;
+  div.wrapper.page_wrap {
+    margin-top: 0;
+    color: white;
+  }
+  .form-group {
+    width: 46%;
+    float: left;
+    margin-right: 2%;
+  }
+  .actions {
+    text-align: center;
+    margin-bottom: 80px;
+    margin-top: 45px;
+    width: 100%;
+    button.btn {
+      margin-left: 0;
+    }
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 85px;
+    padding-bottom: 65px;
+    border-bottom: 1px solid rgba(275,275,275,0.1);
+    font-weight: 100;
+  }
+  h3 {  
+    line-height: 92px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 60px;
+    span {
+      position: relative; 
+      padding-left: 120px;
+    }
+    span:before {
+      background: url(/images/money_icon.png);
+      content: '';
+      width: 85px;
+      height: 92px;
+      position: absolute;
+      left: 0;
+    }
+  }
   section.onboard_signup {
     margin-top: 120px;
     text-align: center;
@@ -690,11 +744,16 @@ header {
       text-align: center;
       margin: 45px 0;
       color: white;
+      text-transform: uppercase;
     }
 
     button {
       background-color: #4267b2;
-      margin-top: 60px;
+      margin-bottom: 60px;
+      &.btn-google {
+        background-color: #df4a32;
+        margin-left: 30px;
+      }
       &:hover {
         color:white;
       }
