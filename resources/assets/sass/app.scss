@@ -816,6 +816,10 @@ header {
       margin: 45px 0;
       color: white;
       text-transform: uppercase;
+      @include media($mobile) {
+        font-size: 14px;
+        margin-top: 0;
+      }
     }
 
     button {

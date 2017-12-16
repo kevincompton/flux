@@ -1470,6 +1470,13 @@ header .concierge {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 480px) {
+  .body__onboard section.onboard_signup span.or {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
 .body__onboard section.onboard_signup button,
 .body__onboard section.onboard_signup a.btn {
   background-color: #4267b2;
