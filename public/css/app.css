@@ -523,6 +523,20 @@ form:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  form {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+    padding-left: 45px;
+  }
+
+  form:last-child {
+    margin-right: 0;
+  }
+}
+
 @media screen and (max-width: 480px) {
   form {
     float: left;
@@ -795,6 +809,15 @@ div.wrapper.page_wrap {
   padding-bottom: 30px;
 }
 
+@media screen and (max-width: 1300px) {
+  .comp-chart {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .comp-chart table {
   text-align: center;
 }
@@ -821,6 +844,12 @@ div.wrapper.page_wrap {
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding: 15px;
+}
+
+@media screen and (max-width: 1300px) {
+  .comp-chart .wrapper {
+    margin-bottom: 0;
+  }
 }
 
 .comp-chart .section-header {
@@ -892,6 +921,8 @@ div.wrapper.page_wrap {
 
 .newsletter form button,
 .newsletter form a.btn {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
   float: left;
   display: block;
   margin-right: 2.35765202%;
@@ -931,6 +962,8 @@ div.wrapper.page_wrap {
   border-radius: 40px;
   text-indent: 25px;
   font-size: 18px;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter .section-header {
@@ -951,7 +984,7 @@ div.wrapper.page_wrap {
   float: left;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1300px) {
   .newsletter .col-sm-6 {
     width: 100%;
     float: none;
@@ -966,12 +999,27 @@ div.wrapper.page_wrap {
   border-left: 5px solid #00d2c1;
 }
 
+@media screen and (max-width: 1300px) {
+  .newsletter .email-signup {
+    border-left: 0;
+    border-top: 5px solid #00d2c1;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
 .newsletter .email-signup p {
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 }
 
 .newsletter .email-signup .section-header {
   padding-top: 80px;
+}
+
+@media screen and (max-width: 1300px) {
+  .newsletter .email-signup .section-header {
+    padding-top: 30px;
+  }
 }
 
 .customer-testimonials {
@@ -979,6 +1027,12 @@ div.wrapper.page_wrap {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 80px;
+}
+
+@media screen and (max-width: 1300px) {
+  .customer-testimonials.col-sm-6 {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1202,6 +1256,12 @@ header .concierge {
   position: relative;
 }
 
+@media screen and (max-width: 1300px) {
+  header .concierge {
+    display: none;
+  }
+}
+
 .dash_wrap {
   margin-top: 0 !important;
 }
@@ -1302,6 +1362,13 @@ header .concierge {
   margin-left: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  .body__onboard .actions button.btn,
+  .body__onboard .actions a.btn {
+    width: 50%;
+  }
+}
+
 .body__onboard h1 {
   text-align: center;
   text-transform: uppercase;
@@ -1323,13 +1390,27 @@ header .concierge {
   padding-left: 120px;
 }
 
+@media screen and (max-width: 1300px) {
+  .body__onboard h3 span {
+    padding-left: 80px;
+  }
+}
+
 .body__onboard h3 span:before {
   background: url(/images/money_icon.png);
+  background-size: cover;
   content: '';
   width: 85px;
   height: 92px;
   position: absolute;
   left: 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .body__onboard h3 span:before {
+    width: 67px;
+    height: 72px;
+  }
 }
 
 .body__onboard section.onboard_signup {
@@ -1350,12 +1431,20 @@ header .concierge {
 .body__onboard section.onboard_signup a.btn {
   background-color: #4267b2;
   margin-bottom: 60px;
+  min-width: 326px;
 }
 
 .body__onboard section.onboard_signup button.btn-google,
 .body__onboard section.onboard_signup a.btn-google.btn {
   background-color: #df4a32;
   margin-left: 30px;
+}
+
+@media screen and (max-width: 1300px) {
+  .body__onboard section.onboard_signup button.btn-google,
+  .body__onboard section.onboard_signup a.btn-google.btn {
+    margin-left: 0;
+  }
 }
 
 .body__onboard section.onboard_signup button:hover,
@@ -1665,6 +1754,8 @@ footer.main-footer .footer-nav ul .btn {
 @media screen and (max-width: 1300px) {
   footer.main-footer .footer-nav ul {
     display: none;
+    border-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -1722,6 +1813,19 @@ footer.main-footer .footer-nav ul:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  footer.main-footer .footer-nav ul {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  footer.main-footer .footer-nav ul:last-child {
+    margin-right: 0;
+  }
+}
+
 footer.main-footer .footer-nav ul li {
   display: block;
 }
@@ -1751,6 +1855,19 @@ footer.main-footer .footer-col {
 
 footer.main-footer .footer-col:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1300px) {
+  footer.main-footer .footer-col {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  footer.main-footer .footer-col:last-child {
+    margin-right: 0;
+  }
 }
 
 footer.main-footer .site-info {
@@ -1948,6 +2065,7 @@ footer.main-footer .footer-branding a {
   margin-top: 50px;
   padding-left: 25px;
   margin-bottom: 50px;
+  margin-right: 30px;
 }
 
 .container-fluid.products li {
@@ -1979,6 +2097,12 @@ footer.main-footer .footer-branding a {
   width: 40vw;
 }
 
+@media screen and (max-width: 1300px) {
+  .container-fluid.products .laptop {
+    display: none;
+  }
+}
+
 .container-fluid.products .iphone {
   margin-left: 17.05960867%;
   float: left;
@@ -1991,6 +2115,12 @@ footer.main-footer .footer-branding a {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  .container-fluid.products .iphone {
+    display: none;
+  }
+}
+
 .container-fluid.products .copy {
   margin-left: 10%;
   float: left;
@@ -2001,6 +2131,19 @@ footer.main-footer .footer-branding a {
 
 .container-fluid.products .copy:last-child {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .container-fluid.products .copy {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .container-fluid.products .copy:last-child {
+    margin-right: 0;
+  }
 }
 
 body.modal-open .modal-fade-screen {
