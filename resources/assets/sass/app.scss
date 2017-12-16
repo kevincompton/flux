@@ -356,6 +356,9 @@ div.wrapper {
       padding-top: 0;
       padding-bottom: 0;
     }
+    @include media($mobile) {
+      display: none;
+    }
     color: black;
     padding-top: 160px;
     padding-bottom: 30px;
@@ -578,22 +581,21 @@ section#contact-sticky {
 ul.mobile-nav {
   display: none;
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 79px;
   left: 0;
   right: 0;
   text-align: center;
-  background: black;
   z-index: 8888;
   &.active {
     display: block;
   }
   li {
+    background: white;
     text-transform: uppercase;
     font-size: 22px;
-    margin: 15px 0;
-    padding: 0 0 15px 0;
-    border-bottom: 1px solid rgba(275,275,275,0.2);
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
   }
 }
 
@@ -734,6 +736,10 @@ header {
     width: 46%;
     float: left;
     margin-right: 2%;
+    @include media($mobile) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
   .actions {
     text-align: center;
@@ -754,18 +760,30 @@ header {
     padding-bottom: 65px;
     border-bottom: 1px solid rgba(275,275,275,0.1);
     font-weight: 100;
+    @include media($mobile) {
+      border-bottom: 0;
+      font-size: 1.2rem;
+      color: white;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
   }
   h3 {  
     line-height: 92px;
     font-size: 24px;
     text-align: center;
     margin-top: 60px;
+    padding-left: 120px;
+    @include media($tablet) {
+      padding-left: 80px;
+      text-align: left;
+    }
     span {
       position: relative; 
-      padding-left: 120px;
-      @include media($tablet) {
-          padding-left: 80px;
-        }
+    }
+    @include media($mobile) {
+      font-size: 16px;
+      line-height: 1.2;
     }
     span:before {
       background: url(/images/money_icon.png);
@@ -779,12 +797,18 @@ header {
         width: 67px;
         height: 72px;
       }
+      @include media($mobile) {
+        top: -20px;
+        left: -80px;
+      }
     }
   }
   section.onboard_signup {
     margin-top: 120px;
     text-align: center;
-
+    @include media($mobile) {
+      margin-top: 60px;
+    }
     span.or {
       display: block;
       font-size: 24px;
@@ -989,15 +1013,28 @@ section.home_hero {
     left: 0;
     bottom: 0;
     width: 30vw;
+    @include media($mobile) {
+      display: none;
+    }
+  }
+  .wrapper {
+    @include media($mobile) {
+      margin-bottom: 0;
+    }
   }
   @include media($mobile) {
     padding-left: 25px;
     padding-right: 25px;
+    background: url(/images/plus_bg.png);
+    background-size: cover;
   }
   h1 {
     font-weight: 200;
     font-size: 80px;
     letter-spacing: 1px;
+    @include media($tablet) {
+      font-size: 10vw;
+    }
   }
   h3.heading {
     font-size: 24px;
@@ -1107,12 +1144,20 @@ footer.main-footer {
   .footer_cta {
     margin-top: 45px;
     text-align: left;
+    @include media($mobile) {
+      text-align: center;
+    }
     > img {
       margin-bottom: -10px;
     }
     .concierge {
       line-height: 50px;
       margin-left: 45px;
+      @include media($mobile) {
+        display: block;
+        margin-left: 0;
+        margin-top: 25px;
+      }
     }
     .btn {
       border-radius: 30px;
@@ -1123,6 +1168,11 @@ footer.main-footer {
       padding-left: 25px;
       padding-right: 25px;
       margin-right: 25px;
+      @include media($mobile) {
+        margin-right: 0;
+        display: block;
+        margin-bottom: 25px;
+      }
       &.cta-btn {
         background: #00C4B3;
         color: white;
@@ -1134,11 +1184,18 @@ footer.main-footer {
     @include clearfix();
     width: 80%;
     margin:auto;
+    @include media($mobile) {
+      width: 100%;
+      text-align: center;
+    }
     ul {
       @include span-columns(3);
       float: right;
       @include media($tablet) {
         @include span-columns(4);
+      }
+      @include media($mobile) {
+        display: none;
       }
       li {
         display: block;
@@ -1176,6 +1233,9 @@ footer.main-footer {
   }
   .copyright {
       @include span-columns(3);
+      @include media($mobile) {
+        @include span-columns(4);
+      }
       float: right;
       text-align: right;
       font-size: 11px;
@@ -1222,6 +1282,9 @@ footer.main-footer {
     position: absolute; 
     left: 15px;
     bottom: 15px;
+    @include media($mobile) {
+      display: none;
+    }
   }
   .ssl p {
       margin-bottom: 0;
@@ -1236,6 +1299,9 @@ footer.main-footer {
       color: rgba(275,275,275,0.3);
       margin-top: 80px;
       font-size: 14px;
+      @include media($mobile) {
+        display: none;
+      }
   }
    img {
       max-width: 200px;
@@ -1289,8 +1355,19 @@ footer.main-footer {
   padding-top: 85px;
   padding-bottom: 85px;
   background: white;
+  @include media($tablet) {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   @include clearfix();
   color: #00C4B3;
+  .flux_prime {
+    @include media($tablet) {
+      width: 65vw;
+    }
+  }
   &.plus {
     background: url(/images/plus_bg.png);
     background-size: cover;
@@ -1300,17 +1377,29 @@ footer.main-footer {
       margin-left: 0;
     }
   }
+  .btn {
+    @include media($tablet) {
+      margin-bottom: 45px;
+    }
+  }
   .learn_more {
     margin-left: 77px;
     text-decoration: underline;
     &:hover {
       color: #333;
     }
+    @include media($mobile) {
+      margin-left: 0;
+      display: block;
+    }
   }
   h2 {
     font-weight: 200;
     font-size: 44px;
     margin: 40px 0;
+    @include media($mobile) {
+      font-size: 6vw;
+    }
   }
   ul {
     margin-top: 50px;
@@ -1358,6 +1447,10 @@ footer.main-footer {
     @include span-columns(5);
     @include media($tablet) {
       @include span-columns(4);
+    }
+    @include media($mobile) {
+      margin-left: 0;
+      text-align: center;
     }
   }
 }
