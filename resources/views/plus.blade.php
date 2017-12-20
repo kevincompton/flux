@@ -24,12 +24,19 @@
         </section>
 
         <section class="product-page_about">
-            <h2>“I felt Flux was my best option to get out of a high debt load due to a recent divorce.”</h2>
+            <h2>“This was the best decision I’ve ever made. I wish I did this sooner!”</h2>
            
             <div class="copy-wrap"> 
-                <p>Through our proprietary technology-driven process, we beat the competition and eliminate your debt(s) at the lowest market rate. Clients can expect to save on average 45% of their balance due, which includes our rate! Payments are only made once all parties agree on settlement terms. An agreement is then placed in writing and upon receipt of payment, your creditor account is closed for good!</p>
+                <p>Your credit is constantly in flux. Settling your accounts will satisfy 
+your obligation, but creditors don’t always report the updated 
+status to the credit bureaus. Over time, your credit rating will 
+begin to improve, but you may have several derogatory filings 
+on your report that can be removed with appropriate action.</p>
                 
-                <p>Every day we help our clients avoid bankruptcy, while getting the fresh start they are legally promised under US law. Your decision to start Flux Prime today could save you tens of thousands of dollars and a lifetime of stress. We look forward to showing you why we are the #1 Bankruptcy Alternative In America.</p>
+                <p>Originally created for our Flux Prime clients, Flux Plus is now 
+available as a stand-alone monthly service for those who don’t 
+need to eliminate debts, but would like to perfect their FICO /
+VANTAGE 3.0 Credit Score.</p>
             </div>
 
             <img class="iphone" src="/images/large_iphone.png" />
