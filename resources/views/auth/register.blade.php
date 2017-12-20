@@ -50,6 +50,7 @@
                             </div>
                         </div>
 
+
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
@@ -72,6 +73,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="phone" class="col-md-4 control-label">Phone</label>
+
+                            <div class="col-md-6">
+                                <input pattern=".{10,15}" id="phone" type="text" class="form-control" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+
+                                @if ($errors->has('phone'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="actions">
                             <button type="submit" class="btn btn-primary">
                                 SIGN UP
@@ -84,4 +99,17 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+    <script type="text/javascript" src="/dash/widgets/input-mask/inputmask.js"></script>
+
+        <script type="text/javascript">
+            /* Input masks */
+
+            $(function() { "use strict";
+                $("#phone").inputmask();
+            });
+
+        </script>
 @endsection

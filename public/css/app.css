@@ -798,6 +798,97 @@ div.wrapper.page_wrap {
   }
 }
 
+.product-page_bg {
+  background: url(/images/plus_bg.png);
+  background-size: cover;
+}
+
+.product-page_cta {
+  color: #333;
+  background: rgba(255, 255, 255, 0.7);
+  position: relative;
+  padding: 80px 20vw 60px 26vw;
+}
+
+.product-page_cta::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.product-page_cta .left_wrap,
+.product-page_cta ul {
+  float: left;
+  display: block;
+  margin-right: 2.35765202%;
+  width: 48.82117399%;
+}
+
+.product-page_cta .left_wrap:last-child,
+.product-page_cta ul:last-child {
+  margin-right: 0;
+}
+
+.product-page_cta:before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 70px;
+  background: url(/images/coin_icon.png) no-repeat;
+  background-size: cover;
+  left: 20vw;
+}
+
+.product-page_cta li {
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+.product-page_cta li:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  background: url("/images/cross.png") no-repeat;
+  background-size: cover;
+}
+
+.product-page_cta li span {
+  text-transform: none;
+  font-size: 14px;
+  display: block;
+  font-weight: normal;
+}
+
+.product-page_about {
+  padding: 80px 20vw 60px 20vw;
+}
+
+.product-page_about h2 {
+  padding-left: 100px;
+  position: relative;
+  font-size: 20px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  font-style: italic;
+}
+
+.product-page_about h2:before {
+  content: '';
+  position: absolute;
+  width: 77px;
+  height: 90px;
+  background: url("/images/piggy_bank.png") no-repeat;
+  background-size: cover;
+  left: 0;
+  top: -50px;
+}
+
 .comp-chart {
   background: white;
   padding-bottom: 0rem;
@@ -1350,9 +1441,17 @@ header .concierge {
 }
 
 .body__onboard .form-group {
-  width: 46%;
+  width: 50%;
   float: left;
-  margin-right: 2%;
+  margin-right: 0;
+}
+
+.body__onboard .form-group label {
+  text-indent: 10px;
+}
+
+.body__onboard .form-group .col-md-6 {
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 480px) {
@@ -1405,18 +1504,18 @@ header .concierge {
   font-size: 24px;
   text-align: center;
   margin-top: 60px;
-  padding-left: 120px;
-}
-
-@media screen and (max-width: 1300px) {
-  .body__onboard h3 {
-    padding-left: 80px;
-    text-align: left;
-  }
 }
 
 .body__onboard h3 span {
   position: relative;
+  padding-left: 120px;
+}
+
+@media screen and (max-width: 1300px) {
+  .body__onboard h3 span {
+    padding-left: 80px;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -2268,7 +2367,7 @@ footer.main-footer .footer-branding a {
 }
 
 .container-fluid.products .iphone {
-  margin-left: 53.71148588%;
+  margin-left: 15%;
   float: left;
   display: block;
   margin-right: 2.35765202%;
@@ -2302,7 +2401,7 @@ footer.main-footer .footer-branding a {
     float: left;
     display: block;
     margin-right: 7.42297176%;
-    width: 100%;
+    width: 73.14425706%;
   }
 
   .container-fluid.products .copy:last-child {

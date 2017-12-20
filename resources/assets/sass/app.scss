@@ -342,6 +342,78 @@ div.wrapper {
   }
 }
 
+// Product Pages
+
+.product-page_bg {
+  background: url(/images/plus_bg.png);
+  background-size: cover;
+}
+
+.product-page_cta {
+  color: #333;
+  background: rgba(275,275,275,0.7);
+  position: relative;
+  padding: 80px 20vw 60px 26vw;
+  @include clearfix();
+  .left_wrap, ul {
+    @include span-columns(6);
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background: url(/images/coin_icon.png) no-repeat;
+    background-size: cover;
+    left: 20vw;
+  }
+  li {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 30px;
+    text-transform: uppercase;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 8px;
+      width: 20px;
+      height: 20px;
+      background: url('/images/cross.png') no-repeat;
+      background-size: cover;
+    }
+    span {
+      text-transform: none;
+      font-size: 14px;
+      display: block;
+      font-weight: normal;
+    }
+  }
+}
+
+.product-page_about {
+  padding: 80px 20vw 60px 20vw;
+  h2 {
+    padding-left: 100px;
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    font-style: italic;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 77px;
+      height: 90px;
+      background: url('/images/piggy_bank.png') no-repeat;
+      background-size: cover;
+      left: 0; 
+      top: -50px;
+    }
+  }
+}
+
 //comparison chart
 
 .comp-chart {
@@ -733,9 +805,15 @@ header {
     color: white;
   }
   .form-group {
-    width: 46%;
+    width: 50%;
     float: left;
-    margin-right: 2%;
+    margin-right: 0;
+    label {
+      text-indent: 10px;
+    }
+    .col-md-6 {
+      padding: 0 10px;
+    }
     @include media($mobile) {
       width: 100%;
       margin-right: 0;
@@ -773,13 +851,13 @@ header {
     font-size: 24px;
     text-align: center;
     margin-top: 60px;
-    padding-left: 120px;
-    @include media($tablet) {
-      padding-left: 80px;
-      text-align: left;
-    }
     span {
       position: relative; 
+      padding-left: 120px;
+      @include media($tablet) {
+        padding-left: 80px;
+        text-align: left;
+      }
     }
     @include media($mobile) {
       font-size: 16px;
@@ -1440,7 +1518,7 @@ footer.main-footer {
     }
   }
   .iphone {
-    @include shift(2)
+    margin-left: 15%;
     @include span-columns(3);
     @include media($tablet) {
       display: none;
@@ -1450,7 +1528,7 @@ footer.main-footer {
     margin-left: 10%;
     @include span-columns(5);
     @include media($tablet) {
-      @include span-columns(4);
+      @include span-columns(3);
     }
     @include media($mobile) {
       margin-left: 0;

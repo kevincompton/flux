@@ -7,6 +7,31 @@
         <h2>Legally Eliminate Your Bets</h2>
     </section>
 
+    <div class="product-page_bg">
+        <section class="product-page_cta">
+            <div class="left_wrap">
+                <h3>OPEN, UP-FRONT PRICING</h3>
+                <h2>$0 MONTHLY PROGRAM FEE</h2>
+                <a href="#" class="btn">START TODAY FOR FREE!</a>
+            </div>
+
+            <ul>
+              <li>Only pay on debts settled <span>*Lowest market rate</span></li>
+              <li>Flux Flex Lending <span>*6.9% + interest rate</span></li>
+              <li>1% Cash Back</li>
+              <li>No hidden fees</li>
+            </ul>       
+        </section>
+
+        <section class="product-page_about">
+            <h2>“I felt Flux was my best option to get out of a high debt load due to a recent divorce.”</h2>
+            
+            <p>Through our proprietary technology-driven process, we beat the competition and eliminate your debt(s) at the lowest market rate. Clients can expect to save on average 45% of their balance due, which includes our rate! Payments are only made once all parties agree on settlement terms. An agreement is then placed in writing and upon receipt of payment, your creditor account is closed for good!</p>
+            
+            <p>Every day we help our clients avoid bankruptcy, while getting the fresh start they are legally promised under US law. Your decision to start Flux Prime today could save you tens of thousands of dollars and a lifetime of stress. We look forward to showing you why we are the #1 Bankruptcy Alternative In America.</p>
+        </section>
+    </div>
+
     <div class="wrapper page_wrap">
 
         <div class="container product-info text-center info-page">
