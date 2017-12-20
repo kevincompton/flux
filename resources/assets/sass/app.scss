@@ -1324,7 +1324,7 @@ footer.main-footer {
       text-align: center;
   }
   .copyright {
-      @include span-columns(3);
+      @include span-columns(4);
       @include media($mobile) {
         @include span-columns(4);
       }
