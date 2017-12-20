@@ -5,9 +5,9 @@
   <section class="home_hero">
     <div class="wrapper">
       <img class="flux-card" src="/images/flux-card.png" />
-      <h1>Eliminate Debts,<br>
-        perfect Your credit,<br>
-        earn cash back.
+      <h1>ELIMINATE DEBTS.<br>
+        PERFECT YOUR CREDIT.<br>
+        CASH BACK.
       </h1>
 
       <a class="btn" href="/register">Sign Up For Free</a>
