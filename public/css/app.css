@@ -866,7 +866,30 @@ div.wrapper.page_wrap {
 }
 
 .product-page_about {
-  padding: 80px 20vw 60px 20vw;
+  padding: 80px 20vw 0px 20vw;
+}
+
+.product-page_about::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.product-page_about .copy-wrap,
+.product-page_about .iphone {
+  float: left;
+  display: block;
+  margin-right: 2.35765202%;
+  width: 48.82117399%;
+}
+
+.product-page_about .copy-wrap:last-child,
+.product-page_about .iphone:last-child {
+  margin-right: 0;
+}
+
+.product-page_about .copy-wrap {
+  margin-top: 60px;
 }
 
 .product-page_about h2 {

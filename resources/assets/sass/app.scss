@@ -393,7 +393,14 @@ div.wrapper {
 }
 
 .product-page_about {
-  padding: 80px 20vw 60px 20vw;
+  padding: 80px 20vw 0px 20vw;
+  @include clearfix();
+  .copy-wrap, .iphone {
+    @include span-columns(6);
+  }
+  .copy-wrap {
+    margin-top: 60px;
+  }
   h2 {
     padding-left: 100px;
     position: relative;
