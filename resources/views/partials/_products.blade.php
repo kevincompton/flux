@@ -7,7 +7,7 @@
         <ul>
           <li>Only pay on debts settled <span>*Lowest market rate</span></li>
           <li>Flux Flex Lending <span>*6.9% + interest rate</span></li>
-          <li>1% Cash Back towards a Visa Secured Credit Card <span>Flux Prime Client Benefit</span></li>
+          <li>1% Cash Back towards a Visa Secured Credit Card <span>*Flux Prime Client Benefit</span></li>
           <li>No hidden fees</li>
         </ul>
         <a class="btn" href="/register">Sign Up For Free</a>
