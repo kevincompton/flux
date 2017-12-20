@@ -16,9 +16,9 @@
             </div>
 
             <ul>
-                <li>Credit Repair <span>*FICO</span></li>
+                <li>Credit Repair <span>*FICO/Vantage 3.0 Credit Score</span></li>
                 <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
-                <li>Attorney Representation <span>*Included w/ Flux Prime</span></li>
+                <li>Attorney Representation <span>*Flux Prime Client Benefit</span></li>
                 <li>No Hidden Fees</li>
             </ul>       
         </section>

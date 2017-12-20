@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Reduce / Eleminate Debt</td>
+          <td>Reduce / Eliminate Debt</td>
           <td class="highlight"><img src="/images/check.png" /></td>
           <td><img src="/images/comp_cross.png" /></td>
           <td><img src="/images/check.png" /></td>

@@ -95,10 +95,10 @@
                     <h5>FLUX CREDIT IS A TRUSTED NAME IN PERSONAL FINANCE AND CREDIT REPAIR.  WE WORK ALONGSIDE:</h5>
 
                     <ul id="partners">
-                        <li><img src="/images/bbb.png" /></li>
+                        <!-- <li><img src="/images/bbb.png" /></li> -->
                         <li><img src="/images/visa.png" /></li>
-                        <li><img src="/images/equifax.png" /></li>
                         <li><img src="/images/bofl.png" /></li>
+                        <li><img src="/images/equifax.png" /></li>
                         <li><img src="/images/experian.png" /></li>
                         <li><img src="/images/credit_karma.png" /></li>
                         <li><img src="/images/transunion.png" /></li>
@@ -135,7 +135,7 @@
                     <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="/images/lets-encrypt-logo.svg" alt=""></a>     
                 </div>
                 
-                <span class="copyright" href="/">© 2017 FLUX CREDIT<span class="sep"> ALL RIGHTS RESERVED </span></span>
+                <span class="copyright" href="/">© 2017 FLUX CREDIT TECHNOLOGIES, INC. <span class="sep"> ALL RIGHTS RESERVED </span></span>
             </div>
 
         </footer>

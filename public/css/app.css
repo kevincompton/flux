@@ -1542,9 +1542,16 @@ header .concierge {
 }
 
 @media screen and (max-width: 480px) {
+  .body__onboard h3 span {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .body__onboard h3 {
     font-size: 16px;
     line-height: 1.2;
+    margin-top: 0;
   }
 }
 
@@ -1567,8 +1574,7 @@ header .concierge {
 
 @media screen and (max-width: 480px) {
   .body__onboard h3 span:before {
-    top: -20px;
-    left: -80px;
+    display: none;
   }
 }
 
@@ -2435,7 +2441,14 @@ footer.main-footer .footer-branding a {
 @media screen and (max-width: 480px) {
   .container-fluid.products .copy {
     margin-left: 0;
-    text-align: center;
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .container-fluid.products .copy:last-child {
+    margin-right: 0;
   }
 }
 

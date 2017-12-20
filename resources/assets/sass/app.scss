@@ -865,10 +865,14 @@ header {
         padding-left: 80px;
         text-align: left;
       }
+      @include media($mobile) {
+        padding-left: 0;
+      }
     }
     @include media($mobile) {
       font-size: 16px;
       line-height: 1.2;
+      margin-top: 0;
     }
     span:before {
       background: url(/images/money_icon.png);
@@ -883,8 +887,7 @@ header {
         height: 72px;
       }
       @include media($mobile) {
-        top: -20px;
-        left: -80px;
+        display: none;
       }
     }
   }
@@ -1539,7 +1542,7 @@ footer.main-footer {
     }
     @include media($mobile) {
       margin-left: 0;
-      text-align: center;
+      @include span-columns(4);
     }
   }
 }
