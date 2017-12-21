@@ -87,8 +87,8 @@
                     <a class="concierge" href="tel:+1-866-358-9218"><i class="fa fa-phone" aria-hidden="true"></i> 1-866-FLUX-218</a>
 
                     <div class="footer_cta">
-                        <a href="#" class="btn">Prime</a>
-                        <a href="#" class="btn">Plus</a>
+                        <a href="/prime" class="btn">Prime</a>
+                        <a href="/plus" class="btn">Plus</a>
                         <a class="cta-btn btn col-xs-12  col-sm-12 col-sm-offset-0" href="/register">START TODAY!</a>
                     </div>
 
@@ -117,7 +117,7 @@
                     </li>
                     <li>Already have an account?<br>
                         <a href="#" class="btn">Login</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <!-- <li><a href="#">CONTACT US</a></li> -->
                     <li><a href="/payment/">MAKE A PAYMENT</a></li>
                     <li><a href="#">BECOME AN AFFILIATE</a></li>
                     <li><a href="#">TERMS & CONDITIONS</a></li>

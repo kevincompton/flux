@@ -865,6 +865,41 @@ div.wrapper.page_wrap {
   font-weight: normal;
 }
 
+.product-page_benefits {
+  color: #333;
+  padding: 80px 20vw 60px 20vw;
+}
+
+.product-page_benefits .benefit {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-page_benefits .benefit i {
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #00C4B3;
+}
+
+.product-page_benefits .benefit h3 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #00C4B3;
+}
+
+.product-page_benefits .benefit p {
+  display: none;
+  margin-top: 45px;
+}
+
+.product-page_benefits .benefit:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .product-page_about {
   padding: 80px 20vw 0px 20vw;
 }
