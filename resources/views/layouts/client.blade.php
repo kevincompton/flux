@@ -116,7 +116,7 @@
                         </div>
                     </li>
                     <li>Already have an account?<br>
-                        <a href="#" class="btn">Login</a></li>
+                        <a href="/login" class="btn">Login</a></li>
                     <!-- <li><a href="#">CONTACT US</a></li> -->
                     <li><a href="/payment/">MAKE A PAYMENT</a></li>
                     <li><a href="#">BECOME AN AFFILIATE</a></li>
