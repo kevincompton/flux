@@ -23,7 +23,7 @@
             </ul>       
         </section>
 
-        <section class="product-page_about">
+        <section class="product-page_about plus">
             <h2>“This was the best decision I’ve ever made. I wish I did this sooner!”</h2>
            
             <div class="copy-wrap"> 
@@ -39,7 +39,7 @@ need to eliminate debts, but would like to perfect their FICO /
 VANTAGE 3.0 Credit Score.</p>
             </div>
 
-            <img class="iphone" src="/images/large_iphone.png" />
+            <img class="iphone" src="/images/plus_hero.png" />
         </section>
     </div>    
 

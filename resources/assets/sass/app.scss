@@ -424,6 +424,12 @@ div.wrapper {
 
 .product-page_about {
   padding: 80px 20vw 0px 20vw;
+  &.plus {
+    padding-bottom: 60px;
+    .iphone {
+      margin-top: 30px;
+    }
+  }
   @include clearfix();
   .copy-wrap, .iphone {
     @include span-columns(6);

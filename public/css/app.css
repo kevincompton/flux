@@ -904,6 +904,14 @@ div.wrapper.page_wrap {
   padding: 80px 20vw 0px 20vw;
 }
 
+.product-page_about.plus {
+  padding-bottom: 60px;
+}
+
+.product-page_about.plus .iphone {
+  margin-top: 30px;
+}
+
 .product-page_about::after {
   clear: both;
   content: "";
