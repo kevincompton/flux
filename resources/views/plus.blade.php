@@ -96,6 +96,42 @@ penalties, interest, liens and levies.
 
     </section>
 
+    <section class="product-page_benefits">
+        <h2>ADDITIONAL BENEFITS FOR PRIME CLIENTS</h2>
+
+        <div class="benefit">
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Consolidation</h3>
+            <p>COMING SOON</p>
+        </div>
+        <div class="benefit">
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> 1.5% Cash Back</h3>
+            <p>Cash out your debts… With Flux Plus, 
+our clients earn 1.5% cash back on all 
+settlement payments made. These funds 
+are allocated to a secured credit card, 
+opened in your name, with monthly 
+reporting to the credit agencies. 
+Essentially, you are cashing out your 
+old debt, while re-establishing your 
+credit! We call this; Your Finances… 
+Reinvented! </p>
+        </div>
+        <div class="benefit">
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Attorney Representation</h3>
+            <p>In some cases your creditor may file 
+litigation to secure a judgment against 
+you. However, clients enrolled in Flux 
+Plus will have legal representation, 
+that will file an answer in the local 
+jurisdiction. Flux Plus clients will not 
+be responsible for any additional 
+attorney fees and our network of 
+attorneys will take on the case to 
+negotiate on behalf of our clients.</p>
+        </div>
+
+    </section>
+
 @endsection
 
 @section('footer')

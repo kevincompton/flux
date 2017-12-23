@@ -23,7 +23,7 @@
         <ul>
           <li>Credit Repair <span>*FICO/Vantage 3.0 Credit Score</span></li>
           <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
-          <li>Attorney Representation <span>*Included w/ Flux Prime</span></li>
+          <li>Attorney Representation <span>*Flux Prime Client Benefit</span></li>
         </ul>
         <a class="btn" href="/register">$49 per Month</a>
         <a class="learn_more" href="/plus">Learn More</a>

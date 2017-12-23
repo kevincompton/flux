@@ -4,7 +4,7 @@
     
     <section class="section-header prime">
         <img src="/images/flux_prime.png" />
-        <h2>Legally Eliminate Your Bets</h2>
+        <h2>Legally Eliminate Your Debts</h2>
     </section>
 
     <div class="product-page_bg">
@@ -18,7 +18,7 @@
             <ul>
               <li>Only pay on debts settled <span>*Lowest market rate</span></li>
               <li>Flux Flex Lending <span>*6.9% + interest rate</span></li>
-              <li>1% Cash Back</li>
+              <li>1% Cash Back towards a Visa Secuired Credit Card</li>
               <li>No hidden fees</li>
             </ul>       
         </section>
