@@ -18,7 +18,7 @@
             <ul>
               <li>Only pay on debts settled <span>*Lowest market rate</span></li>
               <li>Flux Flex Lending <span>*6.9% + interest rate</span></li>
-              <li>1% Cash Back towards a Visa Secuired Credit Card</li>
+              <li>1% Cash Back towards a Visa Secured Credit Card</li>
               <li>No hidden fees</li>
             </ul>       
         </section>
@@ -26,7 +26,16 @@
         <section class="product-page_about">
             <h2>“I felt Flux was my best option to get out of a high debt load due to a recent divorce.”</h2>
            
-            <div class="copy-wrap"> 
+            <div class="copy-wrap">
+                <p>Our team of industry veterans created Flux Prime to be the 
+best solution for our clients to become debt free. We’ve created 
+an all-inclusive program, which will eliminate your debts, while 
+perfecting your credit. By the time your debt free, you’ll have 
+saved money, while earning cash back, which is alotted towards 
+a VISA secured credit card opened in your name, backed by an 
+FDIC insured savings account. We developed this program with 
+the goal of helping our clients become debt free 5-10 years 
+sooner than by not settling the accounts.</p>
                 <p>Through our proprietary technology-driven process, we beat the competition and eliminate your debt(s) at the lowest market rate. Clients can expect to save on average 45% of their balance due, which includes our rate! Payments are only made once all parties agree on settlement terms. An agreement is then placed in writing and upon receipt of payment, your creditor account is closed for good!</p>
                 
                 <p>Every day we help our clients avoid bankruptcy, while getting the fresh start they are legally promised under US law. Your decision to start Flux Prime today could save you tens of thousands of dollars and a lifetime of stress. We look forward to showing you why we are the #1 Bankruptcy Alternative In America.</p>
