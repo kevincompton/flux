@@ -324,6 +324,9 @@ section.section-header {
   background: url(/images/plus_bg.png);
   background-size: cover;
   padding: 80px 20vw 60px 20vw;
+  @include media($mobile) {
+      padding: 30px;
+    }
 }
 
 div.wrapper {
@@ -355,9 +358,21 @@ div.wrapper {
   background: rgba(275,275,275,0.7);
   position: relative;
   padding: 80px 20vw 60px 26vw;
+  @include media($mobile) {
+    padding: 25px;
+    text-align: center;
+  }
   @include clearfix();
   .left_wrap, ul {
     @include span-columns(6);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+  }
+  .btn {
+    @include media($mobile) {
+      margin: 30px 0 45px 0;
+    }
   }
   &:before {
     content: '';
@@ -367,6 +382,9 @@ div.wrapper {
     background: url(/images/coin_icon.png) no-repeat;
     background-size: cover;
     left: 20vw;
+    @include media($mobile) {
+      background: transparent;
+    }
   }
   li {
     position: relative;
@@ -374,6 +392,9 @@ div.wrapper {
     font-weight: bold;
     padding-left: 30px;
     text-transform: uppercase;
+    @include media($mobile) {
+      margin-bottom: 25px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -396,6 +417,9 @@ div.wrapper {
 .product-page_benefits {
   color: #333;
   padding: 80px 20vw 60px 20vw;
+  @include media($mobile) {
+      padding: 30px;
+    }
   .benefit {
     border-top: 1px solid rgba(0,0,0,0.1);
     padding-top: 20px;
@@ -412,6 +436,9 @@ div.wrapper {
       margin-bottom: 0;
       text-transform: uppercase;
       color: #00C4B3;
+      @include media($mobile) {
+      font-size: 0.8em
+    }
     }
     p {
       display: none;
@@ -425,6 +452,9 @@ div.wrapper {
 
 .product-page_about {
   padding: 80px 20vw 0px 20vw;
+  @include media($mobile) {
+      display: none;
+    }
   &.plus {
     padding-bottom: 60px;
     .iphone {

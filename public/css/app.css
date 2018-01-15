@@ -780,6 +780,12 @@ section.section-header {
   padding: 80px 20vw 60px 20vw;
 }
 
+@media screen and (max-width: 480px) {
+  section.section-header {
+    padding: 30px;
+  }
+}
+
 div.wrapper {
   max-width: 1400px;
   margin: auto;
@@ -816,6 +822,13 @@ div.wrapper.page_wrap::after {
   padding: 80px 20vw 60px 26vw;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_cta {
+    padding: 25px;
+    text-align: center;
+  }
+}
+
 .product-page_cta::after {
   clear: both;
   content: "";
@@ -835,6 +848,27 @@ div.wrapper.page_wrap::after {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_cta .left_wrap,
+  .product-page_cta ul {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .product-page_cta .left_wrap:last-child,
+  .product-page_cta ul:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-page_cta .btn {
+    margin: 30px 0 45px 0;
+  }
+}
+
 .product-page_cta:before {
   content: '';
   position: absolute;
@@ -845,12 +879,24 @@ div.wrapper.page_wrap::after {
   left: 20vw;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_cta:before {
+    background: transparent;
+  }
+}
+
 .product-page_cta li {
   position: relative;
   font-size: 20px;
   font-weight: bold;
   padding-left: 30px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 480px) {
+  .product-page_cta li {
+    margin-bottom: 25px;
+  }
 }
 
 .product-page_cta li:before {
@@ -876,6 +922,12 @@ div.wrapper.page_wrap::after {
   padding: 80px 20vw 60px 20vw;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_benefits {
+    padding: 30px;
+  }
+}
+
 .product-page_benefits .benefit {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 20px;
@@ -897,6 +949,12 @@ div.wrapper.page_wrap::after {
   color: #00C4B3;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_benefits .benefit h3 {
+    font-size: 0.8em;
+  }
+}
+
 .product-page_benefits .benefit p {
   display: none;
   margin-top: 45px;
@@ -908,6 +966,12 @@ div.wrapper.page_wrap::after {
 
 .product-page_about {
   padding: 80px 20vw 0px 20vw;
+}
+
+@media screen and (max-width: 480px) {
+  .product-page_about {
+    display: none;
+  }
 }
 
 .product-page_about.plus {

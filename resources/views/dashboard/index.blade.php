@@ -28,7 +28,7 @@
                             <a href="#step-2" data-toggle="tab">
                                 <label class="wizard-step">2</label>
                           <span class="wizard-description">
-                             Budget information
+                             Budget Information
                              <small>Enter your Income, Debt & Expenses</small>
                           </span>
                             </a>

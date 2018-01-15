@@ -95,7 +95,7 @@
                     <h5>FLUX CREDIT IS A TRUSTED NAME IN PERSONAL FINANCE AND CREDIT REPAIR.  WE WORK ALONGSIDE:</h5>
 
                     <ul id="partners">
-                        <!-- <li><img src="/images/bbb.png" /></li> -->
+                        <li><img src="/images/bbb.png" /></li>
                         <li><img src="/images/visa.png" /></li>
                         <li><img src="/images/bofl.png" /></li>
                         <li><img src="/images/equifax.png" /></li>
