@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+
+  public function privacy()
+  {
+    return view('privacy');
+  }
     
     public function update(Request $request)
     {

@@ -121,7 +121,7 @@
                     <li><a href="/payment/">MAKE A PAYMENT</a></li>
                     <li><a href="#">BECOME AN AFFILIATE</a></li>
                     <li><a href="#">TERMS & CONDITIONS</a></li>
-                    <li><a href="#">PRIVACY POLICY</a></li>
+                    <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
 

@@ -12,6 +12,7 @@
 */
 
 Route::get('/payment', 'UserController@payment');
+Route::get('/privacy-policy', 'UserController@privacy');
 
 Route::get('/poa', 'SignatureController@sign');
 
