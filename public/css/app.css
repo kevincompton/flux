@@ -970,7 +970,7 @@ div.wrapper.page_wrap::after {
 
 @media screen and (max-width: 480px) {
   .product-page_about {
-    display: none;
+    padding: 30px;
   }
 }
 
@@ -1001,6 +1001,21 @@ div.wrapper.page_wrap::after {
   margin-right: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_about .copy-wrap,
+  .product-page_about .iphone {
+    float: left;
+    display: block;
+    margin-right: 7.42297176%;
+    width: 100%;
+  }
+
+  .product-page_about .copy-wrap:last-child,
+  .product-page_about .iphone:last-child {
+    margin-right: 0;
+  }
+}
+
 .product-page_about .copy-wrap {
   margin-top: 60px;
 }
@@ -1014,6 +1029,14 @@ div.wrapper.page_wrap::after {
   font-style: italic;
 }
 
+@media screen and (max-width: 480px) {
+  .product-page_about h2 {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 .product-page_about h2:before {
   content: '';
   position: absolute;
@@ -1023,6 +1046,12 @@ div.wrapper.page_wrap::after {
   background-size: cover;
   left: 0;
   top: -50px;
+}
+
+@media screen and (max-width: 480px) {
+  .product-page_about h2:before {
+    background: transparent;
+  }
 }
 
 .comp-chart {

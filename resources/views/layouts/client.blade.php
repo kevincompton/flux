@@ -119,10 +119,10 @@
                         <a href="/login" class="btn">Login</a></li>
                     <!-- <li><a href="#">CONTACT US</a></li> -->
                     <li><a href="/payment/">MAKE A PAYMENT</a></li>
-                    <li><a href="#">BECOME AN AFFILIATE</a></li>
-                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <!-- <li><a href="#">BECOME AN AFFILIATE</a></li> -->
+                    <!-- <li><a href="#">TERMS & CONDITIONS</a></li> -->
                     <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <!-- <li><a href="#">FAQ</a></li> -->
                 </ul>
 
             </div>
@@ -135,7 +135,7 @@
                     <a href="https://letsencrypt.org/how-it-works/"><img class="col-xs-6" src="/images/lets-encrypt-logo.svg" alt=""></a>     
                 </div>
                 
-                <span class="copyright" href="/">© 2017 FLUX CREDIT TECHNOLOGIES, INC. <span class="sep"> ALL RIGHTS RESERVED </span></span>
+                <span class="copyright" href="/">© 2018 FLUX CREDIT <span class="sep"> ALL RIGHTS RESERVED </span></span>
             </div>
 
         </footer>

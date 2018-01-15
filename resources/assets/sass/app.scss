@@ -453,7 +453,7 @@ div.wrapper {
 .product-page_about {
   padding: 80px 20vw 0px 20vw;
   @include media($mobile) {
-      display: none;
+      padding: 30px;
     }
   &.plus {
     padding-bottom: 60px;
@@ -464,6 +464,9 @@ div.wrapper {
   @include clearfix();
   .copy-wrap, .iphone {
     @include span-columns(6);
+    @include media($mobile) {
+       @include span-columns(4);
+    }
   }
   .copy-wrap {
     margin-top: 60px;
@@ -475,6 +478,11 @@ div.wrapper {
     margin-bottom: 60px;
     margin-top: 60px;
     font-style: italic;
+    @include media($mobile) {
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -484,6 +492,9 @@ div.wrapper {
       background-size: cover;
       left: 0; 
       top: -50px;
+      @include media($mobile) {
+        background: transparent;
+      }
     }
   }
 }
