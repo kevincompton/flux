@@ -44,7 +44,7 @@ return [
     'google' => [
         'client_id' => '271818749975282',
         'client_secret' => 'c653c167bcd3914dc8ae780a738370c5',
-        'redirect' => 'http://localhost:8000',
+        'redirect' => 'http://fluxcredit.com',
     ],
 
 ];
