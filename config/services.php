@@ -42,8 +42,8 @@ return [
     ],
 
     'google' => [
-        'client_id' => '271818749975282',
-        'client_secret' => 'c653c167bcd3914dc8ae780a738370c5',
+        'client_id' => '587475219374-s4q60v3up4fphmn51sqnrgavmqjgeo2m.apps.googleusercontent.com',
+        'client_secret' => 'zSyUlBWSJ58CCVZy3tDonMni',
         'redirect' => 'http://fluxcredit.com/auth/google/callback',
     ],
 
