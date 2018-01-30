@@ -62,11 +62,6 @@ Originally created for our Flux Prime clients, Plus is now available as a stand-
         </div>
 
         <div class="benefit">
-            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Consolidation</h3>
-            <p>Clients have the option to enroll their fixed monthly expenses, such as but not limited to rent/mortgage, car payments and insurance. This offers one convenient monthly payment to help budget and ensure that you are never late on a payment again. In some cases we may be able to reduce your interest rate and monthly payment.</p>
-        </div>
-
-        <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Tax Defense</h3>
             <p>Clients enrolled in Flux Plus may submit their tax forms to 
 our CPA’s, who will prepare and sign off their tax return. 
@@ -88,7 +83,7 @@ penalties, interest, liens and levies.
 
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Consolidation</h3>
-            <p>COMING SOON</p>
+            <p>Clients have the option to enroll their fixed monthly expenses, such as but not limited to rent/mortgage, car payments and insurance. This offers one convenient monthly payment to help budget and ensure that you are never late on a payment again. In some cases we may be able to reduce your interest rate and monthly payment.</p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> 1.5% Cash Back</h3>
