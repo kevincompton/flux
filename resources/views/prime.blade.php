@@ -24,21 +24,11 @@
         </section>
 
         <section class="product-page_about">
-            <h2>“I felt Flux was my best option to get out of a high debt load due to a recent divorce.”</h2>
+            <h2>“Flux Credit reduced my monthly payments and got me out of debt in just 18 months. Best part, I now have a new Visa and a Savings account of $1,200!”</h2>
            
             <div class="copy-wrap">
-                <p>Our team of industry veterans created Flux Prime to be the 
-best solution for our clients to become debt free. We’ve created 
-an all-inclusive program, which will eliminate your debts, while 
-perfecting your credit. By the time your debt free, you’ll have 
-saved money, while earning cash back, which is alotted towards 
-a VISA secured credit card opened in your name, backed by an 
-FDIC insured savings account. We developed this program with 
-the goal of helping our clients become debt free 5-10 years 
-sooner than by not settling the accounts.</p>
-                <p>Through our proprietary technology-driven process, we beat the competition and eliminate your debt(s) at the lowest market rate. Clients can expect to save on average 45% of their balance due, which includes our rate! Payments are only made once all parties agree on settlement terms. An agreement is then placed in writing and upon receipt of payment, your creditor account is closed for good!</p>
-                
-                <p>Every day we help our clients avoid bankruptcy, while getting the fresh start they are legally promised under US law. Your decision to start Flux Prime today could save you tens of thousands of dollars and a lifetime of stress. We look forward to showing you why we are the #1 Bankruptcy Alternative In America.</p>
+                <p>Flux Prime was designed by our team of industry veterans as the best solution in America to become debt free. Our all-inclusive program eliminates your debts and perfects your credit.  Clients will earn cash back, which is allotted towards a VISA secured credit card opened in their name and backed by an FDIC Insured Savings Account. Clients should expect their credit issues to be fully resolved five to ten years sooner and two to three times less expensive by using Flux versus making their minimal payment only to their creditors.
+Through our proprietary technology-driven process, we beat the competition and eliminate your debt(s) at the lowest market rate. We offer a free analysis of your credit circumstance and design a program that is right for you.  We will never run your credit or share your personal information with any third party, ever!  Payments are only accepted once our clients agree to a written proposal. Every day we help our clients avoid bankruptcy, while getting the fresh start they are legally promised under US law. Your decision to start Flux Prime today could save you tens of thousands of dollars and a lifetime of stress. We look forward to showing you why we are the #1 Bankruptcy Alternative in America!</p>
             </div>
 
             <img class="iphone" src="/images/large_iphone.png" />
@@ -49,7 +39,7 @@ sooner than by not settling the accounts.</p>
         <h2>PROGRAM BENEFITS</h2>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Quick Sign Up</h3>
-            <p>Get signed up in less than 1 minute! Flux Credit can settle most debts, including credit cards, personal loans/lines of credit, medical bills, collections, repossessions, business debts & certain student debts.</p>
+            <p>Sign up in less than a minute!  Flux Credit can settle most debts, including credit cards, personal loans/lines of credit, medical bills, collections, repossessions, business debts & certain student debts.</p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> 24/7 Digital Dashboard</h3>
@@ -57,57 +47,16 @@ sooner than by not settling the accounts.</p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Personal Concierge</h3>
-            <p>Every step of the way, our team is 
-here to understand your circum-
-stances & answer any questions you 
-have while becoming debt free - 
-Unlike the creditors we’re on your 
-side!
-</p>
+            <p>Our team is here to help you every step of the way. You may communicate with your Personal Concierge 24/7, by phone, chat, text, email and web. We’re here to keep more money in your wallet and less money paid towards interest, so you can enjoy the flux lifestyle. You’ll have a financial advisor on call to point you & your family in the right direction during future financial decisions.</p>
         </div>
         <div class="benefit">
-            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> 6.9% Flux Flex Lending</h3>
-            <p>Negotiating settlement terms is sometimes the easy part. 
-Over the years, we’ve learned that clients who are going 
-through financial hardship often default on the settlement 
-and creditors are not obligated to renew their offers. 
-Fortunately, Flux Flex is there when you need it, which is 
-why we have a higher client success rate than the comp-
-etition. If your creditor agrees to settlement terms, but you 
-can’t afford the required payments, Flux Flex can finance 
-the settlement for you, reducing your monthly payment 
-and extending the terms - This could be the difference 
-between settling your account or being sued by your credit
-or for non-payment. Flux Flex is amortized using a simple 
-interest rate as low as 6.9%. Many clients will first attempt 
-to seek outside financing from a bank or hard lender before 
-joining our program, only to learn their rates are 20-30% 
-or higher, due to their current credit circumstances. When 
-compared to Flux Flex, taking on one loan to pay off 
-another simply doesn’t make sense. Keep more money in 
-your pocket, while eliminating your debts & perfecting 
-your credit!
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Flux Flex Lending - 6.9% APR</h3>
+            <p>Over the years, we’ve learned that clients who are going through financial hardship sometimes default on the settlement terms reached with their creditors. Clients are at a loss because the creditors are not obligated to renew their offers. Fortunately, Flux Flex is there when you need it! For this reason, Flux Credit has a higher success rate than the competition. With Flex, our clients can reduce their monthly payment and we will finance the difference at 6.9% APR, to ensure that your agreement does not go null and void. The alternative to Flux is to seek a loan from a hard money lender at a rate of 20%-30%, or even higher. Not only are these rates outrageous, there is no forgiveness and they run your credit, with no guarantee of approval. Compared with Flux Credit, once you are our client, you are automatically approved for Flex, and we never run your credit! Taking on one loan to pay off another simply doesn’t make sense. Keep more money in your pocket while eliminating your debts & perfecting your credit, with Flux Credit.
 </p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Visa Secured Credit Card</h3>
-            <p>Living without a credit card in this economy is difficult. 
-Have you tried renting a car with a debit card? First, it 
-will usually require a minimum deposit of $500 and your 
-monies may remain on hold for up to a week after you 
-return the car. This inconvenience can lead to bounced 
-checks and bank fees. Clients who graduate from our 
-program are rewarded with a VISA secured credit card, 
-backed by an FDIC Insured Savings Account. Did you 
-originally get yourself in debt because you were building 
-up your credit and then got overextended? It happens, 
-but with your secured credit card, it’s impossible. Your 
-new secured credit card is yours to keep, even after you 
-complete our program. You may wish to deposit more 
-funds on the card to increase your credit limit, or you 
-may withdrawal funds or close your account if you need 
-the cash. As you re-establish your credit, you’ll soon be 
-approved for additional loans.
+            <p>Living without a credit card in this economy is difficult.  For example, have you tried renting a car with only a debit card? Unfortunately, you may not be approved for the rental, but if you are, they will likely place a minimum hold of at least $500 on your account and this may not be released for up to two weeks after you return the car. If your cashflow is tight, this could lead to bounced checks and bank fees.  Fortunately, most Flux Credit clients will be approved for the VISA card, regardless of their credit score and even if they have previously filed bankruptcy. The VISA card is backed by an FDIC Insured Savings account opened in your name.  Best of all, this will report positively on your revolving credit, regardless if you use the card or not. By boosting your credit score and satisfying your old debt, your credit score will improve over time. This is just another example as to why Flux Credit is quickly becoming the industry leader
 </p>
         </div>
         <div class="benefit">

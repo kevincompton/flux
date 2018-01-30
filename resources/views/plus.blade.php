@@ -16,27 +16,24 @@
             </div>
 
             <ul>
-                <li>Credit Repair <span>*FICO/Vantage 3.0 Credit Score</span></li>
-                <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
-                <li>Attorney Representation <span>*Flux Prime Client Benefit</span></li>
-                <li>No Hidden Fees</li>
+                <li>Credit Repair & Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
+          <li>Debt Consolidation</li>
+          <li>Attorney Representation</li>
+          <li>Tax Defense & Preparation</li>
+          <li>1.5% Cash Back <span>*Towards a Visa secured credit card</span></li>
             </ul>       
         </section>
 
         <section class="product-page_about plus">
-            <h2>“This was the best decision I’ve ever made. I wish I did this sooner!”</h2>
+            <h2>“This was the best decision I’ve ever made. My life is finally on track!”</h2>
            
             <div class="copy-wrap"> 
-                <p>Your credit is constantly in flux. Settling your accounts will satisfy 
-your obligation, but creditors don’t always report the updated 
-status to the credit bureaus. Over time, your credit rating will 
-begin to improve, but you may have several derogatory filings 
-on your report that can be removed with appropriate action.</p>
-                
-                <p>Originally created for our Flux Prime clients, Flux Plus is now 
-available as a stand-alone monthly service for those who don’t 
-need to eliminate debts, but would like to perfect their FICO /
-VANTAGE 3.0 Credit Score.</p>
+                <p>Your credit is constantly in flux. Did you know that you may have negative or erroneous marks reported on your credit that could simply be removed by taking the appropriate actions? However, demanding your creditors resolve the matter with you directly is a tedious & frustrating task. Fortunately, Flux Plus is here to help!
+
+Originally created for our Flux Prime clients, Plus is now available as a stand-alone monthly service for those who don’t need to eliminate debts but would like to perfect their FICO/VANTAGE 3.0 Credit Score.</p> 
+
+<p>Additionally, Flux Prime clients can utilize Plus as an added extension of their debt elimination program & receive our credit repair & monitoring service, consolidation, additional 1.5% cash back, attorney representation on enrolled debts, a tax specialist that will prepare, sign off & maximize your tax returns & no transaction fees.
+</p>
             </div>
 
             <img class="iphone" src="/images/plus_hero.png" />
@@ -47,7 +44,7 @@ VANTAGE 3.0 Credit Score.</p>
         <h2>PROGRAM BENEFITS</h2>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Quick Sign Up</h3>
-            <p>Get signed up in less than 1 minute! Flux Credit can settle most debts, including credit cards, personal loans/lines of credit, medical bills, collections, repossessions, business debts & certain student debts.</p>
+            <p>Get signed up in less than a minute! You’ll have 24/7 access to your digital dashboard.</p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> 24/7 Digital Dashboard</h3>
@@ -55,28 +52,18 @@ VANTAGE 3.0 Credit Score.</p>
         </div>
         <div class="benefit">
             <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Personal Concierge</h3>
-            <p>Every step of the way, our team is 
-here to understand your circum-
-stances & answer any questions you 
-have while becoming debt free - 
-Unlike the creditors we’re on your 
-side!
+            <p>Our team is here to help you every step of the way. You may communicate with your Personal Concierge 24/7, by phone, chat, text, email and web. We’re here to keep more money in your wallet and less money paid towards interest, so you can enjoy the flux lifestyle. You’ll have a financial advisor on call to point you & your family in the right direction during future financial decisions.</p>
+        </div>
+
+        <div class="benefit">
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Credit Repair & Monitoring Service</h3>
+            <p>Due to recent data breaches, we monitor our clients identities for potential threats that could adversely impact their credit. This is done without making any credit inquiry. By reviewing and disputing any inaccurate, obsolete or erroneous marks, your credit score will rebound to maximize your financial opportunities.
 </p>
         </div>
 
         <div class="benefit">
-            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Credit Repair Service</h3>
-            <p>By reviewing & disputing any inaccurate, obsolete, erroneous 
-or settled items on your credit score, your score can be 
-restored, maximizing financial opportunities.
-</p>
-        </div>
-
-        <div class="benefit">
-            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Credit Monitoring Service</h3>
-            <p>Due to the recent data breaches, everyday we monitor our 
-clients identities for any potential threats to your credit, 
-which we can help restore should any issues arise.</p>
+            <h3><i class="fa fa-chevron-down" aria-hidden="true"></i> Consolidation</h3>
+            <p>Clients have the option to enroll their fixed monthly expenses, such as but not limited to rent/mortgage, car payments and insurance. This offers one convenient monthly payment to help budget and ensure that you are never late on a payment again. In some cases we may be able to reduce your interest rate and monthly payment.</p>
         </div>
 
         <div class="benefit">

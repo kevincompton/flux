@@ -21,9 +21,12 @@
         <img class="flux_prime" src="/images/flux_plus.png"/>
         <h2>Perfect Your Credit Score</h2>
         <ul>
-          <li>Credit Repair <span>*FICO/Vantage 3.0 Credit Score</span></li>
-          <li>Credit Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
-          <li>Attorney Representation <span>*Flux Prime Client Benefit</span></li>
+          <li>Credit Repair & Monitoring <span>*FICO/Vantage 3.0 Credit Score</span></li>
+          <li>Debt Consolidation</li>
+          <li>Attorney Representation</li>
+          <li>Tax Defense & Preparation</li>
+          <li>1.5% Cash Back <span>*Towards a Visa secured credit card</span></li>
+          
         </ul>
         <a class="btn" href="/register">$49 per Month</a>
         <a class="learn_more" href="/plus">Learn More</a>

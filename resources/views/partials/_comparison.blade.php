@@ -47,6 +47,13 @@
           <td><img src="/images/check.png" /></td>
         </tr>
         <tr>
+          <td>Cash Back</td>
+          <td class="highlight"><img src="/images/check.png" /></td>
+          <td><img src="/images/comp_cross.png" /></td>
+          <td><img src="/images/comp_cross.png" /></td>
+          <td><img src="/images/comp_cross.png" /></td>
+        </tr>
+        <tr>
           <td>Total Average Paid By Client (Based on $50k debt)</td>
           <td class="highlight">$27,500</td>
           <td><img src="/images/comp_cross.png" /></td>
