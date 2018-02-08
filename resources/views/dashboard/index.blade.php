@@ -134,8 +134,6 @@
                                   <div class="form-group copy">
 
                                     <h3>Fixed Monthly Expenses</h3>
-                                    <p>Please complete the section below to estimate what your fixed monthly expenses are. You should not include any payment
-                        on any balance you included above for reduction. <br> <span class="italic">*You should include everything else, such as: Insurance (not deducted from your pay check), Utilities, Student Loans, and personal food, clothes, entertainment and childcare expenses.</span></p>
                                   
                                   </div>
 
@@ -154,7 +152,7 @@
                                   </div>
 
                                   <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="other">Other:</label>
+                                    <label class="col-sm-3 control-label" for="other">Other (Insurance, utilities, food, clothes, entertainment, student loans, child care, etc.):</label>
                                     <div class="col-sm-6">
                                       <input type="number" class="form-control" id="other" name="other" placeholder="Other" required>
                                     </div>
