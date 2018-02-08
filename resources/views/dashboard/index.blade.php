@@ -107,7 +107,7 @@
 
                                   <div class="form-group copy">
                                     <h2>Net Monthly Income</h2>
-                                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and deductions, including alimony, disability and social security. This information will remain confidential and is only used internally to help tailor the perfect solution for you.</p>
+                                    <p>This amount should reflect all household sources of take-home pay and your Net Income after deductions. Please include alimony, disability, social security and any other money received.</p>
                                     <div class="col-sm-7 col-sm-offset-2">
                                         <div id="horizontal-slider"></div>
                                         <div class="input-group slider_output">
