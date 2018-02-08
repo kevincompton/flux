@@ -118,15 +118,14 @@
                                   </div>
 
                                   <div class="form-group copy">
-                                    <h2>Expenses</h2>
+                                    <h2>Total Debt</h2>
 
-                                    <h3>Balance Reductions</h3>
                                     <p>If you have any credit cards that are maxed out, personal loans, repossessions, evictions, medical bills, or any other credit account that you are behind on or struggling with, the Flux Credit balance reduction program may be right for you. Please determine what your approximate total balance due is. Please only include those accounts that are closed or you intend to close. Do not include the balances due on your current vehicles or rent/mortgage.</p>
 
                                     <div class="col-sm-7 col-sm-offset-2">
                                         <div id="horizontal-slider-2"></div>
                                         <div class="input-group slider_output">
-                                          <span class="input-group-addon">Balance Reductions:</span>
+                                          <span class="input-group-addon">Total Debt:</span>
                                           <input type="text" name="debt" id="amount-2" class="form-control" placeholder="Price range ...">
                                         </div>
                                     </div>
