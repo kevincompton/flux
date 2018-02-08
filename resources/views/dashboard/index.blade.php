@@ -168,6 +168,7 @@
                             @include('partials._products-select')
                         </div>
                         <div class="tab-pane" id="step-4">
+                          <p class="text-center"><strong><i>This information is neccessary for Flux Credit to communicate with your creditors, resolve past debt and improve your credit score.</i></strong></p>
                           <form role="form" class="form-horizontal bordered-row wizard_form" method="POST" action="/budget/new">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">SSN</label>
