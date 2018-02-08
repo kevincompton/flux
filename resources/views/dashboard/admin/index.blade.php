@@ -16,6 +16,7 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Onboard Date</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>State</th>
@@ -35,6 +36,7 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Onboard Date</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>State</th>
@@ -58,6 +60,7 @@
                   <tr>
                     <td>{{ $customer->name }}</td>
                     <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->created_at }}</td>
                     <td>{{ $customer->address }}</td>
                     <td>{{ $customer->city }}</td>
                     <td>{{ $customer->state }}</td>
