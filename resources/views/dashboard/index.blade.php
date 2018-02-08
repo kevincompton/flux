@@ -57,12 +57,16 @@
                       <div class="tab-pane active" id="step-1">
                         <form action="#" class="form-horizontal bordered-row wizard_form">
                           <input type="hidden" name="onboard_step" value="1" />
-                          <div class="form-group">
-                            <label class="col-sm-3 control-label" for="phone">Phone</label>
-                            <div class="col-sm-6">
-                              <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                          
+                          @if($user->phone == null)
+                            <div class="form-group">
+                              <label class="col-sm-3 control-label" for="phone">Phone</label>
+                              <div class="col-sm-6">
+                                <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                              </div>
                             </div>
-                          </div>
+                          @endif
+                          
                           <div class="form-group">
                             <label class="col-sm-3 control-label" for="address">Address</label>
                             <div class="col-sm-6">
@@ -192,6 +196,7 @@
             </div>
         </div>
     </div>
+    <p class="text-center"><i>We respect your privacy and will not sell or share your information. We will not run your credit.</i></p>
 @else 
   <div class="panel">
     <div class="panel-body">
