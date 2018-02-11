@@ -68,3 +68,6 @@ Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');
 Route::get('/dashboard/admin/cosigners', 'AdminController@cosigners')->middleware('admin');
 Route::get('/dashboard/admin/creditors', 'AdminController@creditors')->middleware('admin');
 Route::get('/dashboard/admin/budget/{budget}', 'AdminController@showBudget')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/delete', 'AdminController@deleteUser')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/poa/complete', 'AdminController@poaComplete')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/poa/incomplete', 'AdminController@poaInomplete')->middleware('admin');

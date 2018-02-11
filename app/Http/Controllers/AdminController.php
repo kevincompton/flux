@@ -8,6 +8,31 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     
+    public function deleteUser($userID) {
+      $user = \App\User::find($userID);
+      $user->delete();
+
+      return back();
+    }
+
+    public function poaComplete($userID)
+    {
+      $user = \App\User::find($userID);
+      $user->poa_status = true;
+      $user->save();
+
+      return back();
+    }
+
+    public function poaIncomplete($userID)
+    {
+      $user = \App\User::find($userID);
+      $user->poa_status = false;
+      $user->save();
+
+      return back();
+    }
+
     public function index()
     {
       $user = Auth::user();

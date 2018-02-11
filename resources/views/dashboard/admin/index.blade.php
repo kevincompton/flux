@@ -29,6 +29,8 @@
                 <th>Budget</th>
                 <th>Co-Signer</th>
                 <th>Creditors</th>
+                <th>POA Status</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -49,6 +51,8 @@
                 <th>Budget</th>
                 <th>Co-Signer</th>
                 <th>Creditors</th>
+                <th>POA Status</th>
+                <th></th>
             </tr>
             </tfoot>
 
@@ -96,6 +100,16 @@
                       @else
                         None
                       @endif
+                    </td>
+                    <td>
+                      @if($user->poa_status == false)
+                        Incomplete <a class="btn btn-default" href="#">Mark Completed</a>
+                      @else
+                        Completed <a class="btn btn-default" href="#">Mark Incomplete</a>
+                      @endif
+                    </td>
+                    <td>
+                      <a class="btn btn-danger" href="#">Delete</a>
                     </td>
                   </tr>
 
