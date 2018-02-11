@@ -40,6 +40,7 @@ class SocialAuthController extends Controller
             $data = [
                 'name'     => $user->name,
                 'email'    => $user->email,
+                'password' => $provider
             ];
 
             Mail::to($data['email'])->send(new NewRegistration($data));
