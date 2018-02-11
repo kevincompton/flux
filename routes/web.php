@@ -44,8 +44,6 @@ Auth::routes();
 
 Route::post('/cosigner/new', 'UserController@cosign');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 // Dashboard Routes
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
 Route::get('/dashboard/cosigner', 'DashController@cosigner');
