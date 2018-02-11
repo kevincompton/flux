@@ -36,6 +36,12 @@ class SocialAuthController extends Controller
         }
 
         if(env('APP_VERSION') == 'production') {
+
+            $data = [
+                'name'     => $user->name,
+                'email'    => $user->email,
+            ];
+
             Mail::to($data['email'])->send(new NewRegistration($data));
             Mail::to(env('ADMIN_EMAIL'))->send(new AdminNewUser($data));
         }
