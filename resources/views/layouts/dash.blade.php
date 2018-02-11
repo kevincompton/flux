@@ -544,13 +544,13 @@
                     </a>
                 </li>
                 <li class="divider"></li>
-                <li>
+                <!-- <li>
                     <a href="#" title="Flux Plus">
                         <i class="glyph-icon icon-linecons-money"></i>
                         <span>Flux Plus</span>
                         <span class="bs-label label-primary">Upgrade</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="/dashboard/credit" title="Flux Plus">
                         <i class="glyph-icon icon-credit-card"></i>
