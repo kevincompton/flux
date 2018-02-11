@@ -15,6 +15,14 @@
 
     @if($user->application)
       <h1 class="text-center">Your Application has been submitted!</h1>
+
+      <h3 class="text-center" style="margin: 60px auto;">To complete the process, download the Application, sign and date, then mail to:<br>
+        <br>
+        Flux Credit<br>
+792 Alverstone Ave<br>
+Ventura, CA 93003<br>
+      </h3>
+      <p class="text-center"><a href="/dashboard/credit-application/pdf" class="btn btn-lg btn-primary">Download Application</a></p>
     @else
     <form class="form-horizontal bordered-row" role="form" method="POST" action="/credit/apply">
       {{ csrf_field() }}
@@ -115,7 +123,7 @@
       </span>
 
         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-          <label for="employer_name" class="col-md-4 control-label">Employer Name</label>
+          <label for="employer_name" class="col-md-4 control-label">Employer Name (If self-employed give name & type of business)</label>
           <div class="col-md-6">
               <input id="employer_name" type="text" class="form-control" name="employer_name" required>
 

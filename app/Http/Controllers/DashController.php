@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use PDF;
+use Mail;
 use Illuminate\Http\Request;
 
 class DashController extends Controller
@@ -11,6 +13,34 @@ class DashController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function renderPDF()
+    {
+        $user = Auth::user();
+        $application = $user->application;
+        $cosigner = $user->cosigners->first();
+        $handle = str_replace(" ", "_", $user->name);
+
+        $data = [
+          "user" => $user,
+          "app" => $application,
+          "cosigner" => $cosigner,
+          "handle" => $handle
+        ];
+
+        $pdf = PDF::loadView('dashboard.pdf.credit_application', $data);
+
+        $pdf->save(storage_path('pdf/credit-applications/' . $handle . '_flux_visa_application.pdf'));
+
+        if(env('APP_VERSION') == 'production') {
+            Mail::send('emails.admin_new_credit_application', $data, function ($message) use ($handle) {
+                $message->attach(storage_path('pdf/credit-applications/' . $handle . '_flux_visa_application.pdf'));
+                $message->to(env('ADMIN_EMAIL'), 'Flux Admin')->subject('New Credit Application');
+            });
+        }
+
+        return $pdf->download($handle . '_flux_visa_application.pdf');
     }
 
     public function creditApply(Request $request)

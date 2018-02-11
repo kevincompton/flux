@@ -52,6 +52,7 @@ Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 Route::get('/dashboard/credit', 'DashController@credit');
 Route::get('/dashboard/credit-report', 'DashController@creditReport');
+Route::get('/dashboard/credit-application/pdf', 'DashController@renderPDF');
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');
