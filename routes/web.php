@@ -50,6 +50,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
 Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
+Route::get('/dashboard/credit', 'DashController@credit');
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');

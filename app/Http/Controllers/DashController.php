@@ -21,6 +21,11 @@ class DashController extends Controller
             return redirect('/dashboard/admin');
         }
 
+        if($_GET["poa_status"]) {
+            $user->poa_status = true;
+            $user->save();
+        }
+
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
         $cosigners = $user->cosigners()->get();
@@ -88,6 +93,19 @@ class DashController extends Controller
         
 
         return "user updated";
+    }
+
+    public function credit()
+    {
+        $user = Auth::user();
+        $cosigner = $user->cosigners->first();
+
+        $data = [
+            "user" => $user,
+            "cosigner" => $cosigner
+        ];
+
+        return view('dashboard.credit')->with($data);
     }
 
     public function cosigner()

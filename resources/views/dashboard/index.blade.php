@@ -196,6 +196,19 @@
     </div>
     <p class="text-center"><i>We respect your privacy and will not sell or share your information. We will not run your credit.</i></p>
 @else 
+
+  @if($user->poa_status == 0)
+    <div class="alert alert-warning">
+      <div class="bg-orange alert-icon">
+        <i class="glyph-icon icon-warning"></i>
+      </div>
+      <div class="alert-content">
+        <h4 class="alert-title">You have not signed the Power Of Attorney form</h4>
+        <p>In order to complete your profile you need to sign the Power of Attorney form. <a href="/poa">Click here to sign now.</a>
+      </div>
+    </div>
+  @endif
+
   <div class="panel">
     <div class="panel-body">
         <h3 class="title-hero">

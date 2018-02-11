@@ -545,6 +545,13 @@
                         <span class="bs-label label-primary">Upgrade</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/dashboard/credit" title="Flux Plus">
+                        <i class="glyph-icon icon-credit-card"></i>
+                        <span>Flux Credit</span>
+                        <span class="bs-label label-primary">Apply Now</span>
+                    </a>
+                </li>
             </ul><!-- #sidebar-menu -->
         @else
            <ul id="sidebar-menu">
