@@ -58,7 +58,7 @@
                 </div>
               </div>
 
-              <div class="form-group copy"
+              <div class="form-group copy">
                 <small class="italic">*You are agreeing to cease all activity in relation to this account which allows Flux Credit to settle the account for less. If you are contacted by this creditor, please refer them to our office by providing our phone number.</small>
 
                 <label for="file">Upload Files (you may choose multiple)</label>

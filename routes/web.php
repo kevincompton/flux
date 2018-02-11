@@ -51,6 +51,7 @@ Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
 Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 Route::get('/dashboard/credit', 'DashController@credit');
+Route::get('/dashboard/credit-report', 'DashController@creditReport');
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');
@@ -62,6 +63,7 @@ Route::post('/budget/new', 'BudgetController@create');
 Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
+Route::post('/credit-report/upload', 'DashController@uploadCreditReport');
 
 // Admin Routes
 Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');

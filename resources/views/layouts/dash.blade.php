@@ -537,6 +537,12 @@
                         <span>Manage Creditors</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/dashboard/credit-report" title="Upload Credit Report">
+                        <i class="glyph-icon icon-linecons-attach"></i>
+                        <span>Upload Credit Report</span>
+                    </a>
+                </li>
                 <li class="divider"></li>
                 <li>
                     <a href="#" title="Flux Plus">

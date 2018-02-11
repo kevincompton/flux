@@ -21,7 +21,7 @@ class DashController extends Controller
             return redirect('/dashboard/admin');
         }
 
-        if($_GET["poa_status"]) {
+        if(isset($_GET["poa_status"])) {
             $user->poa_status = true;
             $user->save();
         }
@@ -48,6 +48,33 @@ class DashController extends Controller
         ];
 
         return view('dashboard.index')->with($data);
+    }
+
+    public function creditReport()
+    {
+        $user = Auth::user();
+
+        $data = [
+            "user" => $user,
+        ];
+
+        return view('dashboard.credit_report')->with($data);
+    }
+
+    public function uploadCreditReport(Request $request)
+    {
+
+        $files = $request->file('file');
+
+        if(!empty($files)) {
+            foreach ($files as $key => $file) {
+              $name = 'user_' . $user->id . '_' . 'credit_report_' . $key;
+              Storage::disk('local')->put($name, $file);
+            }        
+        }
+
+        return back();
+
     }
 
     public function onboardStep()
