@@ -6,9 +6,11 @@
 
 <div class="panel">
   <div class="panel-body">
-    <h3 class="title-hero">
-        Apply For Flux Credit
-    </h3>
+    @if(!$user->application)
+      <h3 class="title-hero">
+          Apply For Flux Credit
+      </h3>
+    @endif
   <div class="example-box-wrapper">
 
     @if($user->application)
