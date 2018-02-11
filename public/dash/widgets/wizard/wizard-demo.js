@@ -3,6 +3,11 @@
 // need to activate if element is present
 
 $(function() {
+
+var wizard = document.getElementById('form-wizard');
+
+if(wizard != null) {
+
     "use strict";
     var parent = this;
 
@@ -91,5 +96,9 @@ $(function() {
     }
 
     disable();
+
+}
+
+    
 
 });

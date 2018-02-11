@@ -64,6 +64,7 @@ Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
 Route::post('/credit-report/upload', 'DashController@uploadCreditReport');
+Route::post('/credit/apply', 'DashController@creditApply');
 
 // Admin Routes
 Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');

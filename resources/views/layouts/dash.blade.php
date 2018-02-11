@@ -554,7 +554,7 @@
                 <li>
                     <a href="/dashboard/credit" title="Flux Plus">
                         <i class="glyph-icon icon-credit-card"></i>
-                        <span>Flux Credit</span>
+                        <span>Visa Secured Card</span>
                         <span class="bs-label label-primary">Apply Now</span>
                     </a>
                 </li>
