@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use Auth;
 use Socialite;
+use Mail;
 use App\Mail\NewRegistration;
 use App\Mail\AdminNewUser;
 use Illuminate\Http\Request;

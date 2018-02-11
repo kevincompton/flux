@@ -335,37 +335,37 @@
             </div>
           </div>
 
-        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-          <label for="employer_address" class="col-md-4 control-label">Employer Address</label>
-          <div class="col-md-6">
-              <input id="employer_address" type="text" class="form-control" name="employer_address" required>
+          <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+            <label for="cosigner_employer_address" class="col-md-4 control-label">Co-Signer's Employer Address</label>
+            <div class="col-md-6">
+                <input id="cosigner_employer_address" type="text" class="form-control" name="cosigner_employer_address" required>
 
-              @if ($errors->has('employer_address'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('employer_address') }}</strong>
-                </span>
-              @endif
+                @if ($errors->has('employer_address'))
+                  <span class="help-block">
+                      <strong>{{ $errors->first('employer_address') }}</strong>
+                  </span>
+                @endif
+            </div>
           </div>
-        </div>
 
         <div class="form-group">
           <div class="form-row col-sm-8 col-sm-offset-2">
             <div class="form-group col-sm-6">
-              <label class="col-sm-3 control-label" for="employer_city">City</label>
+              <label class="col-sm-3 control-label" for="cosigner_employer_city">City</label>
               <div class="col-sm-6">
-                <input type="text" class="form-control" id="employer_city" name="employer_city" required>
+                <input type="text" class="form-control" id="cosigner_employer_city" name="cosigner_employer_city" required>
               </div>
             </div>
             <div class="form-group col-sm-3">
-              <label class="col-sm-3 control-label" for="employer_state">State</label>
+              <label class="col-sm-3 control-label" for="cosigner_employer_state">State</label>
               <div class="col-sm-6">
-                @include('partials._state-employer-select')
+                @include('partials._state-cosigner-employer-select')
               </div>
             </div>
             <div class="form-group col-sm-3">
-              <label class="col-sm-3 control-label" for="employer_zip">Zip</label>
+              <label class="col-sm-3 control-label" for="cosigner_employer_zip">Zip</label>
               <div class="col-sm-6">
-                <input type="text" name="employer_zip" class="input-mask form-control" id="zip" data-inputmask="&apos;mask&apos;:&apos;99999&apos;">
+                <input type="text" name="cosigner_employer_zip" class="input-mask form-control" id="zip" data-inputmask="&apos;mask&apos;:&apos;99999&apos;">
               </div>
             </div>
           </div>
