@@ -551,7 +551,7 @@
                         <span class="bs-label label-primary">Upgrade</span>
                     </a>
                 </li> -->
-                @if($user->onboard_step > 4)
+                @if($user->onboard_step > 3)
                     <li>
                         <a href="/dashboard/credit" title="Flux Plus">
                             <i class="glyph-icon icon-credit-card"></i>
