@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use PDF;
 use Mail;
+use Storage;
 use Illuminate\Http\Request;
 
 class DashController extends Controller
@@ -13,6 +14,46 @@ class DashController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function inviteFriend()
+    {
+        $user = Auth::user();
+
+        // send user invite email with referral code
+        // setup user register to accept $_GET or fillable code
+        // on register find code id using code hash, associate referred user to ID
+        // return user to refer page with success notice
+
+    }
+
+    public function refer()
+    {
+        $user = Auth::user();
+
+        if(!$user->referral) {
+            $length = 10;
+            $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            $string = "";
+
+            for ($p = 0; $p < $length; $p++) {
+                $string .= $characters[mt_rand(0, strlen($characters))];
+            }
+
+            $referral = new \App\Referral;
+            $referral->user_id = $user->id;
+            $referral->code = $string;
+            $referral->save();
+        } else {
+            $referral = $user->referral;
+        }
+
+        $data = [
+            "user" => $user,
+            "referral" => $referral
+        ];
+
+        return view('dashboard.refer')->with($data);
     }
 
     public function renderPDF()
@@ -150,7 +191,7 @@ class DashController extends Controller
 
     public function uploadCreditReport(Request $request)
     {
-
+        $user = Auth::user();
         $files = $request->file('file');
 
         if(!empty($files)) {

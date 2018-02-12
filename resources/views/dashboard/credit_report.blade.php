@@ -11,7 +11,7 @@
         </h3>
         <div class="example-box-wrapper">
           
-          <form role="form" class="form-horizontal bordered-row" method="POST" action="/creditor-report/upload" enctype="multipart/form-data">
+          <form role="form" class="form-horizontal bordered-row" method="POST" action="/credit-report/upload" enctype="multipart/form-data">
               {{ csrf_field() }}
 
               <div class="form-group copy">
