@@ -18,7 +18,7 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
 
-      if(env('APP_VERSION') != 'production') {
+      if(env('APP_VERSION') != 'production' || env('APP_VERSION') != 'staging' ) {
         return redirect('/dashboard');
       }
       $response = $this->getEmbeddedSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
@@ -44,7 +44,7 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
 
-      if(env('APP_VERSION') != 'production') {
+      if(env('APP_VERSION') != 'production' || env('APP_VERSION') != 'staging' ) {
         return redirect('/dashboard');
       }
       $response = $this->getEmbeddedSignatureRequest(getenv('HELLOSIGN_TEMPLATE_ID'));
