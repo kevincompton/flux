@@ -14,14 +14,40 @@ class SignatureController extends Controller
       return "success";
     }
 
+    public function creditApply()
+    {
+      $user = Auth::user();
+
+      if(env('APP_VERSION') != 'production') {
+        return redirect('/dashboard');
+      }
+      $response = $this->getEmbeddedSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
+
+      $signature_request_id = $response["signature_request"]["signature_request_id"];
+      $signatures = $response["signature_request"]["signatures"];
+
+      $signature_id = $signatures[0]["signature_id"];
+
+      $response = $this->getEmbeddedSignUrl($signature_id);
+
+      $sign_url = $response["embedded"]["sign_url"];
+
+      $data = [
+        "user" => $user,
+        "sign_url" => $sign_url
+      ];
+
+      return view('documents.credit_form')->with($data);
+    }
+
     public function sign()
     {
       $user = Auth::user();
 
-      if(env('APP_VERSION' != 'production')) {
+      if(env('APP_VERSION') != 'production') {
         return redirect('/dashboard');
       }
-      $response = $this->getEmbeddedSignatureRequest();
+      $response = $this->getEmbeddedSignatureRequest(getenv('HELLOSIGN_TEMPLATE_ID'));
 
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
@@ -83,14 +109,14 @@ class SignatureController extends Controller
         return $response;
     }
 
-    private function getEmbeddedSignatureRequest()
+    private function getEmbeddedSignatureRequest($template_id)
     {
       $user = Auth::user();
       $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
 
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
-            'template_id' => getenv('HELLOSIGN_TEMPLATE_ID'),
+            'template_id' => $template_id,
             'subject' => 'Subject',
             'message' => '',
             'signers' => [

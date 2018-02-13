@@ -37,6 +37,19 @@ class User extends Authenticatable
         return $this->hasOne('App\Budget');
     }
 
+<<<<<<< Updated upstream
+=======
+    public function application()
+    {
+        return $this->hasOne('App\Application');
+    }
+
+    public function referral()
+    {
+        return $this->hasOne('App\Referral');
+    }
+
+>>>>>>> Stashed changes
     public function creditors()
     {
         return $this->hasMany('App\Creditor');
@@ -45,6 +58,11 @@ class User extends Authenticatable
     public function cosigners()
     {
         return $this->hasMany('App\CoSigner');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany('App\Payment');
     }
 
 }

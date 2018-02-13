@@ -13,6 +13,106 @@ class DashController extends Controller
         $this->middleware('auth');
     }
 
+<<<<<<< Updated upstream
+=======
+    public function inviteFriend()
+    {
+        $user = Auth::user();
+
+        // send user invite email with referral code
+        // setup user register to accept $_GET or fillable code
+        // on register find code id using code hash, associate referred user to ID
+        // return user to refer page with success notice
+
+    }
+
+    public function refer()
+    {
+        $user = Auth::user();
+
+        if(!$user->referral) {
+            $length = 10;
+            $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            $string = "";
+
+            for ($p = 0; $p < $length; $p++) {
+                $string .= $characters[mt_rand(0, strlen($characters))];
+            }
+
+            $referral = new \App\Referral;
+            $referral->user_id = $user->id;
+            $referral->code = $string;
+            $referral->save();
+        } else {
+            $referral = $user->referral;
+        }
+
+        $data = [
+            "user" => $user,
+            "referral" => $referral
+        ];
+
+        return view('dashboard.refer')->with($data);
+    }
+
+    public function creditApply(Request $request)
+    {
+        $user = Auth::user();
+        // grab all inputs and create application object
+
+        $app = new \App\Application;
+        $app->user_id = $user->id;
+        $app->dl_no = $request->dl_no;
+        $app->dl_state = $request->state;
+        $app->dependencies = $request->dependencies;
+        $app->years_at_address = $request->years_at_address;
+        $app->owner_status = $request->owner_status;
+        
+        if($app->years_at_address < 3) {
+            $app->prev_address = $request->prev_address;
+            $app->prev_city = $request->prev_city;
+            $app->prev_state = $request->prev_state;
+            $app->prev_zip = $request->prev_zip;
+        }
+
+        $app->employer_name = $request->employer_name; 
+        $app->employer_phone = $request->employer_phone; 
+        $app->employer_years = $request->employer_years; 
+        $app->position = $request->position; 
+        $app->employer_address = $request->employer_address; 
+        $app->employer_city = $request->employer_city; 
+        $app->employer_state = $request->employer_state; 
+        $app->employer_zip = $request->employer_zip; 
+
+        if($user->cosigner) {
+            $app->cosigner_dl_no = $request->cosigner_dl_no; 
+            $app->cosigner_dl_state = $request->cosigner_dl_state; 
+            $app->cosigner_dependencies = $request->cosigner_dependencies; 
+            $app->cosigner_years_at_address = $request->cosigner_years_at_address;
+
+            if($app->cosigner_years_at_address < 3) {
+                $app->cosigner_prev_address = $request->cosigner_prev_address; 
+                $app->cosigner_prev_city = $request->cosigner_prev_city; 
+                $app->cosigner_prev_state = $request->cosigner_prev_state; 
+                $app->cosigner_prev_zip = $request->cosigner_prev_zip;
+            }
+
+            $app->cosigner_employer_name = $request->cosigner_employer_name; 
+            $app->cosigner_employer_phone = $request->cosigner_employer_phone;
+            $app->cosigner_employer_years = $request->cosigner_employer_years;
+            $app->cosigner_position = $request->cosigner_position;
+            $app->cosigner_income = $request->cosigner_income;
+            $app->cosigner_mortgage = $request->cosigner_mortgage;
+            $app->cosigner_owner_status = $request->cosigner_owner_status; 
+        }
+
+        $app->save();
+
+        return back();
+
+    }
+
+>>>>>>> Stashed changes
     public function dashboard()
     {
         $user = Auth::user();
