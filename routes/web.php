@@ -50,13 +50,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
 Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
-<<<<<<< Updated upstream
-=======
 Route::get('/dashboard/credit', 'DashController@credit');
 Route::get('/dashboard/credit-report', 'DashController@creditReport');
 Route::get('/dashboard/refer', 'DashController@refer');
 Route::get('/dashboard/credit-application/pdf', 'SignatureController@creditApply');
->>>>>>> Stashed changes
+
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');
