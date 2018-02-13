@@ -20,6 +20,7 @@
                             <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Sign Up with Facebook</a>
                             <a href="{{ url('/auth/google') }}" class="btn btn-google"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign Up with Google</a>
                             <span class="or">Or Create A New Account Below</span>
+                            <p class="text-center"><i>We respect your privacy and will not sell or share your information. We will not run your credit.</i></p>
                         </section>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">

@@ -42,6 +42,7 @@ class User extends Authenticatable
         return $this->hasOne('App\Application');
     }
 
+
     public function referral()
     {
         return $this->hasOne('App\Referral');

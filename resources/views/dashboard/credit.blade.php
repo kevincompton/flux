@@ -29,6 +29,10 @@ Ventura, CA 93003<br>
 
       <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
         <label for="dl_no" class="col-md-4 control-label">Driver's License</label>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         <div class="col-md-6">
             <input id="dl_no" placeholder="Driver's License #" type="text" class="form-control" name="dl_no" required autofocus>
 
@@ -38,6 +42,10 @@ Ventura, CA 93003<br>
               </span>
             @endif
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
       </div>
 
       <div class="form-group">

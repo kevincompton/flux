@@ -23,7 +23,8 @@
      // Define a callback for processing events.
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
-         window.location.replace("http://fluxcredit.com/dashboard");
+
+         window.location.replace("http://fluxcredit.com/dashboard?poa_status");
        }
      }
    });

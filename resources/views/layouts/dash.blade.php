@@ -228,7 +228,7 @@
                 <div id="page-header" class="bg-gradient-9">
                     <div id="mobile-navigation">
                         <button id="nav-toggle" class="collapsed" data-toggle="collapse" data-target="#page-sidebar"><span></span></button>
-                        <a href="index.html" class="logo-content-small" title="MonarchUI"></a>
+                        <a href="/dashboard" class="logo-content-small" title="MonarchUI"></a>
                     </div>
                     <div id="header-logo" class="logo-bg">
                         <a href="/dashboard" class="logo-content-big" title="MonarchUI">
@@ -537,14 +537,35 @@
                         <span>Manage Creditors</span>
                     </a>
                 </li>
-                <li class="divider"></li>
                 <li>
+                    <a href="/dashboard/credit-report" title="Upload Credit Report">
+                        <i class="glyph-icon icon-linecons-attach"></i>
+                        <span>Upload Credit Report</span>
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <!-- <li>
                     <a href="#" title="Flux Plus">
                         <i class="glyph-icon icon-linecons-money"></i>
                         <span>Flux Plus</span>
                         <span class="bs-label label-primary">Upgrade</span>
                     </a>
-                </li>
+                </li> -->
+                @if($user->onboard_step > 3)
+                    <li>
+                        <a href="/dashboard/credit" title="Flux Plus">
+                            <i class="glyph-icon icon-credit-card"></i>
+                            <span>Visa Secured Card</span>
+                        </a>
+                    </li>
+                @endif 
+
+                <!-- <li>
+                    <a href="/dashboard/refer" title="Flux Plus">
+                        <i class="glyph-icon icon-linecons-megaphone"></i>
+                        <span>Flux Friends</span>
+                    </a>
+                </li> -->
             </ul><!-- #sidebar-menu -->
         @else
            <ul id="sidebar-menu">

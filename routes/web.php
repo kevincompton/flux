@@ -44,17 +44,19 @@ Auth::routes();
 
 Route::post('/cosigner/new', 'UserController@cosign');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 // Dashboard Routes
 Route::get('/dashboard', 'DashController@dashboard')->name('dashboard');
 Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 Route::get('/dashboard/credit', 'DashController@credit');
 Route::get('/dashboard/credit-report', 'DashController@creditReport');
+<<<<<<< HEAD
 Route::get('/dashboard/refer', 'DashController@refer');
 Route::get('/dashboard/credit-application/pdf', 'SignatureController@creditApply');
 
+=======
+Route::get('/dashboard/credit-application/pdf', 'DashController@renderPDF');
+>>>>>>> master
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');
@@ -67,9 +69,14 @@ Route::post('/budget/new', 'BudgetController@create');
 Route::post('/plan/plus', 'BudgetController@plus');
 Route::post('/plan/prime', 'BudgetController@prime');
 Route::post('/creditor/new', 'CreditorController@create');
+Route::post('/credit-report/upload', 'DashController@uploadCreditReport');
+Route::post('/credit/apply', 'DashController@creditApply');
 
 // Admin Routes
 Route::get('/dashboard/admin', 'AdminController@index')->middleware('admin');
 Route::get('/dashboard/admin/cosigners', 'AdminController@cosigners')->middleware('admin');
 Route::get('/dashboard/admin/creditors', 'AdminController@creditors')->middleware('admin');
 Route::get('/dashboard/admin/budget/{budget}', 'AdminController@showBudget')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/delete', 'AdminController@deleteUser')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/poa/complete', 'AdminController@poaComplete')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/poa/incomplete', 'AdminController@poaInomplete')->middleware('admin');

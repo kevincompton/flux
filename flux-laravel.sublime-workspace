@@ -308,69 +308,79 @@
 	"buffers":
 	[
 		{
-			"file": "resources/assets/sass/app.scss",
+			"file": "resources/views/dashboard/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 31877,
+				"buffer_size": 15899,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/prime.blade.php",
+			"file": "resources/views/dashboard/credit.blade.php",
 			"settings":
 			{
-				"buffer_size": 7597,
+				"buffer_size": 2849,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/assets/js/app.js",
+			"file": "resources/views/dashboard/cosigner.blade.php",
 			"settings":
 			{
-				"buffer_size": 3263,
+				"buffer_size": 5362,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/plus.blade.php",
+			"file": "resources/views/dashboard/creditors.blade.php",
 			"settings":
 			{
-				"buffer_size": 6115,
+				"buffer_size": 2942,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/partials/_state-select.blade.php",
+			"settings":
+			{
+				"buffer_size": 1771,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/partials/dlstate-select.blade",
+			"settings":
+			{
+				"buffer_size": 1777,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/welcome.blade.php",
+			"file": "app/Http/Controllers/DashController.php",
 			"settings":
 			{
-				"buffer_size": 1007,
+				"buffer_size": 3310,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/partials/_products.blade.php",
+			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 1402,
+				"buffer_size": 2849,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "resources/views/partials/_comparison.blade.php",
+			"file": "resources/views/layouts/dash.blade.php",
 			"settings":
 			{
-				"buffer_size": 2231,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "resources/views/layouts/client.blade.php",
-			"settings":
-			{
-				"buffer_size": 6725,
+				"buffer_size": 36679,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -467,54 +477,59 @@
 	[
 		"/Users/kevincompton/Sites/flux-laravel",
 		"/Users/kevincompton/Sites/flux-laravel/app",
-		"/Users/kevincompton/Sites/flux-laravel/app/Console",
-		"/Users/kevincompton/Sites/flux-laravel/app/Exceptions",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers",
-		"/Users/kevincompton/Sites/flux-laravel/public",
-		"/Users/kevincompton/Sites/flux-laravel/public/dash",
-		"/Users/kevincompton/Sites/flux-laravel/public/dash/elements",
-		"/Users/kevincompton/Sites/flux-laravel/public/dash/widgets",
-		"/Users/kevincompton/Sites/flux-laravel/public/js",
+		"/Users/kevincompton/Sites/flux-laravel/app/Mail",
 		"/Users/kevincompton/Sites/flux-laravel/resources",
-		"/Users/kevincompton/Sites/flux-laravel/resources/assets",
-		"/Users/kevincompton/Sites/flux-laravel/resources/assets/js",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views"
+		"/Users/kevincompton/Sites/flux-laravel/resources/views",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/layouts",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials",
+		"/Users/kevincompton/Sites/flux-laravel/routes"
 	],
 	"file_history":
 	[
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/plus.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/assets/js/app.js",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/auth/register.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/admin/index.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/Auth/SocialAuthController.php",
+		"/Users/kevincompton/Sites/flux-laravel/app/Mail/AdminNewUser.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/Auth/RegisterController.php",
-		"/Users/kevincompton/Sites/flux-laravel/public/dash/elements/forms.css",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/layouts/dash.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/layouts/client.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/auth/register.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/index.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/config/session.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_products.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_comparison.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_newsletter.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/layouts/client.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/welcome.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_contact-sticky.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/plus.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_comparison.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/prime.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/home.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/UserController.php",
+		"/Users/kevincompton/Sites/flux-laravel/config/mail.php",
+		"/Users/kevincompton/Sites/flux-laravel/routes/web.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/privacy.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/contact.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/config/services.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/auth/passwords/reset.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/auth/passwords/email.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/assets/sass/app.scss",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/layouts/dash.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/assets/js/app.js",
+		"/Users/kevincompton/Sites/flux-laravel/public/dash/elements/forms.css",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_newsletter.blade.php",
+		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_contact-sticky.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/documents/poa_form.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/emails/admin_new_user.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/AdminController.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/admin/index.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/.env",
-		"/Users/kevincompton/Sites/flux-laravel/routes/web.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/creditors.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/home.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/DashController.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/assets/sass/dash.scss",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/CreditorController.php",
-		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/UserController.php",
 		"/Users/kevincompton/Sites/flux-laravel/database/migrations/2017_11_12_213207_cosigner_update.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/cosigner.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/assets/js/dash.js",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/admin/creditors.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/SignatureController.php",
-		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/Auth/SocialAuthController.php",
 		"/Users/kevincompton/Sites/flux-laravel/public/dash/widgets/wizard/wizard-demo.js",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/admin/budget.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/dashboard/admin/cosigners.blade.php",
@@ -528,7 +543,6 @@
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/BudgetController.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_products-select.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_state-select.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/assets/sass/app.scss",
 		"/Users/kevincompton/Sites/flux-laravel/database/migrations/2017_11_03_214915_onboard_steps.php",
 		"/Users/kevincompton/Sites/flux-laravel/public/dash/widgets/slider-ui/slider.css",
 		"/Users/kevincompton/Sites/flux-laravel/public/dash/widgets/wizard/wizard.css",
@@ -542,7 +556,6 @@
 		"/Users/kevincompton/Sites/flux-laravel/app/Mail/NewRegistration.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/emails/admin_user_update.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Mail/AdminDashUpdate.php",
-		"/Users/kevincompton/Sites/flux-laravel/app/Mail/AdminNewUser.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/flex.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/database/migrations/2017_10_09_193059_update_dob.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Http/Controllers/MailChimpController.php",
@@ -551,7 +564,6 @@
 		"/Users/kevincompton/Sites/flux-laravel/composer.json",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/payment.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/partials/_contact-modal.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/resources/views/contact.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/cash.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/config/filesystems.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Creditor.php",
@@ -563,8 +575,6 @@
 		"/Users/kevincompton/Sites/flux-laravel/app/Mail/CustomerInquiry.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/emails/inquiry.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/confirm.blade.php",
-		"/Users/kevincompton/Sites/flux-laravel/config/services.php",
-		"/Users/kevincompton/Sites/flux-laravel/config/mail.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/auth/login.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/resources/views/poa_placeholder.blade.php",
 		"/Users/kevincompton/Sites/flux-laravel/app/Console/Kernel.php",
@@ -606,15 +616,11 @@
 		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/modules/_education.scss",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/education.blade.php",
 		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/welcome.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/app.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/sass/client/_junkdrawer.scss",
-		"/Users/kevincompton/Sites/swallow-partners/resources/views/client/show_product.blade.php",
-		"/Users/kevincompton/Sites/swallow-partners/resources/assets/js/app.js",
-		"/Users/kevincompton/Sites/swallow-partners/app/Http/Controllers/CompanyController.php"
+		"/Users/kevincompton/Sites/swallow-partners/resources/views/layouts/app.blade.php"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -629,6 +635,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hello@example.com",
 			"page_wra",
 			"page_wrap",
 			"page",
@@ -732,64 +739,62 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "resources/assets/sass/app.scss",
+					"file": "resources/views/dashboard/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31877,
+						"buffer_size": 15899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4916,
-								4916
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 5327.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/prime.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7597,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1600,
-								1600
+								9898,
+								9898
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5.0,
+						"translation.y": 2145.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "resources/views/dashboard/credit.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2487,
+								2487
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -797,11 +802,41 @@
 				},
 				{
 					"buffer": 2,
-					"file": "resources/assets/js/app.js",
+					"file": "resources/views/dashboard/cosigner.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3599,
+								3633
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "resources/views/dashboard/creditors.blade.php",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 3263,
+						"buffer_size": 2942,
 						"regions":
 						{
 						},
@@ -814,42 +849,12 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1204.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "resources/views/plus.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5454,
-								5454
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1149.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
@@ -857,19 +862,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "resources/views/welcome.blade.php",
+					"file": "resources/views/partials/_state-select.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1007,
+						"buffer_size": 1771,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								243,
-								243
+								0,
+								1771
 							]
 						],
 						"settings":
@@ -882,24 +887,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "resources/views/partials/_products.blade.php",
+					"file": "resources/views/partials/dlstate-select.blade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1402,
+						"buffer_size": 1777,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1150,
-								1150
+								301,
+								301
 							]
 						],
 						"settings":
@@ -917,29 +922,29 @@
 				},
 				{
 					"buffer": 6,
-					"file": "resources/views/partials/_comparison.blade.php",
+					"file": "app/Http/Controllers/DashController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2231,
+						"buffer_size": 3310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								524,
-								524
+								2737,
+								2737
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 670.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
@@ -947,19 +952,47 @@
 				},
 				{
 					"buffer": 7,
-					"file": "resources/views/layouts/client.blade.php",
+					"file": "routes/web.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6725,
+						"buffer_size": 2849,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5026,
-								5026
+								1980,
+								1980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "resources/views/layouts/dash.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								31445,
+								31445
 							]
 						],
 						"settings":
@@ -969,10 +1002,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1581.0,
+						"translation.y": 9987.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -980,7 +1013,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -1017,7 +1050,7 @@
 	"project": "flux-laravel.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 46.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -16,6 +16,7 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Onboard Date</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>State</th>
@@ -28,6 +29,8 @@
                 <th>Budget</th>
                 <th>Co-Signer</th>
                 <th>Creditors</th>
+                <th>POA Status</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -35,6 +38,7 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Onboard Date</th>
                 <th>Address</th>
                 <th>City</th>
                 <th>State</th>
@@ -47,6 +51,8 @@
                 <th>Budget</th>
                 <th>Co-Signer</th>
                 <th>Creditors</th>
+                <th>POA Status</th>
+                <th></th>
             </tr>
             </tfoot>
 
@@ -58,6 +64,7 @@
                   <tr>
                     <td>{{ $customer->name }}</td>
                     <td>{{ $customer->email }}</td>
+                    <td>{{ $customer->created_at }}</td>
                     <td>{{ $customer->address }}</td>
                     <td>{{ $customer->city }}</td>
                     <td>{{ $customer->state }}</td>
@@ -93,6 +100,16 @@
                       @else
                         None
                       @endif
+                    </td>
+                    <td>
+                      @if($user->poa_status == false)
+                        Incomplete <a class="btn btn-default" href="#">Mark Completed</a>
+                      @else
+                        Completed <a class="btn btn-default" href="#">Mark Incomplete</a>
+                      @endif
+                    </td>
+                    <td>
+                      <a class="btn btn-danger" href="#">Delete</a>
                     </td>
                   </tr>
 

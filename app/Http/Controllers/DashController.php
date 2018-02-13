@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use PDF;
+use Mail;
+use Storage;
 use Illuminate\Http\Request;
 
 class DashController extends Controller
@@ -119,6 +122,11 @@ class DashController extends Controller
             return redirect('/dashboard/admin');
         }
 
+        if(isset($_GET["poa_status"])) {
+            $user->poa_status = true;
+            $user->save();
+        }
+
         $budget = $user->budget()->get()->first();
         $creditors = $user->creditors()->get();
         $cosigners = $user->cosigners()->get();
@@ -141,6 +149,33 @@ class DashController extends Controller
         ];
 
         return view('dashboard.index')->with($data);
+    }
+
+    public function creditReport()
+    {
+        $user = Auth::user();
+
+        $data = [
+            "user" => $user,
+        ];
+
+        return view('dashboard.credit_report')->with($data);
+    }
+
+    public function uploadCreditReport(Request $request)
+    {
+        $user = Auth::user();
+        $files = $request->file('file');
+
+        if(!empty($files)) {
+            foreach ($files as $key => $file) {
+              $name = 'user_' . $user->id . '_' . 'credit_report_' . $key;
+              Storage::disk('local')->put($name, $file);
+            }        
+        }
+
+        return back();
+
     }
 
     public function onboardStep()
@@ -186,6 +221,19 @@ class DashController extends Controller
         
 
         return "user updated";
+    }
+
+    public function credit()
+    {
+        $user = Auth::user();
+        $cosigner = $user->cosigners->first();
+
+        $data = [
+            "user" => $user,
+            "cosigner" => $cosigner
+        ];
+
+        return view('dashboard.credit')->with($data);
     }
 
     public function cosigner()

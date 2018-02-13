@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 
 use Auth;
 use Socialite;
+use Mail;
+use App\Mail\NewRegistration;
+use App\Mail\AdminNewUser;
 use Illuminate\Http\Request;
 
 class SocialAuthController extends Controller
@@ -31,6 +34,19 @@ class SocialAuthController extends Controller
         if ($authUser) {
             return $authUser;
         }
+
+        if(env('APP_VERSION') == 'production') {
+
+            $data = [
+                'name'     => $user->name,
+                'email'    => $user->email,
+                'password' => $provider
+            ];
+
+            Mail::to($data['email'])->send(new NewRegistration($data));
+            Mail::to(env('ADMIN_EMAIL'))->send(new AdminNewUser($data));
+        }
+
         return \App\User::create([
             'name'     => $user->name,
             'email'    => $user->email,

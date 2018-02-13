@@ -1,5 +1,9 @@
 <style>
+<<<<<<< HEAD
   body {
+=======
+  table {
+>>>>>>> master
     font-size: 16px;
   }
   td {

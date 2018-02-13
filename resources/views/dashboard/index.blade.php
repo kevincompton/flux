@@ -57,12 +57,16 @@
                       <div class="tab-pane active" id="step-1">
                         <form action="#" class="form-horizontal bordered-row wizard_form">
                           <input type="hidden" name="onboard_step" value="1" />
-                          <div class="form-group">
-                            <label class="col-sm-3 control-label" for="phone">Phone</label>
-                            <div class="col-sm-6">
-                              <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                          
+                          @if($user->phone == null)
+                            <div class="form-group">
+                              <label class="col-sm-3 control-label" for="phone">Phone</label>
+                              <div class="col-sm-6">
+                                <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                              </div>
                             </div>
-                          </div>
+                          @endif
+                          
                           <div class="form-group">
                             <label class="col-sm-3 control-label" for="address">Address</label>
                             <div class="col-sm-6">
@@ -103,7 +107,7 @@
 
                                   <div class="form-group copy">
                                     <h2>Net Monthly Income</h2>
-                                    <p>The amount you enter should accurately reflect all Household Take Home Pay from All Sources after taxes and deductions, including alimony, disability and social security. This information will remain confidential and is only used internally to help tailor the perfect solution for you.</p>
+                                    <p>This amount should reflect all household sources of take-home pay and your Net Income after deductions. Please include alimony, disability, social security and any other money received.</p>
                                     <div class="col-sm-7 col-sm-offset-2">
                                         <div id="horizontal-slider"></div>
                                         <div class="input-group slider_output">
@@ -114,15 +118,14 @@
                                   </div>
 
                                   <div class="form-group copy">
-                                    <h2>Expenses</h2>
+                                    <h2>Total Debt</h2>
 
-                                    <h3>Balance Reductions</h3>
                                     <p>If you have any credit cards that are maxed out, personal loans, repossessions, evictions, medical bills, or any other credit account that you are behind on or struggling with, the Flux Credit balance reduction program may be right for you. Please determine what your approximate total balance due is. Please only include those accounts that are closed or you intend to close. Do not include the balances due on your current vehicles or rent/mortgage.</p>
 
                                     <div class="col-sm-7 col-sm-offset-2">
                                         <div id="horizontal-slider-2"></div>
                                         <div class="input-group slider_output">
-                                          <span class="input-group-addon">Balance Reductions:</span>
+                                          <span class="input-group-addon">Total Debt:</span>
                                           <input type="text" name="debt" id="amount-2" class="form-control" placeholder="Price range ...">
                                         </div>
                                     </div>
@@ -131,8 +134,6 @@
                                   <div class="form-group copy">
 
                                     <h3>Fixed Monthly Expenses</h3>
-                                    <p>Please complete the section below to estimate what your fixed monthly expenses are. You should not include any payment
-                        on any balance you included above for reduction. <br> <span class="italic">*You should include everything else, such as: Insurance (not deducted from your pay check), Utilities, Student Loans, and personal food, clothes, entertainment and childcare expenses.</span></p>
                                   
                                   </div>
 
@@ -151,7 +152,7 @@
                                   </div>
 
                                   <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="other">Other:</label>
+                                    <label class="col-sm-3 control-label" for="other">Other (Insurance, utilities, food, clothes, entertainment, student loans, child care, etc.):</label>
                                     <div class="col-sm-6">
                                       <input type="number" class="form-control" id="other" name="other" placeholder="Other" required>
                                     </div>
@@ -167,6 +168,7 @@
                             @include('partials._products-select')
                         </div>
                         <div class="tab-pane" id="step-4">
+                          <p class="text-center"><strong><i>This information is neccessary for Flux Credit to communicate with your creditors, resolve past debt and improve your credit score.</i></strong></p>
                           <form role="form" class="form-horizontal bordered-row wizard_form" method="POST" action="/budget/new">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">SSN</label>
@@ -192,7 +194,21 @@
             </div>
         </div>
     </div>
+    <p class="text-center"><i>We respect your privacy and will not sell or share your information. We will not run your credit.</i></p>
 @else 
+
+  @if($user->poa_status == 0)
+    <div class="alert alert-warning">
+      <div class="bg-orange alert-icon">
+        <i class="glyph-icon icon-warning"></i>
+      </div>
+      <div class="alert-content">
+        <h4 class="alert-title">You have not signed the Power Of Attorney form</h4>
+        <p>In order to complete your profile you need to sign the Power of Attorney form. <a href="/poa">Click here to sign now.</a>
+      </div>
+    </div>
+  @endif
+
   <div class="panel">
     <div class="panel-body">
         <h3 class="title-hero">

@@ -36,6 +36,7 @@
                 <li><a href="/dashboard">DASHBOARD</a></li>
             @else
                 <li><a href="/register">START TODAY</a></li>
+                <li><a href="/login">LOGIN</a></li>
             @endif
         </ul>
 
