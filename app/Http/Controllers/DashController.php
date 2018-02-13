@@ -13,8 +13,6 @@ class DashController extends Controller
         $this->middleware('auth');
     }
 
-<<<<<<< Updated upstream
-=======
     public function inviteFriend()
     {
         $user = Auth::user();
@@ -112,7 +110,7 @@ class DashController extends Controller
 
     }
 
->>>>>>> Stashed changes
+
     public function dashboard()
     {
         $user = Auth::user();
