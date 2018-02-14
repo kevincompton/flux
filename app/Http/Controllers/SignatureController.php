@@ -109,7 +109,7 @@ class SignatureController extends Controller
         return $response;
     }
 
-    private function getEmbeddedSignatureRequest($template_id)
+    private function getEmbeddedCreditSignatureRequest($template_id)
     {
       $user = Auth::user();
       $app = $user->application;
