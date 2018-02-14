@@ -21,7 +21,7 @@ class SignatureController extends Controller
       if(env('APP_VERSION') != 'production' && env('APP_VERSION') != 'staging' ) {
         return redirect('/dashboard');
       }
-      return $response = $this->getEmbeddedSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
+      $response = $this->getEmbeddedCreditSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
 
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
@@ -105,6 +105,84 @@ class SignatureController extends Controller
         }
       */
         curl_close($ch);
+
+        return $response;
+    }
+
+    private function getEmbeddedSignatureRequest($template_id)
+    {
+      $user = Auth::user();
+      $app = $user->application;
+      $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
+
+        $data = [
+            'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
+            'template_id' => $template_id,
+            'subject' => 'Subject',
+            'message' => '',
+            'signers' => [
+                'Client' => [
+                    'email_address' => $user->email,
+                    'name' => $user->name
+                ]
+            ],
+            'custom_fields' => json_encode([
+              [
+                'name' => 'user_name',
+                'value' => $user->name
+              ],
+              [
+                'name' => 'user_name2',
+                'value' => $user->name
+              ],
+              [
+                'name' => 'user_ssn',
+                'value' => $ssn
+              ],
+              [
+                'name' => 'user_dob',
+                'value' => $user->dob
+              ],
+              [
+                'name' => 'user_dl_no',
+                'value' => $app->dl_no
+              ],
+              [
+                'name' => 'user_dl_state',
+                'value' => $app->dl_state
+              ],
+              [
+                'name' => 'dependencies',
+                'value' => $app->dependencies
+              ],
+              [
+                'name' => 'user_address',
+                'value' => $user->address
+              ],
+              [
+                'name' => 'user_city',
+                'value' => $user->city
+              ],
+              [
+                'name' => 'user_state',
+                'value' => $user->state
+              ],
+              [
+                'name' => 'user_zip',
+                'value' => $user->zip
+              ]
+            ])
+        ];
+
+        if (getenv('HELLOSIGN_TEST_MODE') == 1) {
+            $data['test_mode'] = 1;
+        } else {
+          $data['test_mode'] = 0;
+        }
+
+        $ch = curl_init('https://api.hellosign.com/v3/signature_request/create_embedded_with_template');
+
+        $response = $this->curlRequest($ch, $data);
 
         return $response;
     }
