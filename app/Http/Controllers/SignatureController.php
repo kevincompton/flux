@@ -23,6 +23,8 @@ class SignatureController extends Controller
       }
       $response = $this->getEmbeddedCreditSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
 
+      return $response;
+
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
 
