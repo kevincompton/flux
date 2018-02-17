@@ -26,10 +26,6 @@ class SignatureController extends Controller
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
 
-      $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
-      $dest_file_path = storage_path();
-      $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
-
       $signature_id = $signatures[0]["signature_id"];
 
       $response = $this->getEmbeddedSignUrl($signature_id);
@@ -38,7 +34,8 @@ class SignatureController extends Controller
 
       $data = [
         "user" => $user,
-        "sign_url" => $sign_url
+        "sign_url" => $sign_url,
+        "signature_request_id" => $signature_request_id
       ];
 
       return view('documents.credit_form')->with($data);
@@ -70,10 +67,14 @@ class SignatureController extends Controller
       return view('documents.poa_form')->with($data);
     }
 
-    private function getDocument()
+    private function getDocument($signature_request_id)
     {
+      $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
       $dest_file_path = storage_path();
-      $client->getFiles('fa5c8a0b0f492d768749333ad6fcc214c111e967', $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+      
+      return $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+
+
     }
 
     private function getEmbeddedSignUrl($signature_id)

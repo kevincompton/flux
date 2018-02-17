@@ -50,7 +50,7 @@ Route::get('/dashboard/cosigner', 'DashController@cosigner');
 Route::get('/dashboard/creditors', 'DashController@creditors');
 Route::get('/dashboard/credit', 'DashController@credit');
 Route::get('/dashboard/credit-report', 'DashController@creditReport');
-
+Route::get('/dashboard/credit/document/{signature_request_id}', 'SignatureController@getDocument');
 Route::get('/dashboard/refer', 'DashController@refer');
 Route::get('/dashboard/credit-application/pdf', 'SignatureController@creditApply');
 
