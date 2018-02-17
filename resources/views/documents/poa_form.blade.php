@@ -14,7 +14,7 @@
      // Set the sign_url passed from the controller.
      url: "{{ $sign_url }}",
      allowCancel: false,
-     redirectUrl: 'http://fluxcredit.com/dashboard',
+     redirectUrl: '{{ getenv('APP_URL') }}/dashboard',
      height: 800,
      // Set the debug mode based on the test mode toggle.
      debug: {{ (getenv('HELLOSIGN_TEST_MODE') == 1 ? "true" : "false") }},
@@ -24,7 +24,7 @@
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
 
-         window.location.replace("http://fluxcredit.com/dashboard?poa_status");
+         window.location.replace("{{ getenv('APP_URL') }}/dashboard?poa_status");
        }
      }
    });
