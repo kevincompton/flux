@@ -70,7 +70,7 @@ class SignatureController extends Controller
     public function getDocument($signature_request_id)
     {
       $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
-      $dest_file_path = storage_path();
+      $dest_file_path = storage_path() . '/';
       
       return $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
 
