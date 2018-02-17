@@ -67,7 +67,7 @@ class SignatureController extends Controller
       return view('documents.poa_form')->with($data);
     }
 
-    private function getDocument($signature_request_id)
+    public function getDocument($signature_request_id)
     {
       $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
       $dest_file_path = storage_path();
