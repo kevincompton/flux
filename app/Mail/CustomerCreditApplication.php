@@ -33,6 +33,6 @@ class CustomerCreditApplication extends Mailable
         return $this->from(env('ADMIN_EMAIL'))
                     ->subject('Customer Credit Application')
                     ->view('emails.customer_credit_application')
-                    ->attach($this->document_path);
+                    ->attach($this->data->document_path);
     }
 }
