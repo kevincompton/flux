@@ -71,8 +71,8 @@ class SignatureController extends Controller
     {
       $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
       $user = Auth::user();
-      
-      $name = "credit_application_" . $user->id;
+
+      $name = "credit_application_" . $user->id . ".zip";
       $dest_file_path = storage_path() . '/' . $name;
       
       return $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
