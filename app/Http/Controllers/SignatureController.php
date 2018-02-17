@@ -81,7 +81,7 @@ class SignatureController extends Controller
 
       $data = [
         "document_path" => $dest_file_path,
-        "user" => $user
+        "user_name" => $user->name
       ];
       
       Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($data));
