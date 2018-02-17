@@ -112,14 +112,12 @@ class SignatureController extends Controller
     private function getEmbeddedCreditSignatureRequest($template_id)
     {
       $user = Auth::user();
-      if($user->cosigners()->get()->first()) {
-        $cosigner = $user->cosigners()->get()->first();
-      } else {
-        $cosigner = [];
-      }
+      $cosigner = $user->cosigners()->get()->first();
       $budget = $user->budget()->get()->first();
       $app = $user->application;
       $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
+
+      if($cosigner) {
 
         $data = [
             'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
@@ -234,10 +232,6 @@ class SignatureController extends Controller
                 'value' => $cosigner->name
               ],
               [
-                'name' => 'cosigner_name',
-                'value' => $cosigner->name
-              ],
-              [
                 'name' => 'cosigner_dob',
                 'value' => $cosigner->dob
               ],
@@ -342,7 +336,119 @@ class SignatureController extends Controller
                 'value' => $app->cosigner_employer_zip
               ],
             ])
-        ];
+          ];
+        } else {
+          $data = [
+            'client_id' => getenv('HELLOSIGN_CLIENT_KEY'),
+            'template_id' => $template_id,
+            'subject' => 'Subject',
+            'message' => '',
+            'signers' => [
+                'Client' => [
+                    'email_address' => $user->email,
+                    'name' => $user->name
+                ]
+            ],
+            'custom_fields' => json_encode([
+              [
+                'name' => 'user_name',
+                'value' => $user->name
+              ],
+              [
+                'name' => 'user_name2',
+                'value' => $user->name
+              ],
+              [
+                'name' => 'user_ssn',
+                'value' => $ssn
+              ],
+              [
+                'name' => 'user_dob',
+                'value' => $user->dob
+              ],
+              [
+                'name' => 'user_dl_no',
+                'value' => $app->dl_no
+              ],
+              [
+                'name' => 'user_dl_state',
+                'value' => $app->dl_state
+              ],
+              [
+                'name' => 'dependencies',
+                'value' => $app->dependencies
+              ],
+              [
+                'name' => 'user_address',
+                'value' => $user->address
+              ],
+              [
+                'name' => 'user_city',
+                'value' => $user->city
+              ],
+              [
+                'name' => 'user_state',
+                'value' => $user->state
+              ],
+              [
+                'name' => 'user_zip',
+                'value' => $user->zip
+              ],
+              [
+                'name' => 'years_at_address',
+                'value' => $app->years_at_address
+              ],
+              [
+                'name' => 'owner_status',
+                'value' => $app->owner_status
+              ],
+              [
+                'name' => 'prev_address',
+                'value' => $app->prev_address
+              ],
+              [
+                'name' => 'prev_city',
+                'value' => $app->prev_city
+              ],
+              [
+                'name' => 'prev_state',
+                'value' => $app->prev_state
+              ],
+              [
+                'name' => 'prev_zip',
+                'value' => $app->prev_zip
+              ],
+              [
+                'name' => 'employer_name',
+                'value' => $app->employer_name
+              ],
+              [
+                'name' => 'employer_phone',
+                'value' => $app->employer_phone
+              ],
+              [
+                'name' => 'position',
+                'value' => $app->position
+              ],
+              [
+                'name' => 'employer_address',
+                'value' => $app->employer_address
+              ],
+              [
+                'name' => 'employer_city',
+                'value' => $app->employer_city
+              ],
+              [
+                'name' => 'employer_state',
+                'value' => $app->employer_state
+              ],
+              [
+                'name' => 'employer_zip',
+                'value' => $app->employer_zip
+              ]
+            ])
+          ];
+        }
 
         if (getenv('HELLOSIGN_TEST_MODE') == 1) {
             $data['test_mode'] = 1;
