@@ -80,7 +80,8 @@ class SignatureController extends Controller
       $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
 
       $data = [
-        "document_path" => $dest_file_path
+        "document_path" => $dest_file_path,
+        "user" => $user
       ];
       
       Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($data));
