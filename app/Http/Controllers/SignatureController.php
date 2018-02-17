@@ -112,7 +112,11 @@ class SignatureController extends Controller
     private function getEmbeddedCreditSignatureRequest($template_id)
     {
       $user = Auth::user();
-      $cosigner = $user->cosigners()->get()->first();
+      if($user->cosigners()->get()->first()) {
+        $cosigner = $user->cosigners()->get()->first();
+      } else {
+        $cosigner = [];
+      }
       $budget = $user->budget()->get()->first();
       $app = $user->application;
       $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
