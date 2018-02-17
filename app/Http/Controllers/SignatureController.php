@@ -26,6 +26,10 @@ class SignatureController extends Controller
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
 
+      $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
+      $dest_file_path = storage_path();
+      $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+
       $signature_id = $signatures[0]["signature_id"];
 
       $response = $this->getEmbeddedSignUrl($signature_id);
