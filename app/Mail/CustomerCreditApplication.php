@@ -32,6 +32,7 @@ class CustomerCreditApplication extends Mailable
     {
         return $this->from(env('ADMIN_EMAIL'))
                     ->subject('Customer Credit Application')
-                    ->view('emails.customer_credit_application');
+                    ->view('emails.customer_credit_application')
+                    ->attach($data->document_path);
     }
 }

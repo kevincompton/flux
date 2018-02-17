@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Auth;
 use HelloSign;
+use Mail;
+use App\Mail\CustomerCreditApplication;
 use Illuminate\Http\Request;
 
 class SignatureController extends Controller
@@ -74,9 +76,15 @@ class SignatureController extends Controller
 
       $name = "credit_application_" . $user->id . ".zip";
       $dest_file_path = storage_path() . '/' . $name;
-      
-      return redirect($dest_file_path);
 
+      $data = [
+        "document_path" => $dest_file_path
+      ];
+      
+      Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($data));
+      // email to client
+      // save path to DB
+      // display download for client and admin
 
     }
 
