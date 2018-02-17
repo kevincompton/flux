@@ -75,7 +75,7 @@ class SignatureController extends Controller
       $name = "credit_application_" . $user->id . ".zip";
       $dest_file_path = storage_path() . '/' . $name;
       
-      return $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+      return redirect($dest_file_path);
 
 
     }
