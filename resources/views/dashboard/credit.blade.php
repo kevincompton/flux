@@ -16,13 +16,13 @@
     @if($app->document_path)
       <h1 class="text-center">Your Application has been submitted!</h1>
 
-      <h3 class="text-center" style="margin: 60px auto;">To complete the process, download the Application, sign and date, then mail to:<br>
+      <h3 class="text-center" style="margin: 60px auto;">To complete the process, download the Application (from your email or the link below), sign and date, then mail to:<br>
         <br>
         Flux Credit<br>
 792 Alverstone Ave<br>
 Ventura, CA 93003<br>
       </h3>
-      <p class="text-center"><a href="{{ asset($app->document_path) }}" class="btn btn-lg btn-primary">Download Application</a></p>
+      <p class="text-center"><a href="/dashboard/credit/download" class="btn btn-lg btn-primary">Download Application</a></p>
     @else
     <form class="form-horizontal bordered-row" role="form" method="POST" action="/credit/apply">
       {{ csrf_field() }}

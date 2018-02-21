@@ -53,7 +53,7 @@ Route::get('/dashboard/credit-report', 'DashController@creditReport');
 Route::get('/dashboard/credit/document/{signature_request_id}', 'SignatureController@getDocument');
 Route::get('/dashboard/refer', 'DashController@refer');
 Route::get('/dashboard/credit-application/pdf', 'SignatureController@creditApply');
-
+Route::get('/dashboard/credit/download', 'SignatureController@downloadCreditDocument');
 
   // Dashboard Actions
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');

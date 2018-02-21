@@ -69,6 +69,16 @@ class SignatureController extends Controller
       return view('documents.poa_form')->with($data);
     }
 
+    public function downloadCreditDocument()
+    {
+      $user = Auth::user();
+      $app = $user->application;
+      $name = "credit_application_" . $user->id . ".zip";
+      $path = storage_path($name);
+
+      return response()->download($path);
+    }
+
     public function getDocument($signature_request_id)
     {
       $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
@@ -88,7 +98,7 @@ class SignatureController extends Controller
       Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($data));
       Mail::to($user->email)->send(new CustomerCreditApplication($data));
 
-      $app->document_path = $dest_file_path;
+      $app->document_path = $name;
       $app->save();
       
       return redirect("/dashboard");
