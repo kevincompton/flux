@@ -22,7 +22,7 @@
 792 Alverstone Ave<br>
 Ventura, CA 93003<br>
       </h3>
-      <p class="text-center"><a href="{{ $app->document_path }}" class="btn btn-lg btn-primary">Download Application</a></p>
+      <p class="text-center"><a href="{{ asset($app->document_path) }}" class="btn btn-lg btn-primary">Download Application</a></p>
     @else
     <form class="form-horizontal bordered-row" role="form" method="POST" action="/credit/apply">
       {{ csrf_field() }}
