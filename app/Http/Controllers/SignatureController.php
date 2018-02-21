@@ -73,6 +73,7 @@ class SignatureController extends Controller
     {
       $client = new HelloSign\Client(env('HELLOSIGN_API_KEY'));
       $user = Auth::user();
+      $app = $user->application;
 
       $name = "credit_application_" . $user->id . ".zip";
       $dest_file_path = storage_path() . '/' . $name;
@@ -85,10 +86,12 @@ class SignatureController extends Controller
       ];
       
       Mail::to(env('ADMIN_EMAIL'))->send(new CustomerCreditApplication($data));
-      // email to client
-      // save path to DB
-      // display download for client and admin
+      Mail::to($user->email)->send(new CustomerCreditApplication($data));
 
+      $app->document_path = $dest_file_path;
+      $app->save();
+      
+      return redirect("/dashboard");
     }
 
     private function getEmbeddedSignUrl($signature_id)

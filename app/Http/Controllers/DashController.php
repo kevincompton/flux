@@ -109,7 +109,7 @@ class DashController extends Controller
 
         $app->save();
 
-        return back();
+        return redirect("/dashboard/credit-application/pdf");
 
     }
 
@@ -228,9 +228,16 @@ class DashController extends Controller
         $user = Auth::user();
         $cosigner = $user->cosigners->first();
 
+        if($user->application) {
+            $app = $user->application;
+        } else {
+            $app = null;
+        }
+
         $data = [
             "user" => $user,
-            "cosigner" => $cosigner
+            "cosigner" => $cosigner,
+            "app" => $app
         ];
 
         return view('dashboard.credit')->with($data);
