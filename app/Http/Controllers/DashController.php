@@ -16,13 +16,19 @@ class DashController extends Controller
         $this->middleware('auth');
     }
 
-    public function inviteFriend()
+    public function inviteFriend(Request $request)
     {
         $user = Auth::user();
+        $ref = $user->referral;
 
-        // send user invite email with referral code $_GET link ?code=     
-        // return user to refer page with success notice
+        $data = [
+            "user" => $user,
+            "ref" => $ref
+        ];
 
+        Mail::to($request->email)->send(new CustomerReferral($data));   
+        
+        return back();
     }
 
     public function refer()
