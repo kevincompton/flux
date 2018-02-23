@@ -20,9 +20,7 @@ class DashController extends Controller
     {
         $user = Auth::user();
 
-        // send user invite email with referral code
-        // setup user register to accept $_GET or fillable code
-        // on register find code id using code hash, associate referred user to ID
+        // send user invite email with referral code $_GET link ?code=     
         // return user to refer page with success notice
 
     }

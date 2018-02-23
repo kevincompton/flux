@@ -88,6 +88,14 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                            <label for="referral" class="col-md-4 control-label">Referral Code (optional)</label>
+
+                            <div class="col-md-6">
+                                <input id="referral" placeholder="Referral Code" type="text" class="form-control" name="referral" @if(isset($_GET["code"])) value="{{ $_GET['code'] }}" @endif>
+                            </div>
+                        </div>
+
                         <div class="actions">
                             <button type="submit" class="btn btn-primary">
                                 SIGN UP

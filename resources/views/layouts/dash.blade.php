@@ -560,12 +560,12 @@
                     </li>
                 @endif 
 
-                <!-- <li>
+                <li>
                     <a href="/dashboard/refer" title="Flux Plus">
                         <i class="glyph-icon icon-linecons-megaphone"></i>
                         <span>Flux Friends</span>
                     </a>
-                </li> -->
+                </li>
             </ul><!-- #sidebar-menu -->
         @else
            <ul id="sidebar-menu">

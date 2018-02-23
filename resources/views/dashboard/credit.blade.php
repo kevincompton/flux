@@ -13,7 +13,7 @@
     @endif
   <div class="example-box-wrapper">
 
-    @if($app->document_path)
+    @if($app)
       <h1 class="text-center">Your Application has been submitted!</h1>
 
       <h3 class="text-center" style="margin: 60px auto;">To complete the process, download the Application (from your email or the link below), sign and date, then mail to:<br>

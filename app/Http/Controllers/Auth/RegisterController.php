@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Mail;
+use DB;
 use App\Mail\NewRegistration;
 use App\Mail\AdminNewUser;
 use App\Http\Controllers\Controller;
@@ -65,20 +66,25 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
+        $ref_id = 0;
+
         if(env('APP_VERSION') == 'production') {
             Mail::to($data['email'])->send(new NewRegistration($data));
             Mail::to(env('ADMIN_EMAIL'))->send(new AdminNewUser($data));
         }
 
-        // send email to admin
+        if($data['referral']) {
+            $referrer = DB::table('referrals')->where('code', '=', $data['referral'])->get();
+            $ref_id = $referrer->user_id;
+        }
 
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'phone' => $data['phone'],
             'password' => bcrypt($data['password']),
-            'onboard_step' => 0
+            'onboard_step' => 0,
+            'referral_id' => $ref_id
         ]);
     }
 }
