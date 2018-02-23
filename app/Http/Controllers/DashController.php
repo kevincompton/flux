@@ -16,7 +16,7 @@ class DashController extends Controller
         $this->middleware('auth');
     }
 
-    public function inviteFriend(Request $request)
+    public function inviteUser(Request $request)
     {
         $user = Auth::user();
         $ref = $user->referral;
