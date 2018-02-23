@@ -23,8 +23,9 @@ class DashController extends Controller
         $ref = $user->referral;
 
         $data = [
-            "user" => $user,
-            "ref" => $ref
+            "user_name" => $user->name,
+            "user_email" => $user->email,
+            "ref_code" => $ref->code
         ];
 
         Mail::to($request->email)->send(new CustomerReferral($data));   

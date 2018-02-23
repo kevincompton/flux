@@ -30,7 +30,7 @@ class CustomerReferral extends Mailable
      */
     public function build()
     {
-        return $this->from($this->data->user->email)
+        return $this->from($this->data["user_email"])
                     ->subject('You have been invited to Flux!')
                     ->view('emails.customer_referral');
     }
