@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use PDF;
 use Mail;
+use App\Mail\CustomerReferral;
 use Storage;
 use Illuminate\Http\Request;
 
