@@ -428,11 +428,39 @@ class SignatureController extends Controller
                 'value' => $user->name
               ],
               [
+                'name' => 'user_email',
+                'value' => $user->email
+              ],
+              [
+                'name' => 'user_mortgage',
+                'value' => $budget->mortgage
+              ],
+              [
+                'name' => 'owner_rent',
+                'value' => $owner_rent
+              ],
+              [
+                'name' => 'owner_own',
+                'value' => $owner_own
+              ],
+              [
+                'name' => 'user_income',
+                'value' => $income
+              ],
+              [
                 'name' => 'user_name2',
                 'value' => $user->name
               ],
               [
+                'name' => 'user_name3',
+                'value' => $user->name
+              ],
+              [
                 'name' => 'user_ssn',
+                'value' => $ssn
+              ],
+              [
+                'name' => 'user_ssn2',
                 'value' => $ssn
               ],
               [
