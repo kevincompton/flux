@@ -269,6 +269,10 @@ class SignatureController extends Controller
                 'value' => $app->employer_name
               ],
               [
+                'name' => 'employer_years',
+                'value' => $app->employer_years
+              ],
+              [
                 'name' => 'employer_phone',
                 'value' => $app->employer_phone
               ],
@@ -433,7 +437,11 @@ class SignatureController extends Controller
               ],
               [
                 'name' => 'user_mortgage',
-                'value' => $budget->mortgage
+                'value' => "$" . $budget->mortgage
+              ],
+              [
+                'name' => 'employer_years',
+                'value' => $app->employer_years
               ],
               [
                 'name' => 'owner_rent',
@@ -445,7 +453,7 @@ class SignatureController extends Controller
               ],
               [
                 'name' => 'user_income',
-                'value' => $income
+                'value' => "$" . $income
               ],
               [
                 'name' => 'user_name2',
