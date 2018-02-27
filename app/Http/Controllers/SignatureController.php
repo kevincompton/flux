@@ -73,7 +73,7 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
       $app = $user->application;
-      $name = "credit_application_" . $user->id . ".zip";
+      $name = "credit_application_" . $user->id . ".pdf";
       $path = storage_path($name);
 
       return response()->download($path);
@@ -85,10 +85,10 @@ class SignatureController extends Controller
       $user = Auth::user();
       $app = $user->application;
 
-      $name = "credit_application_" . $user->id . ".zip";
+      $name = "credit_application_" . $user->id . ".pdf";
       $dest_file_path = storage_path() . '/' . $name;
 
-      $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_ZIP);
+      $client->getFiles($signature_request_id, $dest_file_path, HelloSign\SignatureRequest::FILE_TYPE_PDF);
 
       $data = [
         "document_path" => $dest_file_path,
