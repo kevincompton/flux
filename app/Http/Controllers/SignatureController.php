@@ -145,9 +145,18 @@ class SignatureController extends Controller
     {
       $user = Auth::user();
       $cosigner = $user->cosigners()->get()->first();
-      $budget = $user->budget()->get()->first();
+      $budget = $user->budget;
       $app = $user->application;
       $ssn = preg_replace ('/^(\d{3})(\d{2})(\d{4})$/', '$1-$2-$3', $user->ssn);
+      $income = $budget->income * 12;
+
+      if($app->owner_status == "rent") {
+        $owner_rent = "rent";
+        $owner_own = "";
+      } else {
+        $owner_rent = "";
+        $owner_own = "own";
+      }
 
       if($cosigner) {
 
@@ -168,11 +177,39 @@ class SignatureController extends Controller
                 'value' => $user->name
               ],
               [
+                'name' => 'user_email',
+                'value' => $user->email
+              ],
+              [
+                'name' => 'user_mortgage',
+                'value' => $budget->mortgage
+              ],
+              [
+                'name' => 'owner_rent',
+                'value' => $owner_rent
+              ],
+              [
+                'name' => 'owner_own',
+                'value' => $owner_own
+              ],
+              [
+                'name' => 'user_income',
+                'value' => $income
+              ],
+              [
                 'name' => 'user_name2',
                 'value' => $user->name
               ],
               [
+                'name' => 'user_name3',
+                'value' => $user->name
+              ],
+              [
                 'name' => 'user_ssn',
+                'value' => $ssn
+              ],
+              [
+                'name' => 'user_ssn2',
                 'value' => $ssn
               ],
               [
@@ -210,10 +247,6 @@ class SignatureController extends Controller
               [
                 'name' => 'years_at_address',
                 'value' => $app->years_at_address
-              ],
-              [
-                'name' => 'owner_status',
-                'value' => $app->owner_status
               ],
               [
                 'name' => 'prev_address',
@@ -264,11 +297,19 @@ class SignatureController extends Controller
                 'value' => $cosigner->name
               ],
               [
+                'name' => 'cosigner_name2',
+                'value' => $cosigner->name
+              ],
+              [
                 'name' => 'cosigner_dob',
                 'value' => $cosigner->dob
               ],
               [
                 'name' => 'cosigner_ssn',
+                'value' => $cosigner->ssn
+              ],
+              [
+                'name' => 'cosigner_ssn2',
                 'value' => $cosigner->ssn
               ],
               [
