@@ -152,9 +152,9 @@ class SignatureController extends Controller
 
       if($app->owner_status == "rent") {
         $owner_rent = "rent";
-        $owner_own = "";
+        $owner_own = "_";
       } else {
-        $owner_rent = "";
+        $owner_rent = "_";
         $owner_own = "own";
       }
 
