@@ -23,7 +23,7 @@ class SignatureController extends Controller
       if(env('APP_VERSION') != 'production' && env('APP_VERSION') != 'staging' ) {
         return redirect('/dashboard');
       }
-      $response = $this->getEmbeddedCreditSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
+      return $this->getEmbeddedCreditSignatureRequest(getenv('HELLOSIGN_CREDIT_TEMPLATE_ID'));
 
       $signature_request_id = $response["signature_request"]["signature_request_id"];
       $signatures = $response["signature_request"]["signatures"];
