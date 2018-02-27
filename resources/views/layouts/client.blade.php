@@ -123,7 +123,7 @@
                     <!-- <li><a href="#">BECOME AN AFFILIATE</a></li> -->
                     <!-- <li><a href="#">TERMS & CONDITIONS</a></li> -->
                     <li><a href="/privacy-policy">PRIVACY POLICY</a></li>
-                    <li><a href="https://www.google.com/url?q=https://www.bbb.org/santa-barbara/business-reviews/credit-card-merchant-services/flux-credit-in-ventura-ca-92025041&sa=D&source=hangouts&ust=1519848718130000&usg=AFQjCNHxI6l9EinsNGPnljByzdbCG4ig2A">BETTER BUSINESS BUREAU PROFILE</a></li>
+                    <li><a href="https://www.google.com/url?q=https://www.bbb.org/santa-barbara/business-reviews/credit-card-merchant-services/flux-credit-in-ventura-ca-92025041&sa=D&source=hangouts&ust=1519848718130000&usg=AFQjCNHxI6l9EinsNGPnljByzdbCG4ig2A">BBB PROFILE</a></li>
                     <!-- <li><a href="#">FAQ</a></li> -->
                 </ul>
 
