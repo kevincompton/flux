@@ -11,6 +11,7 @@
         Invite A Friend
       </h3>
       <div class="example-box-wrapper">
+        <p>Refer A Friend & Earn Up To $1,000 In Cash Rewards.</p>
         <form class="form-horizontal bordered-row" role="form" method="POST" action="/dashboard/refer/invite">
           {{ csrf_field() }}
         
