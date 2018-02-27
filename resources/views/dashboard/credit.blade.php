@@ -8,7 +8,7 @@
   <div class="panel-body">
     @if(!$user->application)
       <h3 class="title-hero">
-          Apply For Flux Credit
+          Apply For A Flux Visa Credit Card 
       </h3>
     @endif
   <div class="example-box-wrapper">
