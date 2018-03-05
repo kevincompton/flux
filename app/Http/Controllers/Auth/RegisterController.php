@@ -74,7 +74,7 @@ class RegisterController extends Controller
         }
 
         if($data['referral']) {
-            $referrer = DB::table('referrals')->where('code', '=', $data['referral'])->get();
+            $referrer = DB::table('referrals')->where('code', '=', $data['referral'])->first();
             $ref_id = $referrer->user_id;
         }
 
