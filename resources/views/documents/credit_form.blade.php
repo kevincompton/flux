@@ -24,7 +24,7 @@
      messageListener: function(e) {
        if (e.event == 'signature_request_signed') {
 
-         window.location.replace("http://staging.fluxcredit.com/dashboard/credit/document/{{ $signature_request_id }}");
+         window.location.replace("{{ getenv('APP_URL') }}/dashboard/credit/document/{{ $signature_request_id }}");
        }
      }
    });
