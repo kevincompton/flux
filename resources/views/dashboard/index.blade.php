@@ -209,10 +209,22 @@
     </div>
   @endif
 
+  @if(!$user->credit_report)
+    <div class="alert alert-success">
+      <div class="bg-orange alert-icon">
+        <i class="glyph-icon icon-pencil"></i>
+      </div>
+      <div class="alert-content">
+        <h4 class="alert-title">Upload your credit report</h4>
+        <p>In order to activate your account we need a copy of your credit report. <a href="/dashboard/credit-report">Click here to upload now.</a>
+      </div>
+    </div>
+  @endif
+
   <div class="panel">
     <div class="panel-body">
         <h3 class="title-hero">
-            Your Budget
+            FLUX ESTIMATOR
         </h3>
         <div class="example-box-wrapper">
             <div class="row">
@@ -250,7 +262,43 @@
                 <div class="col-md-3">
                   <div class="tile-box bg-white content-box">
                       <div class="tile-header">
-                          Monthly Payment
+                          Fixed Expenses
+                      </div>
+                      <div class="tile-content-wrapper">
+                          <i class="glyph-icon tooltip-button icon-sort-asc"></i>
+                          <div class="tile-content">
+                              <span>$</span>
+                              {{ $budget->mortgage + $budget->car + $budget->other }}
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="tile-box bg-white content-box">
+                      <div class="tile-header">
+                          Months Till Debt Free
+                      </div>
+                      <div class="tile-content-wrapper">
+                          <i class="glyph-icon tooltip-button icon-calendar"></i>
+                          <div class="tile-content" id="month_calculator">
+                            @if($budget->preferred_payment)
+                              {{ ceil($budget->debt / $budget->preferred_payment) }}
+                            @else
+                              {{ ceil($budget->debt / $budget->afford) }}
+                            @endif
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div class="col-md-4">
+                  <div class="tile-box bg-white content-box">
+                      <div class="tile-header">
+                          Flux Monthly Payment
                       </div>
                       <div class="tile-content-wrapper">
                           <i class="glyph-icon tooltip-button icon-money"></i>
@@ -262,10 +310,10 @@
                   </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-4">
                   <div class="tile-box bg-green">
                       <div class="tile-header">
-                          Flex Monthly Payment
+                          Flex Payment Option
                           <div class="float-right">
                               <i class="glyph-icon icon-caret-down"></i>
                               15%
@@ -280,37 +328,63 @@
                       </div>
                   </div>
                 </div>
-              </div>
-              <div class="row" style="padding: 015px;">
 
-                <form style="clear:both;" role="form" class="form-horizontal bordered-row" method="POST" action="/budget/new">
-                  <div class="form-group text-right">
-                      <a href="/payment" class="btn btn-lg btn-primary" type="submit">Make A Payment</a>
+                <div class="col-md-4">
+                  <div class="tile-box bg-white content-box">
+                      <div class="tile-header">
+                          Your Monthly Payment
+                      </div>
+                      <div class="tile-content-wrapper">
+                          <i class="glyph-icon tooltip-button icon-money"></i>
+                          <div class="tile-content">
+                              $<input id="payment_toggle" type="number" name="payment_amount" value="@if($budget->preferred_payment){{ $budget->preferred_payment }}@endif">
+                          </div>
+                      </div>
                   </div>
-                </form>
+                </div>
+
+              </div>
+              <div class="row" style="padding: 0 15px;">
+
+                <div style="clear:both;" class="bordered-row">
+                  <div class="form-group text-right">
+                      <form id="update_payment_form" role="form" class="form-horizontal" method="POST" action="/dashboard/payment/update">
+                        {{ csrf_field() }}
+
+                        <input type="hidden" name="amount" id="amount_selected" value="@if($budget->preferred_payment){{ $budget->preferred_payment }}@endif">
+                        <button class="btn btn-lg btn-primary" type="submit">Save Payment Amount</button>
+                      </form>
+                  </div>
+                </div>
                     
 
 
-                    <!-- @if($user->flux_credit == "pending")
-                      <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
-                      <p class="text-center">Your application is pending, we will get back to you shortly</p>
-                    @elseif($user->flux_credit != "denied")
-                      <h2 class="text-center">Apply For A Flux Secured Credit Card</h2>
-                      <div class="text-center">
-                        <a href="/credit/apply" class="btn">Apply Now </a>
-                        <hr>
-                        <img src="/images/visa.png" />
-                        <img src="/images/bofl.png" />
-                      </div>
-                    @endif -->
-                  </section>
+
+              </section>
             </div>
         </div>
     </div>
   </div>
+  <p class="text-center"><i>**The above estimate is based on the information you provided and may be revised before finalizing
+your program. We encourage you to <a href="/dashboard/credit-report">Upload your Credit Report</a> and/or manually <a href="/dashboard/creditors">Manage Your Creditors</a>
+to help us determine the scope of your credit dilemma.</i></p>
 @endif
 
 
 
   </div>
+@endsection
+
+@section('footer')
+  <script>
+    var debt = {{ $budget->debt }};
+    $( "#payment_toggle" ).change(function() {
+      var value = $(this).val();
+      var months = debt / value;
+      $('#amount_selected').val(value);
+      $('#month_calculator').text(Math.ceil(months));
+    });
+
+
+  </script>
 @endsection

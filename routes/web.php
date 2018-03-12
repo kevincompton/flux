@@ -59,6 +59,7 @@ Route::get('/dashboard/credit/download', 'SignatureController@downloadCreditDocu
   Route::post('/dashboard/onboard', 'DashController@onboardUpdate');
   Route::get('/dashboard/onboard/step', 'DashController@onboardStep');
   Route::post('/dashboard/refer/invite', 'DashController@inviteUser');
+  Route::post('/dashboard/payment/update', 'BudgetController@updatePayment');
 
 Route::post('/user/update/', 'UserController@update');
 Route::post('/user/poa/', 'UserController@poa');

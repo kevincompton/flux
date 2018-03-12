@@ -13,7 +13,7 @@ body .content-box-header > .ui-tabs-nav li.ui-tabs-active > a:hover,
 .pagination > li > a,
 .pagination > li > span,
 .btn-link,
-a {
+#page-sidebar a {
     color: #8da0aa;
 }
 /* Primary font color */

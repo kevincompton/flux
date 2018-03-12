@@ -172,13 +172,18 @@ class DashController extends Controller
     {
         $user = Auth::user();
         $files = $request->file('file');
+        $credit_files = [];
 
         if(!empty($files)) {
             foreach ($files as $key => $file) {
               $name = 'user_' . $user->id . '_' . 'credit_report_' . $key;
               Storage::disk('local')->put($name, $file);
+              array_push($credit_files, $name);
             }        
         }
+
+        $user->credit_report = implode($credit_files);
+        $user->save();
 
         return back();
 
