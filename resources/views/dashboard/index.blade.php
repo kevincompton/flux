@@ -195,7 +195,7 @@
         </div>
     </div>
     <p class="text-center"><i>We respect your privacy and will not sell or share your information. We will not run your credit.</i></p>
-@else 
+@elseif($user->active == false) 
 
   @if($user->poa_status == 0)
     <div class="alert alert-warning">
@@ -368,6 +368,10 @@
   <p class="text-center"><i>**The above estimate is based on the information you provided and may be revised before finalizing
 your program. We encourage you to <a href="/dashboard/credit-report">Upload your Credit Report</a> and/or manually <a href="/dashboard/creditors">Manage Your Creditors</a>
 to help us determine the scope of your credit dilemma.</i></p>
+@else
+
+<h1>Active User</h1>
+
 @endif
 
 
@@ -376,6 +380,7 @@ to help us determine the scope of your credit dilemma.</i></p>
 @endsection
 
 @section('footer')
+  @if($budget)
   <script>
     var debt = {{ $budget->debt }};
     $( "#payment_toggle" ).change(function() {
@@ -384,7 +389,6 @@ to help us determine the scope of your credit dilemma.</i></p>
       $('#amount_selected').val(value);
       $('#month_calculator').text(Math.ceil(months));
     });
-
-
   </script>
+  @endif
 @endsection

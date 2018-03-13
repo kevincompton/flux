@@ -62,7 +62,7 @@
                 @if($customer->admin == 0)
 
                   <tr>
-                    <td>{{ $customer->name }}</td>
+                    <td><a href="/dashboard/admin/user/{{ $customer->id }}">{{ $customer->name }}</a></td>
                     <td>{{ $customer->email }}</td>
                     <td>{{ $customer->created_at }}</td>
                     <td>{{ $customer->address }}</td>

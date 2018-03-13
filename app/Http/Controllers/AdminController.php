@@ -8,11 +8,32 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     
-    public function deleteUser($userID) {
+    public function deleteUser($userID) 
+    {
       $user = \App\User::find($userID);
       $user->delete();
 
       return back();
+    }
+
+    public function activateUser($userID) 
+    {
+      $user = \App\User::find($userID);
+      $user->active = true;
+      $user->save();
+
+      return back();
+    }
+
+    public function showUser($userID) 
+    {
+      $user = \App\User::find($userID);
+      
+      $data = [
+        "user" => $user
+      ];
+
+      return view('dashboard.admin.user')->with($data);
     }
 
     public function poaComplete($userID)

@@ -78,3 +78,9 @@ Route::get('/dashboard/admin/budget/{budget}', 'AdminController@showBudget')->mi
 Route::get('/dashboard/admin/user/{user}/delete', 'AdminController@deleteUser')->middleware('admin');
 Route::get('/dashboard/admin/user/{user}/poa/complete', 'AdminController@poaComplete')->middleware('admin');
 Route::get('/dashboard/admin/user/{user}/poa/incomplete', 'AdminController@poaInomplete')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}', 'AdminController@showUser')->middleware('admin');
+Route::get('/dashboard/admin/user/{user}/activate', 'AdminController@activateUser')->middleware('admin');
+
+
+
+
