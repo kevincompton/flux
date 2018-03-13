@@ -28,8 +28,11 @@ class DashController extends Controller
             "ref_code" => $ref->code
         ];
 
-        Mail::to($request->email)->send(new CustomerReferral($data));   
-        
+        if(env('APP_VERSION') == 'production' || env('APP_VERSION') == 'staging') {
+            Mail::to($request->email)->send(new CustomerReferral($data));
+            Mail::to(env('ADMIN_EMAIL'))->send(new CustomerReferral($data));   
+        }
+
         return back();
     }
 
