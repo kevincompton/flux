@@ -415,7 +415,7 @@ Ventura, CA 93003<br>
 
     </form>
     <p class="text-center">
-The Flux Credit Cash Back Program will deposit the necessary funds on your behalf to the Bank of Louisiana to support your new Visa card. The bank will establish a savings account in your name, which you may close and pull out your cash at any times. The purpose of keeping your savings account active is to help establish your credit recovery, which includes the positive reporting of this Visa card on your credit.</p>
+The Flux Credit Cash Back Program will deposit the necessary funds on your behalf to the Bank of Louisiana to support your new Visa card. The bank will establish a savings account in your name, which you may close and pull out your cash at any time. The purpose of keeping your savings account active is to help establish your credit recovery, which includes the positive reporting of this Visa card on your credit.</p>
     @endif
 
   </div>
