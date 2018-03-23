@@ -305,6 +305,10 @@ class SignatureController extends Controller
                 'value' => $cosigner->name
               ],
               [
+                'name' => 'cosigner_email',
+                'value' => $cosigner->email
+              ],
+              [
                 'name' => 'cosigner_dob',
                 'value' => $cosigner->dob
               ],

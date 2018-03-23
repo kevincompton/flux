@@ -335,7 +335,6 @@
                           Your Monthly Payment
                       </div>
                       <div class="tile-content-wrapper">
-                          <i class="glyph-icon tooltip-button icon-money"></i>
                           <div class="tile-content">
                               $<input id="payment_toggle" type="number" name="payment_amount" value="@if($budget->preferred_payment){{ $budget->preferred_payment }}@endif">
                           </div>

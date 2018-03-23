@@ -68,7 +68,7 @@ class DashController extends Controller
     public function creditApply(Request $request)
     {
         $user = Auth::user();
-        // grab all inputs and create application object
+        $cosigner = $user->cosigners()->get()->first();
 
         $app = new \App\Application;
         $app->user_id = $user->id;
@@ -94,7 +94,7 @@ class DashController extends Controller
         $app->employer_state = $request->employer_state; 
         $app->employer_zip = $request->employer_zip; 
 
-        if($user->cosigner) {
+        if($cosigner) {
             $app->cosigner_dl_no = $request->cosigner_dl_no; 
             $app->cosigner_dl_state = $request->cosigner_dl_state; 
             $app->cosigner_dependencies = $request->cosigner_dependencies; 
