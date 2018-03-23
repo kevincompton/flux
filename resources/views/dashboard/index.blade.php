@@ -58,14 +58,14 @@
                         <form action="#" class="form-horizontal bordered-row wizard_form">
                           <input type="hidden" name="onboard_step" value="1" />
                           
-                          @if($user->phone == null)
+
                             <div class="form-group">
                               <label class="col-sm-3 control-label" for="phone">Phone</label>
                               <div class="col-sm-6">
-                                <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" required>
+                                <input id="phone" type="text" pattern=".{10,15}" name="phone" class="input-mask form-control" data-inputmask="&apos;mask&apos;:&apos;(999) 999-9999&apos;" @if($user->phone != null) value="{{ $user->phone }}" @endif required>
                               </div>
                             </div>
-                          @endif
+
                           
                           <div class="form-group">
                             <label class="col-sm-3 control-label" for="address">Address</label>
